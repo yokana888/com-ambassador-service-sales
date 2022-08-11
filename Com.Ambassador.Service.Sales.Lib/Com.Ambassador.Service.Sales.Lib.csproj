@@ -1,0 +1,95 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200401094218_EnhancementSalesInvoiceUpdateDetailandItem.cs" />
+    <Compile Remove="Migrations\20200401094218_EnhancementSalesInvoiceUpdateDetailandItem.Designer.cs" />
+    <Compile Remove="Migrations\20200406015023_CostCalculationGarment_MaterialIndex.cs" />
+    <Compile Remove="Migrations\20200406015023_CostCalculationGarment_MaterialIndex.Designer.cs" />
+    <Compile Remove="Migrations\20200411023013_RO_Garment_SizeBreakdownIndex.cs" />
+    <Compile Remove="Migrations\20200411023013_RO_Garment_SizeBreakdownIndex.Designer.cs" />
+    <Compile Remove="Migrations\20200419161047_AddBuyerCodeInSalesInvoice.cs" />
+    <Compile Remove="Migrations\20200419161047_AddBuyerCodeInSalesInvoice.Designer.cs" />
+    <Compile Remove="Migrations\20200419204704_AddPackingUomInSalesInvoice.cs" />
+    <Compile Remove="Migrations\20200419204704_AddPackingUomInSalesInvoice.Designer.cs" />
+    <Compile Remove="Migrations\20200423004854_EnhanceSalesReceipt.cs" />
+    <Compile Remove="Migrations\20200423004854_EnhanceSalesReceipt.Designer.cs" />
+    <Compile Remove="Migrations\20200423062926_DeleteIdFieldInDOSalesDOReturnSalesInvoiceSalesReceipt.cs" />
+    <Compile Remove="Migrations\20200423062926_DeleteIdFieldInDOSalesDOReturnSalesInvoiceSalesReceipt.Designer.cs" />
+    <Compile Remove="Migrations\20200427024124_AddReturnFromInDOReturnViewModel.cs" />
+    <Compile Remove="Migrations\20200427024124_AddReturnFromInDOReturnViewModel.Designer.cs" />
+    <Compile Remove="Migrations\20200503214905_DeleteSalesReceiptModule.cs" />
+    <Compile Remove="Migrations\20200503214905_DeleteSalesReceiptModule.Designer.cs" />
+    <Compile Remove="Migrations\20200506093247_RegisterToSalesDbContext.cs" />
+    <Compile Remove="Migrations\20200506093247_RegisterToSalesDbContext.Designer.cs" />
+    <Compile Remove="Migrations\20200508080447_AddPackingUomInDOReturn.cs" />
+    <Compile Remove="Migrations\20200508080447_AddPackingUomInDOReturn.Designer.cs" />
+    <Compile Remove="Migrations\20200510085920_AddingSalesAndUnitInSalesInvoice.cs" />
+    <Compile Remove="Migrations\20200510085920_AddingSalesAndUnitInSalesInvoice.Designer.cs" />
+    <Compile Remove="Migrations\20200510091620_AddConvertValueAndUnitInSalesInvoiceItems.cs" />
+    <Compile Remove="Migrations\20200510091620_AddConvertValueAndUnitInSalesInvoiceItems.Designer.cs" />
+    <Compile Remove="Migrations\20200511210619_ChangeIdNoToBuyerNIK.cs" />
+    <Compile Remove="Migrations\20200511210619_ChangeIdNoToBuyerNIK.Designer.cs" />
+    <Compile Remove="Migrations\20200519123808_EnhanceDO.cs" />
+    <Compile Remove="Migrations\20200519123808_EnhanceDO.Designer.cs" />
+    <Compile Remove="Migrations\20200519124945_TestDOReturn.cs" />
+    <Compile Remove="Migrations\20200519124945_TestDOReturn.Designer.cs" />
+    <Compile Remove="Migrations\20200519125227_AddDOReturn.cs" />
+    <Compile Remove="Migrations\20200519125227_AddDOReturn.Designer.cs" />
+    <Compile Remove="Migrations\20200519125525_AddDOReturn.cs" />
+    <Compile Remove="Migrations\20200519125525_AddDOReturn.Designer.cs" />
+    <Compile Remove="Migrations\20200519130457_UpdateDOReturn.cs" />
+    <Compile Remove="Migrations\20200519130457_UpdateDOReturn.Designer.cs" />
+    <Compile Remove="Migrations\20200519232903_EnhanceSalesInvoiceAddPaymentType.cs" />
+    <Compile Remove="Migrations\20200519232903_EnhanceSalesInvoiceAddPaymentType.Designer.cs" />
+    <Compile Remove="Migrations\20200520195326_UpdateDoSalesStorageCategory.cs" />
+    <Compile Remove="Migrations\20200520195326_UpdateDoSalesStorageCategory.Designer.cs" />
+    <Compile Remove="Migrations\20200521183523_ChangeReturnFromInDOReturn.cs" />
+    <Compile Remove="Migrations\20200521183523_ChangeReturnFromInDOReturn.Designer.cs" />
+    <Compile Remove="Migrations\20200525080907_updateNullableDOReturn.cs" />
+    <Compile Remove="Migrations\20200525080907_updateNullableDOReturn.Designer.cs" />
+    <Compile Remove="Migrations\20200525083030_rollbackUpdateNullableDOReturn.cs" />
+    <Compile Remove="Migrations\20200525083030_rollbackUpdateNullableDOReturn.Designer.cs" />
+    <Compile Remove="Migrations\20200525090350_DeleteDeliveryOrderType.cs" />
+    <Compile Remove="Migrations\20200525090350_DeleteDeliveryOrderType.Designer.cs" />
+    <Compile Remove="Migrations\20200526101502_UpdateSalesInvoiceItemChangeUom.cs" />
+    <Compile Remove="Migrations\20200526101502_UpdateSalesInvoiceItemChangeUom.Designer.cs" />
+    <Compile Remove="Migrations\20200527074206_UpdateSalesInvoiceModel.cs" />
+    <Compile Remove="Migrations\20200527074206_UpdateSalesInvoiceModel.Designer.cs" />
+    <Compile Remove="Migrations\20200529060543_NewMigrationSalesInvoiceDOReturDOSales.cs" />
+    <Compile Remove="Migrations\20200529060543_NewMigrationSalesInvoiceDOReturDOSales.Designer.cs" />
+    <Compile Remove="Migrations\20200529061053_NewMigrationSalesInvoiceDOReturDOSales.cs" />
+    <Compile Remove="Migrations\20200529061053_NewMigrationSalesInvoiceDOReturDOSales.Designer.cs" />
+    <Compile Remove="Migrations\20200529062144_NewMigrationSalesInvoiceDOReturDOSales.cs" />
+    <Compile Remove="Migrations\20200529062144_NewMigrationSalesInvoiceDOReturDOSales.Designer.cs" />
+    <Compile Remove="Migrations\20200529063223_NewMigrationFix.cs" />
+    <Compile Remove="Migrations\20200529063223_NewMigrationFix.Designer.cs" />
+    <Compile Remove="Migrations\20200529065403_NewMigrationFix.cs" />
+    <Compile Remove="Migrations\20200529065403_NewMigrationFix.Designer.cs" />
+    <Compile Remove="Migrations\20200529070201_NewMigrationFix.cs" />
+    <Compile Remove="Migrations\20200529070201_NewMigrationFix.Designer.cs" />
+    <Compile Remove="Migrations\20200602131205_ChangeModelDOReturnItems.cs" />
+    <Compile Remove="Migrations\20200602131205_ChangeModelDOReturnItems.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.0-alpha-0001" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="3.2.0" />
+    <PackageReference Include="Com.Moonlay.Data.EntityFrameworkCore" Version="1.0.2" />
+    <PackageReference Include="Com.Moonlay.NetCore.Lib" Version="1.0.0-alpha-20171102-001" />
+    <PackageReference Include="EPPlus.Core" Version="1.5.4" />
+    <PackageReference Include="iTextSharp.LGPLv2.Core" Version="1.4.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.1.0-rc1-final" />
+    <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.0" />
+    <PackageReference Include="MlkPwgen" Version="0.3.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.0.8.6" />
+    <PackageReference Include="WindowsAzure.Storage" Version="9.3.2" />
+  </ItemGroup>
+
+</Project>
