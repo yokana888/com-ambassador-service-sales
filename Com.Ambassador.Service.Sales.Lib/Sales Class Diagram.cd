@@ -1,0 +1,3507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.CostCalculationGarmentProfiles.CostCalculationGarmentMapper" Collapsed="true">
+    <Position X="172.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\CostCalculationGarmentProfiles\CostCalculationGarmentMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.CostCalculationGarmentProfiles.CostCalculationGarmentMaterialMapper" Collapsed="true">
+    <Position X="144.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\CostCalculationGarmentProfiles\CostCalculationGarmentMaterialMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.FinishingPrintingCostCalculationProfiles.FinishingPrintingCostCalculationChemicalMapper" Collapsed="true">
+    <Position X="160.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\FinishingPrintingCostCalculationProfiles\FinishingPrintingCostCalculationChemicalMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.FinishingPrintingCostCalculationProfiles.FinishingPrintingCostCalculationMachineMapper" Collapsed="true">
+    <Position X="164" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\FinishingPrintingCostCalculationProfiles\FinishingPrintingCostCalculationMachineMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.FinishingPrintingCostCalculationProfiles.FinishingPrintingCostCalculationMapper" Collapsed="true">
+    <Position X="165.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\FinishingPrintingCostCalculationProfiles\FinishingPrintingCostCalculationMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.FinishingPrintingProfiles.FinishingPrintingPreSalesContractMapper" Collapsed="true">
+    <Position X="169.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\FinishingPrintingProfiles\FinishingPrintingPreSalesContractMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.FinishingPrintingProfiles.FinishingPrintingSalesContractDetailMapper" Collapsed="true">
+    <Position X="171" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\FinishingPrintingProfiles\FinishingPrintingSalesContractDetailMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.FinishingPrintingProfiles.FinishingSalesContractMapper" Collapsed="true">
+    <Position X="150" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\FinishingPrintingProfiles\FinishingSalesContractMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.FinishingPrintingProfiles.ShinFinishingPrintingSalesContractMapper" Collapsed="true">
+    <Position X="160.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\FinishingPrintingProfiles\ShinFinishingPrintingSalesContractMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.GarmentBookingOrderProfiles.GarmentBookingOrderItemMapper" Collapsed="true">
+    <Position X="164" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\GarmentBookingOrderProfiles\GarmentBookingOrderItemMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.GarmentBookingOrderProfiles.GarmentBookingOrderMapper" Collapsed="true">
+    <Position X="165.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\GarmentBookingOrderProfiles\GarmentBookingOrderMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.GarmentMasterPlanProfiles.GarmentWeeklyPlanMapper" Collapsed="true">
+    <Position X="169.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\GarmentMasterPlanProfiles\GarmentWeeklyPlanMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.GarmentMasterPlanProfiles.MaxWHConfirmProfile" Collapsed="true">
+    <Position X="158.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\GarmentMasterPlanProfiles\MaxWHConfirmProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.GarmentOmzetTargetProfiles.GarmentOmzetTargetMapper" Collapsed="true">
+    <Position X="172.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\GarmentOmzetTargetProfiles\GarmentOmzetTargetMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.GarmentPreSalesContractProfiles.GarmentPreSalesContractMapper" Collapsed="true">
+    <Position X="146.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\GarmentPreSalesContractProfiles\GarmentPreSalesContractMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.GarmentSalesContractProfiles.GarmentSalesContractItemMapper" Collapsed="true">
+    <Position X="160.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\GarmentSalesContractProfiles\GarmentSalesContractItemMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.GarmentSalesContractProfiles.GarmentSalesContractMapper" Collapsed="true">
+    <Position X="162.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\GarmentSalesContractProfiles\GarmentSalesContractMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.GarmentSewingBlockingPlanProfiles.GarmentSewingBlockingPlanMapper" Collapsed="true">
+    <Position X="167.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\GarmentSewingBlockingPlanProfiles\GarmentSewingBlockingPlanMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.ProductionOrderProfiles.ProductionOrderDetailMapper" Collapsed="true">
+    <Position X="171" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\ProductionOrderProfiles\ProductionOrderDetailMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.ProductionOrderProfiles.ProductionOrderLampStandardMapper" Collapsed="true">
+    <Position X="146.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\ProductionOrderProfiles\ProductionOrderLampStandardMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.ProductionOrderProfiles.ProductionOrderMapper" Collapsed="true">
+    <Position X="148.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\ProductionOrderProfiles\ProductionOrderMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.ProductionOrderProfiles.ProductionOrderRunWidthMapper" Collapsed="true">
+    <Position X="155.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\ProductionOrderProfiles\ProductionOrderRunWidthMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.ProductionOrderProfiles.ShinProductionOrderMapper" Collapsed="true">
+    <Position X="164" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\ProductionOrderProfiles\ShinProductionOrderMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.ROGarmentProfiles.ROGarmentMapper" Collapsed="true">
+    <Position X="153.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\ROGarmentProfiles\ROGarmentMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.ROGarmentProfiles.ROGarmentSizeBreakdownDetailMapper" Collapsed="true">
+    <Position X="157" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\ROGarmentProfiles\ROGarmentSizeBreakdownDetailMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.ROGarmentProfiles.ROGarmentSizeBreakdownMapper" Collapsed="true">
+    <Position X="158.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\ROGarmentProfiles\ROGarmentSizeBreakdownMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.SalesInvoiceProfiles.SalesInvoiceDetailMapper" Collapsed="true">
+    <Position X="164" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\SalesInvoiceProfiles\SalesInvoiceDetailMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.SalesInvoiceProfiles.SalesInvoiceMapper" Collapsed="true">
+    <Position X="167.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\SalesInvoiceProfiles\SalesInvoiceMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.SalesReceiptProfiles.SalesReceiptDetailMapper" Collapsed="true">
+    <Position X="171" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\SalesReceiptProfiles\SalesReceiptDetailMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.SalesReceiptProfiles.SalesReceiptMapper" Collapsed="true">
+    <Position X="144.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\SalesReceiptProfiles\SalesReceiptMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.SpinningProfiles.SpinningSalesContract" Collapsed="true">
+    <Position X="169.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\SpinningProfiles\SpinningSalesContract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.WeavingProfiles.WeavingSalesContract" Collapsed="true">
+    <Position X="167.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\WeavingProfiles\WeavingSalesContract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.EfficiencyMapper" Collapsed="true">
+    <Position X="146.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\EfficiencyMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.RateMapper" Collapsed="true">
+    <Position X="165.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutoMapperProfiles\RateMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculationGarments.CostCalculationGarment_MaterialFacade" Collapsed="true">
+    <Position X="151.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Facades\CostCalculationGarments\CostCalculationGarment_MaterialFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculationGarments.CostCalculationGarmentByBuyer1ReportFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="155.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAIAAEgAAAIAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BusinessLogic\Facades\CostCalculationGarments\CostCalculationGarmentByBuyer1ReportFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculationGarments.CostCalculationGarmentByBuyer2ReportFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="158.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAEgBAAIAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BusinessLogic\Facades\CostCalculationGarments\CostCalculationGarmentByBuyer2ReportFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculationGarments.CostCalculationGarmentBySectionReportFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="162.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAACAAAAAAAAAAEgAAAIAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BusinessLogic\Facades\CostCalculationGarments\CostCalculationGarmentBySectionReportFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculationGarments.CostCalculationGarmentByUnitReportFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="165.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAABAAAAAAAAAAAEgAAAIAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BusinessLogic\Facades\CostCalculationGarments\CostCalculationGarmentByUnitReportFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculationGarments.CostCalculationGarmentFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="171" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAgMCAAQAAgUAAIEAAABAEgAAIISAgAAQCAAIAACIA=</HashCode>
+      <FileName>BusinessLogic\Facades\CostCalculationGarments\CostCalculationGarmentFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculationGarments.CostCalculationGarmentValidationReportFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="150" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAEgAAAIAAAAAAAABAAAIAA=</HashCode>
+      <FileName>BusinessLogic\Facades\CostCalculationGarments\CostCalculationGarmentValidationReportFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculationGarments.DetailCMGarmentByUnitReportFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="162.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABIAAAAAAAAAAAAAAEgAAAIAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BusinessLogic\Facades\CostCalculationGarments\DetailCMGarmentByUnitReportFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculationGarments.DistributionROGarmentReportFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="165.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAEgAAAIAAAAAAAAAAAAMAA=</HashCode>
+      <FileName>BusinessLogic\Facades\CostCalculationGarments\DistributionROGarmentReportFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculationGarments.SMVGarmentByUnitReportFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="165.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAABAAAAAEgAAAIAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BusinessLogic\Facades\CostCalculationGarments\SMVGarmentByUnitReportFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.FinishingPrinting.FinishingPrintingPreSalesContractFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="167.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAIAUgAAAIAAgAQAAAAIAAAIA=</HashCode>
+      <FileName>BusinessLogic\Facades\FinishingPrinting\FinishingPrintingPreSalesContractFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.FinishingPrinting.FinishingPrintingSalesContractFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="144.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAgAAAAAAAAAAAIAAAAAAEgAAAIAAgAAAAAAIAAAIA=</HashCode>
+      <FileName>BusinessLogic\Facades\FinishingPrinting\FinishingPrintingSalesContractFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.FinishingPrinting.FinishingPrintingSalesContractReportFacade" Collapsed="true">
+    <Position X="148.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABIAAAAAACAAAAAIAEAAAAIAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BusinessLogic\Facades\FinishingPrinting\FinishingPrintingSalesContractReportFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.FinishingPrinting.ShinFinishingPrintingSalesContractFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="158.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAIAAAAAAEgAEAIAAgAAAAAAIAAAIA=</HashCode>
+      <FileName>BusinessLogic\Facades\FinishingPrinting\ShinFinishingPrintingSalesContractFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.FinishingPrintingCostCalculation.FinishingPrintingCostCalculationFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="162.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAQAAAAAIQAAAIAEgAEAIAAgAAAAAAIAAAIE=</HashCode>
+      <FileName>BusinessLogic\Facades\FinishingPrintingCostCalculation\FinishingPrintingCostCalculationFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment.AcceptedROReportFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="148.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAIEAAAAAAAgAAAAAAgAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>BusinessLogic\Facades\Garment\AcceptedROReportFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment.AvailableBudgetReportFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="165.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAIEAAAAAAAgAAAAAAgAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>BusinessLogic\Facades\Garment\AvailableBudgetReportFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment.AvailableROReportFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="169.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAIEAAAAAAAgAAAAAAgAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>BusinessLogic\Facades\Garment\AvailableROReportFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment.BudgetJobOrderDisplayFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="150" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BusinessLogic\Facades\Garment\BudgetJobOrderDisplayFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment.Garment_BudgetValidationPPICFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="158.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAEAAAAIAAAAIAAAAAAAIAA=</HashCode>
+      <FileName>BusinessLogic\Facades\Garment\Garment_BudgetValidationPPICFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment.GarmentProductionOrderReportFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="151.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAgAAAAAAgAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>BusinessLogic\Facades\Garment\GarmentProductionOrderReportFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment.GarmentPurchasingQualityObjectiveReportFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="155.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIEAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>BusinessLogic\Facades\Garment\GarmentPurchasingQualityObjectiveReportFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment.MonitoringPreSalesContractFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="164" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAIEAAAAAgAAAAAAAAgAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>BusinessLogic\Facades\Garment\MonitoringPreSalesContractFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment.MonitoringUnpostCostCalculationFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="144.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAIAAAAAAAAgAAAAAAgAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>BusinessLogic\Facades\Garment\MonitoringUnpostCostCalculationFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentBookingOrderFacade.CanceledGarmentBookingOrderReportFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="155.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAIAEgAAAIAAAAAAAAIAAAIAA=</HashCode>
+      <FileName>BusinessLogic\Facades\GarmentBookingOrderFacade\CanceledGarmentBookingOrderReportFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentBookingOrderFacade.ExpiredGarmentBookingOrderFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="155.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAIQAAAAAEgAAAIAAggAQAAAIBAAIA=</HashCode>
+      <FileName>BusinessLogic\Facades\GarmentBookingOrderFacade\ExpiredGarmentBookingOrderFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentBookingOrderFacade.GarmentBookingOrderFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="162.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAIAAAAABEgAAAoACggAQAAAIAAAIA=</HashCode>
+      <FileName>BusinessLogic\Facades\GarmentBookingOrderFacade\GarmentBookingOrderFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentBookingOrderFacade.GarmentBookingOrderMonitoringFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="167.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAIAEgAAAIAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BusinessLogic\Facades\GarmentBookingOrderFacade\GarmentBookingOrderMonitoringFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentMasterPlan.GarmentSewingBlockingPlanFacades.GarmentSewingBlockingPlanFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="165.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgCAAAAAAAAAAIAAAAAAEgAAAIAAgAAQAAAIAAAIA=</HashCode>
+      <FileName>BusinessLogic\Facades\GarmentMasterPlan\GarmentSewingBlockingPlanFacades\GarmentSewingBlockingPlanFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentMasterPlan.MaxWHConfirmFacades.MaxWHConfirmFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="157" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAIAAAAAAEgAAAIAAgAAAAAAIAAIIA=</HashCode>
+      <FileName>BusinessLogic\Facades\GarmentMasterPlan\MaxWHConfirmFacades\MaxWHConfirmFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentMasterPlan.MonitoringFacades.AcceptedOrderMonitoringFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="144.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAIEgAAAIAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BusinessLogic\Facades\GarmentMasterPlan\MonitoringFacades\AcceptedOrderMonitoringFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentMasterPlan.MonitoringFacades.MonitoringRemainingEHFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="169.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAEggAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BusinessLogic\Facades\GarmentMasterPlan\MonitoringFacades\MonitoringRemainingEHFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentMasterPlan.MonitoringFacades.OverScheduleMonitoringFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="162.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAKAAAAAAAAAAAAAAEgAAAIAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BusinessLogic\Facades\GarmentMasterPlan\MonitoringFacades\OverScheduleMonitoringFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentMasterPlan.MonitoringFacades.SewingBlockingPlanReportFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="153.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAEAAAAAAAAAAAEgAAAIAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BusinessLogic\Facades\GarmentMasterPlan\MonitoringFacades\SewingBlockingPlanReportFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentMasterPlan.MonitoringFacades.WeeklyWorkingScheduleMonitoringFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="148.25" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAQAAEgAAAIAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BusinessLogic\Facades\GarmentMasterPlan\MonitoringFacades\WeeklyWorkingScheduleMonitoringFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentMasterPlan.WeeklyPlanFacades.WeeklyPlanFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="146.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAACAAAAIAAAAAAEgAAAIAAgAAAAAAIAAoIA=</HashCode>
+      <FileName>BusinessLogic\Facades\GarmentMasterPlan\WeeklyPlanFacades\WeeklyPlanFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentOmzetTargetFacades.GarmentOmzetTargetFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="171" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAIAAAAAEEgAAAIAAgAAAAAAIAAAIA=</HashCode>
+      <FileName>BusinessLogic\Facades\GarmentOmzetTargetFacades\GarmentOmzetTargetFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentPreSalesContractFacades.GarmentPreSalesContractFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="144.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAIAAAAIAEggAAIQAgAQAAAAIAACIA=</HashCode>
+      <FileName>BusinessLogic\Facades\GarmentPreSalesContractFacades\GarmentPreSalesContractFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentSalesContractFacades.GarmentSalesContractFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="158.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAEAAIAAAAAAUgAAAIQAwAAAAAIIAAAIA=</HashCode>
+      <FileName>BusinessLogic\Facades\GarmentSalesContractFacades\GarmentSalesContractFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.LocalMerchandiserFacades.HOrderFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="172.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Facades\LocalMerchandiserFacades\HOrderFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.ProductionOrder.ProductionOrderFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="144.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAgAAJMIAAAAADoAAQAIAEgAAAIABgAAAAgAIAhgII=</HashCode>
+      <FileName>BusinessLogic\Facades\ProductionOrder\ProductionOrderFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.ProductionOrder.ShinProductionOrderFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="162.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAgAAJMIAAAAACoAAQAIAEgAAAIABgAAAAgAIAhgII=</HashCode>
+      <FileName>BusinessLogic\Facades\ProductionOrder\ShinProductionOrderFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.ROGarment.ROGarmentFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="151.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEgGAAAAAABAAAIgAAIAAUgAAAIAAgAAQAAIIAAAIA=</HashCode>
+      <FileName>BusinessLogic\Facades\ROGarment\ROGarmentFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.SalesInvoice.SalesInvoiceFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="165.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAIAAAAAAEgAAAIAAgAAAAAAIEDAIA=</HashCode>
+      <FileName>BusinessLogic\Facades\SalesInvoice\SalesInvoiceFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.SalesReceipt.SalesReceiptFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="172.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAIAAAAAAEgAAAIAAhAAgAAAIABAIA=</HashCode>
+      <FileName>BusinessLogic\Facades\SalesReceipt\SalesReceiptFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Spinning.SpinningSalesContractFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="171" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAEgQAIIAAgAAAAAAIAAIIA=</HashCode>
+      <FileName>BusinessLogic\Facades\Spinning\SpinningSalesContractFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Spinning.SpinningSalesContractReportFacade" Collapsed="true">
+    <Position X="146.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABIAAAAAAAAAAAAIAEAQAAIAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BusinessLogic\Facades\Spinning\SpinningSalesContractReportFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Weaving.WeavingSalesContractFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="169.25" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAIAAAAAAEgAAIIAAgAAAAAAIAAIIA=</HashCode>
+      <FileName>BusinessLogic\Facades\Weaving\WeavingSalesContractFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Weaving.WeavingSalesContractReportFacade" Collapsed="true">
+    <Position X="144.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABYAAAAAAAAAAAAIAEAAAAIAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>BusinessLogic\Facades\Weaving\WeavingSalesContractReportFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.ArticleColorFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="162.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAEgAAAIAAgAAAAAAIAAIIg=</HashCode>
+      <FileName>BusinessLogic\Facades\ArticleColorFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.AzureDocumentFacade" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAAAAAAAIAAgBACAIAFAQAAAAEAAAAAAAAAQACAA=</HashCode>
+      <FileName>BusinessLogic\Facades\AzureDocumentFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.AzureImageFacade" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAIAAAEEQAAAAgAQFgAAAAgAAAAAAAAAAQICAA=</HashCode>
+      <FileName>BusinessLogic\Facades\AzureImageFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.AzureStorageFacade" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAEAAAAAAAQAggAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Facades\AzureStorageFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.EfficiencyFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="144.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAIAAAAAAEgwAAIAAgAAQAAAIAAAIA=</HashCode>
+      <FileName>BusinessLogic\Facades\EfficiencyFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.RateFacade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="164" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAABAAAAIAAAAAAEgAAAIAAgAAQAAAIAAAIA=</HashCode>
+      <FileName>BusinessLogic\Facades\RateFacade.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGarments.CostCalculationByBuyer1ReportLogic" Collapsed="true">
+    <Position X="18.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAACAAAAAAAACA=</HashCode>
+      <FileName>BusinessLogic\Logic\CostCalculationGarments\CostCalculationGarmentByBuyer1ReportLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGarments.CostCalculationByBuyer2ReportLogic" Collapsed="true">
+    <Position X="23" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAACAAAAAAAACA=</HashCode>
+      <FileName>BusinessLogic\Logic\CostCalculationGarments\CostCalculationGarmentByBuyer2ReportLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGarments.CostCalculationBySectionReportLogic" Collapsed="true">
+    <Position X="25.25" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAACAAAAAAAACA=</HashCode>
+      <FileName>BusinessLogic\Logic\CostCalculationGarments\CostCalculationGarmentBySectionReportLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGarments.CostCalculationByUnitReportLogic" Collapsed="true">
+    <Position X="27.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAACAAAAAAAACA=</HashCode>
+      <FileName>BusinessLogic\Logic\CostCalculationGarments\CostCalculationGarmentByUnitReportLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGarments.CostCalculationGarmentLogic" Collapsed="true">
+    <Position X="42.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAIAAAAAAgQBAAAAAAAAEkAAEISEgAAAiAAAAAAIA=</HashCode>
+      <FileName>BusinessLogic\Logic\CostCalculationGarments\CostCalculationGarmentLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGarments.CostCalculationGarmentMaterialLogic" Collapsed="true">
+    <Position X="49" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAQAAAAAQAAAAAAAEgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Logic\CostCalculationGarments\CostCalculationGarmentMaterialLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGarments.CostCalculationGarmentValidationReportLogic" Collapsed="true">
+    <Position X="32" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAACAAAAAAAACA=</HashCode>
+      <FileName>BusinessLogic\Logic\CostCalculationGarments\CostCalculationGarmentValidationReportLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGarments.DetailCMGarmentByUnitReportLogic" Collapsed="true">
+    <Position X="36.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAACAAAAAAAACA=</HashCode>
+      <FileName>BusinessLogic\Logic\CostCalculationGarments\DetailCMGarmentByUnitReportLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGarments.DistributionROGarmentReportLogic" Collapsed="true">
+    <Position X="41" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAACAAAAAAAACA=</HashCode>
+      <FileName>BusinessLogic\Logic\CostCalculationGarments\DistributionROGarmentReportLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGarments.SMVGarmentByUnitReportLogic" Collapsed="true">
+    <Position X="45.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAACAAAAAAAACA=</HashCode>
+      <FileName>BusinessLogic\Logic\CostCalculationGarments\SMVGarmentByUnitReportLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.FinishingPrinting.FinishingPrintingPreSalesContractLogic" Collapsed="true">
+    <Position X="60.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAgAgAAAEAAQAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Logic\FinishingPrinting\FinishingPrintingPreSalesContractLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.FinishingPrinting.FinishingPrintingSalesContractDetailLogic" Collapsed="true">
+    <Position X="64.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAgAAAAAAAAQAIA=</HashCode>
+      <FileName>BusinessLogic\Logic\FinishingPrinting\FinishingPrintingSalesContractDetailLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.FinishingPrinting.FinishingPrintingSalesContractLogic" Collapsed="true">
+    <Position X="69.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAABAAAAgAAAAAEhAAAAAAAAAAIA=</HashCode>
+      <FileName>BusinessLogic\Logic\FinishingPrinting\FinishingPrintingSalesContractLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.FinishingPrinting.ShinFinishingPrintingSalesContractLogic" Collapsed="true">
+    <Position X="73.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAFAAAEgAEAAAEgAAAAAAAAAAIA=</HashCode>
+      <FileName>BusinessLogic\Logic\FinishingPrinting\ShinFinishingPrintingSalesContractLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.FinishingPrintingCostCalculation.FinishingPrintingCostCalculationLogic" Collapsed="true">
+    <Position X="4" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAgBAAAAAAABIAAAAAAAgAEAAAEgAQAAAAAAAAIA=</HashCode>
+      <FileName>BusinessLogic\Logic\FinishingPrintingCostCalculation\FinishingPrintingCostCalculationLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment.AcceptedROReportLogic" Collapsed="true">
+    <Position X="2.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>BusinessLogic\Logic\Garment\AcceptedROReportLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment.AvailableBudgetReportLogic" Collapsed="true">
+    <Position X="5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>BusinessLogic\Logic\Garment\AvailableBudgetReportLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment.AvailableROReportLogic" Collapsed="true">
+    <Position X="7.25" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>BusinessLogic\Logic\Garment\AvailableROReportLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment.BudgetJobOrderDisplayLogic" Collapsed="true">
+    <Position X="9.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAACAAAAAAAACA=</HashCode>
+      <FileName>BusinessLogic\Logic\Garment\BudgetJobOrderDisplayLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment.Garment_BudgetValidationPPICLogic" Collapsed="true">
+    <Position X="160.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAACAABAAAADAAAgEAQAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Logic\Garment\Garment_BudgetValidationPPICLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment.GarmentProductionOrderReportLogic" Collapsed="true">
+    <Position X="11.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAAIAAAAAAAACA=</HashCode>
+      <FileName>BusinessLogic\Logic\Garment\GarmentProductionOrderReportLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment.GarmentPurchasingQualityObjectiveReportLogic" Collapsed="true">
+    <Position X="14" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAQAABAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>BusinessLogic\Logic\Garment\GarmentPurchasingQualityObjectiveReportLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment.MonitoringPreSalesContractLogic" Collapsed="true">
+    <Position X="16.25" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAQAQAAAAAAAAABAAAAAAAAAAAIACA=</HashCode>
+      <FileName>BusinessLogic\Logic\Garment\MonitoringPreSalesContractLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment.MonitoringUnpostCostCalculationLogic" Collapsed="true">
+    <Position X="20.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>BusinessLogic\Logic\Garment\MonitoringUnpostCostCalculationLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentBookingOrderLogics.GarmentBookingOrderItemLogic" Collapsed="true">
+    <Position X="28.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAIgAAAAAAAAAAIA=</HashCode>
+      <FileName>BusinessLogic\Logic\GarmentBookingOrderLogics\GarmentBookingOrderItemLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentBookingOrderLogics.GarmentBookingOrderLogic" Collapsed="true">
+    <Position X="33.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAIQAAAABEgAAAgAmgAAAAAAABAAIA=</HashCode>
+      <FileName>BusinessLogic\Logic\GarmentBookingOrderLogics\GarmentBookingOrderLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentMasterPlan.GarmentSewingBlockingPlanLogics.GarmentSewingBlockingPlanLogic" Collapsed="true">
+    <Position X="37.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAEgAAAAAEgAAAAAAAAAAIA=</HashCode>
+      <FileName>BusinessLogic\Logic\GarmentMasterPlan\GarmentSewingBlockingPlanLogics\GarmentSewingBlockingPlanLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentMasterPlan.MaxWHConfirmLogics.MaxWHConfirmLogic" Collapsed="true">
+    <Position X="44.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAEgAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Logic\GarmentMasterPlan\MaxWHConfirmLogics\MaxWHConfirmLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentMasterPlan.MonitoringLogics.AcceptedOrderMonitoringLogic" Collapsed="true">
+    <Position X="29.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAACAAAAAAAACA=</HashCode>
+      <FileName>BusinessLogic\Logic\GarmentMasterPlan\MonitoringLogics\AcceptedOrderMonitoringLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentMasterPlan.MonitoringLogics.MonitoringRemainingEHLogic" Collapsed="true">
+    <Position X="34.25" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAACAAAAAAAACA=</HashCode>
+      <FileName>BusinessLogic\Logic\GarmentMasterPlan\MonitoringLogics\MonitoringRemainingEHLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentMasterPlan.MonitoringLogics.OverScheduleMonitoringLogic" Collapsed="true">
+    <Position X="38.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAACAAAAAAAACA=</HashCode>
+      <FileName>BusinessLogic\Logic\GarmentMasterPlan\MonitoringLogics\OverScheduleMonitoringLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentMasterPlan.MonitoringLogics.SewingBlockingPlanReportLogic" Collapsed="true">
+    <Position X="43.25" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAACAAAAAAAACA=</HashCode>
+      <FileName>BusinessLogic\Logic\GarmentMasterPlan\MonitoringLogics\SewingBlockingPlanReportLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentMasterPlan.MonitoringLogics.WeeklyWorkingScheduleMonitoringLogic" Collapsed="true">
+    <Position X="47.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAACAAAAAAAACA=</HashCode>
+      <FileName>BusinessLogic\Logic\GarmentMasterPlan\MonitoringLogics\WeeklyWorkingScheduleMonitoringLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentMasterPlan.WeeklyPlanLogics.WeeklyPlanLogic" Collapsed="true">
+    <Position X="62.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAIAAAAAAEgAAAAAEgAAAAAAAAAgIA=</HashCode>
+      <FileName>BusinessLogic\Logic\GarmentMasterPlan\WeeklyPlanLogics\WeeklyPlanLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentOmzetTargetLogics.GarmentOmzetTargetLogic" Collapsed="true">
+    <Position X="67" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEgAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Logic\GarmentOmzetTargetLogics\GarmentOmzetTargetLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentPreSalesContractLogics.GarmentPreSalesContractLogic" Collapsed="true">
+    <Position X="71.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEgAgAAQEAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Logic\GarmentPreSalesContractLogics\GarmentPreSalesContractLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentSalesContractLogics.GarmentSalesContractItemLogic" Collapsed="true">
+    <Position X="76" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAoAAAAAAgAAAAAAAAAAIA=</HashCode>
+      <FileName>BusinessLogic\Logic\GarmentSalesContractLogics\GarmentSalesContractItemLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentSalesContractLogics.GarmentSalesContractLogic" Collapsed="true">
+    <Position X="6.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAEgAgAAAEwIAAAAAAAAAIA=</HashCode>
+      <FileName>BusinessLogic\Logic\GarmentSalesContractLogics\GarmentSalesContractLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.ProductionOrder.ProductionOrder_DetailLogic" Collapsed="true">
+    <Position X="8.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>BusinessLogic\Logic\ProductionOrder\ProductionOrder_DetailLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.ProductionOrder.ProductionOrder_LampStandardLogic" Collapsed="true">
+    <Position X="10.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>BusinessLogic\Logic\ProductionOrder\ProductionOrder_LampStandardLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.ProductionOrder.ProductionOrder_RunWidthLogic" Collapsed="true">
+    <Position X="13" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>BusinessLogic\Logic\ProductionOrder\ProductionOrder_RunWidthLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.ProductionOrder.ProductionOrderLogic" Collapsed="true">
+    <Position X="15.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAIAAAABAAgAAAAEEgAAAAAAAAAAIA=</HashCode>
+      <FileName>BusinessLogic\Logic\ProductionOrder\ProductionOrderLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.ProductionOrder.ShinProductionOrderLogic" Collapsed="true">
+    <Position X="17.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAIAAEABAAgAAAAEEgAAAAAAAAAAIA=</HashCode>
+      <FileName>BusinessLogic\Logic\ProductionOrder\ShinProductionOrderLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.ROGarmentLogics.ROGarmentLogic" Collapsed="true">
+    <Position X="19.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAgAAAACEgAAAAAEgAAAAAAAAAEIA=</HashCode>
+      <FileName>BusinessLogic\Logic\ROGarmentLogics\ROGarmentLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.ROGarmentLogics.ROGarmentSizeBreakdownDetailLogic" Collapsed="true">
+    <Position X="22" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>BusinessLogic\Logic\ROGarmentLogics\ROGarmentSizeBreakdownDetailLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.ROGarmentLogics.ROGarmentSizeBreakdownLogic" Collapsed="true">
+    <Position X="24.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEgAAAAAEgAAAAAAAIAEIA=</HashCode>
+      <FileName>BusinessLogic\Logic\ROGarmentLogics\ROGarmentSizeBreakdownLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.SalesInvoice.SalesInvoiceDetailLogic" Collapsed="true">
+    <Position X="26.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>BusinessLogic\Logic\SalesInvoice\SalesInvoiceDetailLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.SalesInvoice.SalesInvoiceLogic" Collapsed="true">
+    <Position X="31" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAgAEAAAEgAAAAAAAAAAIA=</HashCode>
+      <FileName>BusinessLogic\Logic\SalesInvoice\SalesInvoiceLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.SalesReceipt.SalesReceiptDetailLogic" Collapsed="true">
+    <Position X="35.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>BusinessLogic\Logic\SalesReceipt\SalesReceiptDetailLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.SalesReceipt.SalesReceiptLogic" Collapsed="true">
+    <Position X="40" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAgAAAAAEgAAAAAAAAACIA=</HashCode>
+      <FileName>BusinessLogic\Logic\SalesReceipt\SalesReceiptLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Spinning.SpinningSalesContractLogic" Collapsed="true">
+    <Position X="46.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Logic\Spinning\SpinningSalesContractLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Weaving.WeavingSalesContractLogic" Collapsed="true">
+    <Position X="51.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Logic\Weaving\WeavingSalesContractLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.ArticleColorLogic" Collapsed="true">
+    <Position X="53.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Logic\ArticleColorLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.EfficiencyLogic" Collapsed="true">
+    <Position X="55.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Logic\EfficiencyLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.RateLogic" Collapsed="true">
+    <Position X="58" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Logic\RateLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Helpers.APIEndpoint" Collapsed="true">
+    <Position X="157" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAABAAAAgAAACAAEgAAEAACAAAAAAAAA=</HashCode>
+      <FileName>Helpers\APIEndpoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Helpers.Base64" Collapsed="true">
+    <Position X="172.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAA=</HashCode>
+      <FileName>Helpers\Base64.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Helpers.Code" Collapsed="true">
+    <Position X="167.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAEAAEAAAAA=</HashCode>
+      <FileName>Helpers\Code.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Helpers.Email" Collapsed="true">
+    <Position X="148.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgCAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\Email.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Helpers.Excel" Collapsed="true">
+    <Position X="153.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\Excel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Helpers.General" Collapsed="true">
+    <Position X="171" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\General.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Helpers.Number" Collapsed="true">
+    <Position X="153.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\Number.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Helpers.ObjectExtension" Collapsed="true">
+    <Position X="158.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Helpers\ObjectExtension.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Helpers.PDFPages" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Helpers\PDFPages.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Helpers.Percentage" Collapsed="true">
+    <Position X="165.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Helpers\Percentage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Helpers.Timestamp" Collapsed="true">
+    <Position X="151.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Helpers\Timestamp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.Initial" Collapsed="true">
+    <Position X="150" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190424072048_Initial.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.Add_GarmentPreSalesContracts" Collapsed="true">
+    <Position X="162.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190701024210_Add_GarmentPreSalesContracts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.Add_WHConfirm_in_WeeklyPlanItems" Collapsed="true">
+    <Position X="165.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190712071903_Add_WHConfirm_in_WeeklyPlanItems.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.Add_Unit_to_Rate" Collapsed="true">
+    <Position X="164" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190712074934_Add_Unit_to_Rate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.Add_WHConfirms_Model" Collapsed="true">
+    <Position X="167.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190712082250_Add_WHConfirms_Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.CosCalculation_Add_PreSC" Collapsed="true">
+    <Position X="144.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190715071958_CosCalculation_Add_PreSC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.Add_CostCalculation_Approval" Collapsed="true">
+    <Position X="160.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190722055433_Add_CostCalculation_Approval.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.Update_RO_Garments" Collapsed="true">
+    <Position X="162.25" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190722074221_Update_RO_Garments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.Update_CostCalculationGarments" Collapsed="true">
+    <Position X="158.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190723015038_Update_CostCalculationGarments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.Update_MaxWHConfirms" Collapsed="true">
+    <Position X="160.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190730023350_Update_MaxWHConfirms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.CC_Material_Add_IsPRMaster" Collapsed="true">
+    <Position X="158.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190730085004_CC_Material_Add_IsPRMaster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.Rem_CC_IsValidated" Collapsed="true">
+    <Position X="169.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190731022417_Rem_CC_IsValidated.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.CC_ValidationPPIC_By_Date" Collapsed="true">
+    <Position X="162.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190803063218_CC_ValidationPPIC_By_Date.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.Add_Column_IsPosted_on_GarmentPreSalesContract" Collapsed="true">
+    <Position X="157" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190808041518_Add_Column_IsPosted_on_GarmentPreSalesContract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.Add_Column_IsROAccepted_on_CostCalculationGarment" Collapsed="true">
+    <Position X="158.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190812040240_Add_Column_IsROAccepted_on_CostCalculationGarment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddIsCalculatedProductionOrder" Collapsed="true">
+    <Position X="164" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190812045846_AddIsCalculatedProductionOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.Add_Column_Available_on_CostCalculationGarment" Collapsed="true">
+    <Position X="153.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190820064908_Add_Column_Available_on_CostCalculationGarment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.Add_column_distribution_on_CostCalculationGarment" Collapsed="true">
+    <Position X="155.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190821024414_Add_column_distribution_on_CostCalculationGarment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.CCO_SectionName_IsPosted" Collapsed="true">
+    <Position X="164" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190826031421_CCO_SectionName_IsPosted.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.CostCalculationGarmentUnpostReason" Collapsed="true">
+    <Position X="148.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190826032008_CostCalculationGarmentUnpostReason.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.CostCalculationUnpostReason_2000_MaxLength" Collapsed="true">
+    <Position X="153.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190828021533_CostCalculationUnpostReason_2000_MaxLength.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.Update_CC_ProductRemark_and_RO_IsPosted" Collapsed="true">
+    <Position X="157" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190831034240_Update_CC_ProductRemark_and_RO_IsPosted.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.Set_MaxLength_GarmentBookingOrder" Collapsed="true">
+    <Position X="150" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190907021334_Set_MaxLength_GarmentBookingOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.Set_MaxLength_GarmentPreSalesContract" Collapsed="true">
+    <Position X="151.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190907021531_Set_MaxLength_GarmentPreSalesContract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.PreSC_CC_SC_Unique_Column" Collapsed="true">
+    <Position X="167.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20190916044257_PreSC_CC_SC_Unique_Column.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.GarmentOmzetTarget" Collapsed="true">
+    <Position X="169.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191024093919_GarmentOmzetTarget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.RO_Garment_Add_DocumentsPath" Collapsed="true">
+    <Position X="148.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191125023015_RO_Garment_Add_DocumentsPath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddFPPreSalesContractModule" Collapsed="true">
+    <Position X="160.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191202083258_AddFPPreSalesContractModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.FPPreSCRemoveUnusedFlag" Collapsed="true">
+    <Position X="157" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191202091655_FPPreSCRemoveUnusedFlag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.ROGarment_DocumentsFileName" Collapsed="true">
+    <Position X="150" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191203035846_ROGarment_DocumentsFileName.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.addDBsetFPPreSC" Collapsed="true">
+    <Position X="151.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191205061553_addDBsetFPPreSC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddFPCCModule" Collapsed="true">
+    <Position X="158.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191205062534_AddFPCCModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.FixFPCCDataType" Collapsed="true">
+    <Position X="153.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191205131459_FixFPCCDataType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.migrationOnSalesInvoice" Collapsed="true">
+    <Position X="160.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191206042045_migrationOnSalesInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.CostCalculation_IsApprovedKadivMD" Collapsed="true">
+    <Position X="148.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191209031056_CostCalculation_IsApprovedKadivMD.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.NewPropertyForFPCC" Collapsed="true">
+    <Position X="151.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191209093128_NewPropertyForFPCC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddUnitInFPCC" Collapsed="true">
+    <Position X="151.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191209101634_AddUnitInFPCC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.RemoveBuyerNameFromFPCC" Collapsed="true">
+    <Position X="171" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191209104837_RemoveBuyerNameFromFPCC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddNewPropertyFPCC" Collapsed="true">
+    <Position X="167.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191209124724_AddNewPropertyFPCC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddIsPostedInFPCC" Collapsed="true">
+    <Position X="165.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191210055247_AddIsPostedInFPCC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.CostCalculation_IsValidatedROMD" Collapsed="true">
+    <Position X="150" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191210091908_CostCalculation_IsValidatedROMD.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.editEntityCurrency" Collapsed="true">
+    <Position X="172.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191211040054_editEntityCurrency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.fixEntityCurrency" Collapsed="true">
+    <Position X="151.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191211040633_fixEntityCurrency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.addDiscOpSc" Collapsed="true">
+    <Position X="153.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191212100227_addDiscOpSc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.renameDiscToDisp" Collapsed="true">
+    <Position X="172.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191212103254_renameDiscToDisp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.EnhanceModelFPCC" Collapsed="true">
+    <Position X="151.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191217092421_EnhanceModelFPCC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.CostCalculation_From_PRMaster" Collapsed="true">
+    <Position X="146.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191220090011_CostCalculation_From_PRMaster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddFieldInSalesInvoice" Collapsed="true">
+    <Position X="155.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191221041610_AddFieldInSalesInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddBuyerAddress" Collapsed="true">
+    <Position X="172.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191222065541_AddBuyerAddress.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddIDNo" Collapsed="true">
+    <Position X="162.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191223025733_AddIDNo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.ChangeDataTypeIDNo" Collapsed="true">
+    <Position X="165.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191223042913_ChangeDataTypeIDNo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddBuyerTypeFPPreSC" Collapsed="true">
+    <Position X="144.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191224072821_AddBuyerTypeFPPreSC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddCostCalculationIdInFPSC" Collapsed="true">
+    <Position X="148.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191224082033_AddCostCalculationIdInFPSC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddPropertyFPSC" Collapsed="true">
+    <Position X="169.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191224084255_AddPropertyFPSC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AutoIncreament" Collapsed="true">
+    <Position X="164" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191225143813_AutoIncreament.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddCode" Collapsed="true">
+    <Position X="146.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20191225151329_AddCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddSalesReceipt" Collapsed="true">
+    <Position X="171" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200108034057_AddSalesReceipt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddFlagIsSCCreatedInFPCC" Collapsed="true">
+    <Position X="157" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200108063802_AddFlagIsSCCreatedInFPCC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.FixIndexFPSC" Collapsed="true">
+    <Position X="155.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200108070646_FixIndexFPSC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddScreenCostInFPSCDetail" Collapsed="true">
+    <Position X="172.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200108095716_AddScreenCostInFPSCDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddDateInFPSC" Collapsed="true">
+    <Position X="150" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200108105747_AddDateInFPSC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.EnhanceFPPreSCAddOrderType" Collapsed="true">
+    <Position X="150" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200109111825_EnhanceFPPreSCAddOrderType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.UpdateSalesReceiptDetail" Collapsed="true">
+    <Position X="164" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200110123053_UpdateSalesReceiptDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.Ignore_CostCalculationGarment_ImageFile" Collapsed="true">
+    <Position X="148.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200113022121_Ignore_CostCalculationGarment_ImageFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddBankInSalesReceiptEntities" Collapsed="true">
+    <Position X="171" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200113041633_AddBankInSalesReceiptEntities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddUnitInPO" Collapsed="true">
+    <Position X="153.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200113093524_AddUnitInPO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddApproveMDPPICInFPCC" Collapsed="true">
+    <Position X="169.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200114093249_AddApproveMDPPICInFPCC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddTotalAmountInSalesInvoice" Collapsed="true">
+    <Position X="146.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200114190052_AddTotalAmountInSalesInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddTotalPaidAndTotalPaymentInSalesReceipt" Collapsed="true">
+    <Position X="148.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200114220436_AddTotalPaidAndTotalPaymentInSalesReceipt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddTotalPaidInSalesInvoice" Collapsed="true">
+    <Position X="150" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200116110421_AddTotalPaidInSalesInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.CC_Material_OpenPO" Collapsed="true">
+    <Position X="160.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200120044041_CC_Material_OpenPO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.Revert_CC_Material_OpenPO" Collapsed="true">
+    <Position X="146.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200120070938_Revert_CC_Material_OpenPO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.AddTempoOverPaidIsPaidOffInSalesReceiptDetails" Collapsed="true">
+    <Position X="144.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200122044029_AddTempoOverPaidIsPaidOffInSalesReceiptDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.PreviousPaymentInSalesReceipt" Collapsed="true">
+    <Position X="169.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200123092730_PreviousPaymentInSalesReceipt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.RenamePreviousPaymentToTotalPaidInSalesReceipt" Collapsed="true">
+    <Position X="144.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200123115448_RenamePreviousPaymentToTotalPaidInSalesReceipt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Migrations.SalesDbContextModelSnapshot" Collapsed="true">
+    <Position X="162.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Migrations\SalesDbContextModelSnapshot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.CostCalculationGarments.CostCalculationGarment" Collapsed="true">
+    <Position X="40.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>pBELwUBjtYNpaAAAxhAwA87MNQJY4IkAIJENsI5gqaQ=</HashCode>
+      <FileName>Models\CostCalculationGarments\CostCalculationGarment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.CostCalculationGarments.CostCalculationGarment_Material" Collapsed="true">
+    <Position X="44.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAEgAIIQCoSgABQAhkEUAAECEASAAAABQBiAAAICA=</HashCode>
+      <FileName>Models\CostCalculationGarments\CostCalculationGarment_Material.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.CostCalculationGarments.CostCalculationGarmentUnpostReason" Collapsed="true">
+    <Position X="49.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Models\CostCalculationGarments\CostCalculationGarmentUnpostReason.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.FinishingPrinting.FinishingPrintingPreSalesContractModel" Collapsed="true">
+    <Position X="53.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAEAIAAIAAABAEAABAIAISAAAIABAQAUAABAAQA=</HashCode>
+      <FileName>Models\FinishingPrinting\FinishingPrintingPreSalesContractModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.FinishingPrinting.FinishingPrintingSalesContractDetailModel" Collapsed="true">
+    <Position X="58.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAIAAQAAAAAAAAAAQEAEAAAAgAQAAAA=</HashCode>
+      <FileName>Models\FinishingPrinting\FinishingPrintingSalesContractDetailModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.FinishingPrinting.FinishingPrintingSalesContractModel" Collapsed="true">
+    <Position X="62.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAUhQgAIAzRJAID0lChg0OYJACEAIAlIaA0IhNAAAY=</HashCode>
+      <FileName>Models\FinishingPrinting\FinishingPrintingSalesContractModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.FinishingPrintingCostCalculation.FinishingPrintingCostCalculationChemicalModel" Collapsed="true">
+    <Position X="67.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAEAAAAAAAAAAAAAABAQIAAABAEAAAAAEAAAAAQAAA=</HashCode>
+      <FileName>Models\FinishingPrintingCostCalculation\FinishingPrintingCostCalculationChemicalModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.FinishingPrintingCostCalculation.FinishingPrintingCostCalculationMachineModel" Collapsed="true">
+    <Position X="71.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAAEAABgAAQAAEAEABAAAAAAAACEgBAIEAEAAAAAAAA=</HashCode>
+      <FileName>Models\FinishingPrintingCostCalculation\FinishingPrintingCostCalculationMachineModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.FinishingPrintingCostCalculation.FinishingPrintingCostCalculationModel" Collapsed="true">
+    <Position X="76.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BBBoGCDFIAIEyAAAAQQowCgCQACgUIkDAoAEgEegwQA=</HashCode>
+      <FileName>Models\FinishingPrintingCostCalculation\FinishingPrintingCostCalculationModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.GarmentBookingOrderModel.GarmentBookingOrder" Collapsed="true">
+    <Position X="80.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAEQAAACAABBAAAAQAAKZCAAEAAAAAAAABwAQA=</HashCode>
+      <FileName>Models\GarmentBookingOrderModel\GarmentBookingOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.GarmentBookingOrderModel.GarmentBookingOrderItem" Collapsed="true">
+    <Position X="4.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAQgQAAAAAAABAAAAACAAAIAEAAAAAAAAAAAASA=</HashCode>
+      <FileName>Models\GarmentBookingOrderModel\GarmentBookingOrderItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.GarmentMasterPlan.WeeklyPlanModels.GarmentWeeklyPlan" Collapsed="true">
+    <Position X="8.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAACAAAAAAAAAIAAAAAAIAAAAAEAAAAAAA=</HashCode>
+      <FileName>Models\GarmentMasterPlan\GarmentWeeklyPlanModels\GarmentWeeklyPlan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.GarmentMasterPlan.WeeklyPlanModels.GarmentWeeklyPlanItem" Collapsed="true">
+    <Position X="13.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAVAAAAIAAAAAAgAAIgABAEAAAIAEAAIAE=</HashCode>
+      <FileName>Models\GarmentMasterPlan\GarmentWeeklyPlanModels\GarmentWeeklyPlanItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.GarmentMasterPlan.MaxWHConfirmModel.MaxWHConfirm" Collapsed="true">
+    <Position X="17.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\GarmentMasterPlan\MaxWHConfirmModel\MaxWHConfirm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.GarmentOmzetTargetModel.GarmentOmzetTarget" Collapsed="true">
+    <Position X="20" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAABACAAAACACAAAAAAAAAABAAAQAAA=</HashCode>
+      <FileName>Models\GarmentOmzetTargetModel\GarmentOmzetTargetModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.GarmentPreSalesContractModel.GarmentPreSalesContract" Collapsed="true">
+    <Position X="22.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAoAQAABABCAKAAQAACAAAAAIACAAAAAIQAQQ=</HashCode>
+      <FileName>Models\GarmentPreSalesContractModel\GarmentPreSalesContract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.GarmentSalesContractModel.GarmentSalesContract" Collapsed="true">
+    <Position X="24.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEBGAwQAoQAgCIAAREUAAACAEAYgEABgAAQAgAIAEQw=</HashCode>
+      <FileName>Models\GarmentSalesContractModel\GarmentSalesContract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.GarmentSalesContractModel.GarmentSalesContractItem" Collapsed="true">
+    <Position X="26.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAgAAAAAAAAAAAAAAAAAAAAAAAAggAAAAA=</HashCode>
+      <FileName>Models\GarmentSalesContractModel\GarmentSalesContractItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.GarmentSewingBlockingPlanModel.GarmentSewingBlockingPlan" Collapsed="true">
+    <Position X="29" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAiAABBAAAAAAAIYIAAEAAAAAAAABAAQA=</HashCode>
+      <FileName>Models\GarmentSewingBlockingPlanModel\GarmentSewingBlockingPlan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.GarmentSewingBlockingPlanModel.GarmentSewingBlockingPlanItem" Collapsed="true">
+    <Position X="31.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAQABAAEACAJRAAAABIgAAAgkJAAAAAEAEAAAUA=</HashCode>
+      <FileName>Models\GarmentSewingBlockingPlanModel\GarmentSewingBlockingPlanItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.ProductionOrder.ProductionOrder_DetailModel" Collapsed="true">
+    <Position X="33.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAIAAAAAgAAAAAAAgAAABAAAAgAIAAgA=</HashCode>
+      <FileName>Models\ProductionOrder\ProductionOrder_DetailModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.ProductionOrder.ProductionOrder_LampStandardModel" Collapsed="true">
+    <Position X="35.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAgAAQAAAAAAAAAAAAAACAAAgA=</HashCode>
+      <FileName>Models\ProductionOrder\ProductionOrder_LampStandardModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.ProductionOrder.ProductionOrder_RunWidthModel" Collapsed="true">
+    <Position X="38" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAgA=</HashCode>
+      <FileName>Models\ProductionOrder\ProductionOrder_RunWidthModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.ProductionOrder.ProductionOrderModel" Collapsed="true">
+    <Position X="42.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BCACgSkAoMALQAYB5nQihgdEIQGkINAEhCC0ESNAIUY=</HashCode>
+      <FileName>Models\ProductionOrder\ProductionOrderModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.ROGarments.RO_Garment" Collapsed="true">
+    <Position X="47" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAGBADIAAAAAAAAAAkAAAAAAAIQAIAAAAACAAAAAA=</HashCode>
+      <FileName>Models\ROGarments\RO_Garment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.ROGarments.RO_Garment_SizeBreakdown" Collapsed="true">
+    <Position X="51.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAEAAABAgAAAAAAAAQAAAAAACAAAAAAA=</HashCode>
+      <FileName>Models\ROGarments\RO_Garment_SizeBreakdown.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.ROGarments.RO_Garment_SizeBreakdown_Detail" Collapsed="true">
+    <Position X="56" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAgAAAAAAgAAAAAAAAAAAAAAAAgCAAQAA=</HashCode>
+      <FileName>Models\ROGarments\RO_Garment_SizeBreakdown_Detail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.SalesInvoice.SalesInvoiceDetailModel" Collapsed="true">
+    <Position X="60.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IgAAAAAAAAAAAAAAAAAAAAKAAAAgQIAAAAAAgAIAAAA=</HashCode>
+      <FileName>Models\SalesInvoice\SalesInvoiceDetailModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.SalesInvoice.SalesInvoiceModel" Collapsed="true">
+    <Position X="65" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAACwAAAgEAAiAAAQAoCAAgAQAQQAAIFAAAAAZwGQA=</HashCode>
+      <FileName>Models\SalesInvoice\SalesInvoiceModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.SalesReceipt.SalesReceiptDetailModel" Collapsed="true">
+    <Position X="69.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAAAAAAgAgAiAAIQAAAAQAEAAAQAAIEAAAgEQQAAA=</HashCode>
+      <FileName>Models\SalesReceipt\SalesReceiptDetailModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.SalesReceipt.SalesReceiptModel" Collapsed="true">
+    <Position X="74" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAgAAAABQgAAAIBEDQAAAJAlAA=</HashCode>
+      <FileName>Models\SalesReceipt\SalesReceiptModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.Spinning.SpinningSalesContractModel" Collapsed="true">
+    <Position X="78.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAWFUQAIQyQAIADQAAgAwIIJSAgEAAiAZAUAAJAAQY=</HashCode>
+      <FileName>Models\Spinning\SpinningSalesContractModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.Weaving.WeavingSalesContractModel" Collapsed="true">
+    <Position X="83" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAWFUwAIUyQQIIDQBAggwMIJSAgMAAiIbA0AAJIIQY=</HashCode>
+      <FileName>Models\Weaving\WeavingSalesContractModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.ArticleColor" Collapsed="true">
+    <Position X="6.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ArticleColor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.Efficiency" Collapsed="true">
+    <Position X="11" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAADAgAAAAAAA=</HashCode>
+      <FileName>Models\Efficiency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Models.Rate" Collapsed="true">
+    <Position X="15.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAYAAAAAAIAAAAAkAAAAAAA=</HashCode>
+      <FileName>Models\Rate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.PDFTemplates.CostCalculationGarmentBudgetPdfTemplate" Collapsed="true">
+    <Position X="153.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAQAAA=</HashCode>
+      <FileName>PDFTemplates\CostCalculationGarmentBudgetPdfTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.PDFTemplates.CostCalculationGarmentPdfTemplate" Collapsed="true">
+    <Position X="146.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAQCAA=</HashCode>
+      <FileName>PDFTemplates\CostCalculationGarmentPdfTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.PDFTemplates.DeliveryOrderPdfTemplate" Collapsed="true">
+    <Position X="160.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>PDFTemplates\DeliveryOrderPdfTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.PDFTemplates.FinishingPrintingSalesContractExportPDFTemplate" Collapsed="true">
+    <Position X="172.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>PDFTemplates\FinishingPrintingSalesContractExportPDFTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.PDFTemplates.FinishingPrintingSalesContractPDFTemplate" Collapsed="true">
+    <Position X="146.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>PDFTemplates\FinishingPrintingSalesContractPDFTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.PDFTemplates.GarmentSalesContractPDFTemplate" Collapsed="true">
+    <Position X="164" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>PDFTemplates\GarmentSalesContractPDFTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.PDFTemplates.PageEvent" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PDFTemplates\GarmentSalesContractPDFTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.PDFTemplates.ProductionOrderPDFTemplate" Collapsed="true">
+    <Position X="150" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>PDFTemplates\ProductionOrderPDFTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.PDFTemplates.ROGarmentPdfTemplate" Collapsed="true">
+    <Position X="155.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAQAAA=</HashCode>
+      <FileName>PDFTemplates\ROGarmentPdfTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.PDFTemplates.SalesInvoicePdfTemplate" Collapsed="true">
+    <Position X="169.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>PDFTemplates\SalesInvoicePdfTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.PDFTemplates.SalesReceiptPdfTemplate" Collapsed="true">
+    <Position X="146.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>PDFTemplates\SalesReceiptPdfTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.PDFTemplates.SpinningSalesContractModelExportPDFTemplate" Collapsed="true">
+    <Position X="172.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>PDFTemplates\SpinningSalesContractModelExportPDFTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.PDFTemplates.SpinningSalesContractModelPDFTemplate" Collapsed="true">
+    <Position X="144.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>PDFTemplates\SpinningSalesContractModelPDFTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.PDFTemplates.WeavingSalesContractModelExportPDFTemplate" Collapsed="true">
+    <Position X="171" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>PDFTemplates\WeavingSalesContractModelExportPDFTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.PDFTemplates.WeavingSalesContractModelPDFTemplate" Collapsed="true">
+    <Position X="172.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>PDFTemplates\WeavingSalesContractModelPDFTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Services.HttpClientService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="144.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAgAAAEAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Services\HttpClientService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Services.IdentityService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="146.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAABAEA=</HashCode>
+      <FileName>Services\IdentityService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Services.ValidateService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="165.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\ValidateService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Utilities.BaseClass.BaseLogic&lt;TModel&gt;" Collapsed="true">
+    <Position X="40" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAgAAAIAEgAAAAAAAAAIIA=</HashCode>
+      <FileName>Utilities\BaseClass\BaseLogic.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Utilities.BaseClass.BaseModel" Collapsed="true">
+    <Position X="43.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Utilities\BaseClass\BaseModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Utilities.BaseClass.BaseMonitoringLogic&lt;TViewModel&gt;" Collapsed="true">
+    <Position X="25.25" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Utilities\BaseClass\BaseMonitoringLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Utilities.Base64ImageStrings" Collapsed="true">
+    <Position X="144.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAIQ=</HashCode>
+      <FileName>Utilities\Base64ImageStrings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Utilities.BaseViewModel" Collapsed="true">
+    <Position X="74.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAKAAQABEAAAAAAAAAAAEAAAAAAAAAgAAAAAQAAEAE=</HashCode>
+      <FileName>Utilities\BaseViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Utilities.CodeGenerator" Collapsed="true">
+    <Position X="169.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAEAAEAAAAA=</HashCode>
+      <FileName>Utilities\CodeGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Utilities.NumberToTextEN" Collapsed="true">
+    <Position X="155.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAACAAAAAAACAAAAAAACAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Utilities\NumberToTextEN.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Utilities.NumberToTextIDN" Collapsed="true">
+    <Position X="157" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEIgIAAABAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Utilities\NumberToTextIDN.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Utilities.QueryHelper&lt;TModel&gt;" Collapsed="true">
+    <Position X="162.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAQAAgAAA=</HashCode>
+      <FileName>Utilities\QueryHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Utilities.ReadResponse&lt;TModel&gt;" Collapsed="true">
+    <Position X="167.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAQAAAAAABAAAAAAAAAAAAI=</HashCode>
+      <FileName>Utilities\ReadResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.Utilities.ServiceValidationException" Collapsed="true">
+    <Position X="148.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Utilities\ServiceValidationException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.BuyerBrandViewModel" Collapsed="true">
+    <Position X="77" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\CostCalculationGarment\BuyerBrandViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.BuyerViewModel" Collapsed="true">
+    <Position X="90.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAACAAAAgAAAgAAQABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\CostCalculationGarment\BuyerViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.CategoryViewModel" Collapsed="true">
+    <Position X="101.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAKAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\CostCalculationGarment\CategoryViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.CostCalculationGarment_MaterialViewModel" Collapsed="true">
+    <Position X="113" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACEAAYIQioAAABAAhgEQAAEAEAQAAAAAQhgAAACAA=</HashCode>
+      <FileName>ViewModels\CostCalculationGarment\CostCalculationGarment_MaterialViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.CostCalculationGarmentByBuyer1ReportViewModel" Collapsed="true">
+    <Position X="157" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oBAAAAAAAAAgAAAABAAAAACAMAAIAABBAAAAgABAAAA=</HashCode>
+      <FileName>ViewModels\CostCalculationGarment\CostCalculationGarmentByBuyer1ReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.CostCalculationGarmentByBuyer2ReportViewModel" Collapsed="true">
+    <Position X="160.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oBAAAQAAAAAAAAAABAAAAACAMAAIAABAAAAAgABAAAA=</HashCode>
+      <FileName>ViewModels\CostCalculationGarment\CostCalculationGarmentByBuyer2ReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.CostCalculationGarmentBySectionReportViewModel" Collapsed="true">
+    <Position X="164" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oBABAAAAAAAgCAAABAAAAACAMAAIAIBAAAAAgIBAACA=</HashCode>
+      <FileName>ViewModels\CostCalculationGarment\CostCalculationGarmentBySectionReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.CostCalculationGarmentByUnitReportViewModel" Collapsed="true">
+    <Position X="167.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oBABAAAAAAAgAAAABAAAAACAMAAIAIBAAAAAgIBAACA=</HashCode>
+      <FileName>ViewModels\CostCalculationGarment\CostCalculationGarmentByUnitReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.CostCalculationGarmentDataProductionReport" Collapsed="true">
+    <Position X="169.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAABAAAAAAAAAAAAAAAAACAAAAICAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\CostCalculationGarment\CostCalculationGarmentDataViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.CostCalculationGarmentValidationReportViewModel" Collapsed="true">
+    <Position X="151.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oAAhAAAAACBAAAAABAAAAAAAMACIAIBAAAAAgIBACCE=</HashCode>
+      <FileName>ViewModels\CostCalculationGarment\CostCalculationGarmentValidationReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.CostCalculationGarmentViewModel" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wBEBAUBgJIHtaAAApBA0A+DIFAJoaIgAIIMN0MEgqSA=</HashCode>
+      <FileName>ViewModels\CostCalculationGarment\CostCalculationGarmentViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.Approval" Collapsed="true">
+    <Position X="160.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAEAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\CostCalculationGarment\CostCalculationGarmentViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.DetailCMGarmentByUnitReportViewModel" Collapsed="true">
+    <Position X="164" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oAAAAABAAAAAAAAAhEAAAAAINAAIYIBRAAANgABEAAA=</HashCode>
+      <FileName>ViewModels\CostCalculationGarment\DetailCMGarmentByUnitReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.DistributionROGarmentReportViewModel" Collapsed="true">
+    <Position X="167.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAQAAMAAIAABAAAAAAABAAAA=</HashCode>
+      <FileName>ViewModels\CostCalculationGarment\DistributionROGarmentReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.EfficiencyViewModel" Collapsed="true">
+    <Position X="29.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAgAAQAAAAAAAAAADAgAAAAAAA=</HashCode>
+      <FileName>ViewModels\CostCalculationGarment\EfficiencyViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.GarmentProductViewModel" Collapsed="true">
+    <Position X="34.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACACAAAQAAgAEQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\CostCalculationGarment\GarmentProductViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.MasterPlanComodityViewModel" Collapsed="true">
+    <Position X="41" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\CostCalculationGarment\MasterPlanComodityViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.RateCalculatedViewModel" Collapsed="true">
+    <Position X="47.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\CostCalculationGarment\RateCalculatedViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.RateViewModel" Collapsed="true">
+    <Position X="47.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAIAAgAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>ViewModels\CostCalculationGarment\RateViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.SMVGarmentByUnitReportViewModel" Collapsed="true">
+    <Position X="167.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>pAABAAAAAAAAAAAABAAAAAAINAAIIIBAAAAEgIBAACA=</HashCode>
+      <FileName>ViewModels\CostCalculationGarment\SMVGarmentByUnitReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.UnitViewModel" Collapsed="true">
+    <Position X="59" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\CostCalculationGarment\UnitViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.UOMViewModel" Collapsed="true">
+    <Position X="63.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAIAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\CostCalculationGarment\UOMViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.FinishingPrinting.FinishingPrintingPreSalesContractViewModel" Collapsed="true">
+    <Position X="70.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAIACAAAABIAAQAAAAACAAAAABAQAAAAAAAQA=</HashCode>
+      <FileName>ViewModels\FinishingPrinting\FinishingPrintingPreSalesContractViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.FinishingPrinting.FinishingPrintingSalesContractDetailViewModel" Collapsed="true">
+    <Position X="79.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAQAAAAAACAAAAAAEAAAAgAAAAAA=</HashCode>
+      <FileName>ViewModels\FinishingPrinting\FinishingPrintingSalesContractDetailViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.FinishingPrinting.FinishingPrintingSalesContractReportViewModel" Collapsed="true">
+    <Position X="92.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DQwhBAAAAgEACSCCAAAAAAIAAAAAABCAIEAABAEABAA=</HashCode>
+      <FileName>ViewModels\FinishingPrinting\FinishingPrintingSalesContractReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.FinishingPrinting.FinishingPrintingSalesContractViewModel" Collapsed="true">
+    <Position X="104" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEAEBQgCAAiVAABDQgEwA0CIAAAAAAAFIAAFAAAgAAA=</HashCode>
+      <FileName>ViewModels\FinishingPrinting\FinishingPrintingSalesContractViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.FinishingPrinting.ShinFinishingPrintingSalesContractViewModel" Collapsed="true">
+    <Position X="115.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGBAgCAAiBAABDQAEwA0CIAAAAAAAFIAAFAAAgAAA=</HashCode>
+      <FileName>ViewModels\FinishingPrinting\ShinFinishingPrintingSalesContractViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.FinishingPrintingCostCalculation.FinishingPrintingCostCalculationChemicalViewModel" Collapsed="true">
+    <Position X="124.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQAAA=</HashCode>
+      <FileName>ViewModels\FinishingPrintingCostCalculation\FinishingPrintingCostCalculationChemicalViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.FinishingPrintingCostCalculation.FinishingPrintingCostCalculationMachineViewModel" Collapsed="true">
+    <Position X="133.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAABAAAAAAEAEAAAAAAAAAAAAAAAAIAEAAAAAAAA=</HashCode>
+      <FileName>ViewModels\FinishingPrintingCostCalculation\FinishingPrintingCostCalculationMachineViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.FinishingPrintingCostCalculation.FinishingPrintingCostCalculationViewModel" Collapsed="true">
+    <Position X="137.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AFAoECDEIACEgAAIAQAIVAACQACIUAABAIAAwACgAQA=</HashCode>
+      <FileName>ViewModels\FinishingPrintingCostCalculation\FinishingPrintingCostCalculationViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.FinishingPrintingCostCalculation.Approval" Collapsed="true">
+    <Position X="158.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAEAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\FinishingPrintingCostCalculation\FinishingPrintingCostCalculationViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Garment.AcceptedROReportViewModel" Collapsed="true">
+    <Position X="150" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAAAAAAAAAAABAIQAAAAEAAEAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>ViewModels\Garment\AcceptedROReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Garment.AvailableBudgetReportViewModel" Collapsed="true">
+    <Position X="167.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAABAAAABAAQAAAAGAAEAAEAAAAAgAAAAAA=</HashCode>
+      <FileName>ViewModels\Garment\AvailableBudgetReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Garment.AvailableROReportViewModel" Collapsed="true">
+    <Position X="171" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAIAAAAAABAAAABgAQAAAAEAAEAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>ViewModels\Garment\AvailableROReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Garment.BudgetJobOrderDisplayViewModel" Collapsed="true">
+    <Position X="151.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oAACAAAAAQAgAAQABAAAAAAAMAAIAABAAAAAgABAIAE=</HashCode>
+      <FileName>ViewModels\Garment\BudgetJobOrderDisplayViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Garment.CostCalculationGarment_RO_Garment_ValidationViewModel" Collapsed="true">
+    <Position X="14" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Garment\CostCalculationGarment_RO_Garment_ValidationViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Garment.GarmentProductionOrderReportViewModel" Collapsed="true">
+    <Position X="153.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>ViewModels\Garment\GarmentProductionOrderReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Garment.GarmentProductionOrderReportBuyerViewModel" Collapsed="true">
+    <Position X="148.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAABAAAAAAAQAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Garment\GarmentProductionOrderReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Garment.GarmentProductionOrderReportDetailViewModel" Collapsed="true">
+    <Position X="150" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAACAAAAAAAAAAAAAACAEAAEAAABAAAggIAAgCA=</HashCode>
+      <FileName>ViewModels\Garment\GarmentProductionOrderReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Garment.GarmentPurchasingQualityObjectiveReportViewModel" Collapsed="true">
+    <Position X="157" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEACCAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>ViewModels\Garment\GarmentPurchasingQualityObjectiveReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Garment.MonitoringPreSalesContractViewModel" Collapsed="true">
+    <Position X="167.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAABABIAAAAAAAAIAAIACAAAAIAIAAA=</HashCode>
+      <FileName>ViewModels\Garment\MonitoringPreSalesContractViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Garment.MonitoringPreSalesContractGPRViewModel" Collapsed="true">
+    <Position X="165.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAIAAAAAAAGAAAAAABAIAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Garment\MonitoringPreSalesContractViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Garment.MonitoringPreSalesContractCCViewModel" Collapsed="true">
+    <Position X="162.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAAAAAAAAAAAIAAAAAAAEAAEAAABAAAAgAAAAAA=</HashCode>
+      <FileName>ViewModels\Garment\MonitoringPreSalesContractViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Garment.MonitoringUnpostCostCalculationViewModel" Collapsed="true">
+    <Position X="148.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAgAAAAAAAAIAAAAAAAEAAAAAACAAAAgIAAAAA=</HashCode>
+      <FileName>ViewModels\Garment\UnpostCostCalculationMonitoringViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Garment.MonitoringUnpostCostCalculationReasonsViewModel" Collapsed="true">
+    <Position X="146.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAABEAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Garment\UnpostCostCalculationMonitoringViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentBookingOrderViewModels.CanceledGarmentBookingOrderReportViewModel" Collapsed="true">
+    <Position X="72.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgBIAAQkQAABAABBBIAAAAAAAICAAEBAAAAAAABAASA=</HashCode>
+      <FileName>ViewModels\GarmentBookingOrderViewModels\CanceledGarmentBookingOrderReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentBookingOrderViewModels.GarmentBookingOrderItemViewModel" Collapsed="true">
+    <Position X="81.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAQgQAAAAAAABAAAAAAAAAAAEAAAAAAAAAAAASA=</HashCode>
+      <FileName>ViewModels\GarmentBookingOrderViewModels\GarmentBookingOrderItemViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentBookingOrderViewModels.GarmentBookingOrderMonitoringViewModel" Collapsed="true">
+    <Position X="95" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQgAAABCAABDAAwAgAAAIAAAEEAAABAAABAASA=</HashCode>
+      <FileName>ViewModels\GarmentBookingOrderViewModels\GarmentBookingOrderMonitoringViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentBookingOrderViewModels.GarmentBookingOrderViewModel" Collapsed="true">
+    <Position X="106.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAACAAEQQCACAABBAAAAQAAKZCgAEAAAAAAAABwAQA=</HashCode>
+      <FileName>ViewModels\GarmentBookingOrderViewModels\GarmentBookingOrderViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentMasterPlan.MaxWHConfirmViewModels.MaxWHConfirmViewModel" Collapsed="true">
+    <Position X="117.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAgAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\GarmentMasterPlan\MaxWHConfirmViewModels\MaxWHConfirmViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentMasterPlan.MonitoringViewModels.AcceptedOrderMonitoringViewModel" Collapsed="true">
+    <Position X="146.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAIAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>ViewModels\GarmentMasterPlan\MonitoringViewModels\AcceptedOrderMonitoringViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentMasterPlan.MonitoringViewModels.MonitoringRemainingEHViewModel" Collapsed="true">
+    <Position X="172.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\GarmentMasterPlan\MonitoringViewModels\MonitoringRemainingEHViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentMasterPlan.MonitoringViewModels.MonitoringRemainingEHItemViewModel" Collapsed="true">
+    <Position X="171" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAIAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>ViewModels\GarmentMasterPlan\MonitoringViewModels\MonitoringRemainingEHViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentMasterPlan.MonitoringViewModels.OverScheduleMonitoringViewModel" Collapsed="true">
+    <Position X="164" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAFAAAAgQAkARAAACAAAAQAAgAAABCAAAAAAABACAA=</HashCode>
+      <FileName>ViewModels\GarmentMasterPlan\MonitoringViewModels\OverScheduleMonitoringViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentMasterPlan.MonitoringViewModels.SewingBlockingPlanReportViewModel" Collapsed="true">
+    <Position X="157" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAQAAgAAgABAICAhAAAAQAgAAEAAAAAAIAACAIAA=</HashCode>
+      <FileName>ViewModels\GarmentMasterPlan\MonitoringViewModels\SewingBlockingPlanReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentMasterPlan.MonitoringViewModels.BOItemViewModel" Collapsed="true">
+    <Position X="146.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACCA=</HashCode>
+      <FileName>ViewModels\GarmentMasterPlan\MonitoringViewModels\SewingBlockingPlanReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentMasterPlan.MonitoringViewModels.SewingBlockingPlanReportItemViewModel" Collapsed="true">
+    <Position X="155.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAgAAxgAAABAABACAAAAAAAAAAAAAAIQAAAAA=</HashCode>
+      <FileName>ViewModels\GarmentMasterPlan\MonitoringViewModels\SewingBlockingPlanReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentMasterPlan.MonitoringViewModels.WeeklyWorkingScheduleMonitoringViewModel" Collapsed="true">
+    <Position X="150" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACRFAAAAAIEkABAAAAAAAAQAAAAABACAwAAAgABAIAA=</HashCode>
+      <FileName>ViewModels\GarmentMasterPlan\MonitoringViewModels\WeeklyWorkingScheduleMonitoringViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentMasterPlan.MonitoringViewModels.booking" Collapsed="true">
+    <Position X="148.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACABAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\GarmentMasterPlan\MonitoringViewModels\WeeklyWorkingScheduleMonitoringViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Garment.WeeklyPlanViewModels.GarmentWeeklyPlanItemViewModel" Collapsed="true">
+    <Position X="25.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAVAAAAIAAAAAAgAAAgAAAEAAAIAEAAIAE=</HashCode>
+      <FileName>ViewModels\GarmentMasterPlan\WeeklyPlanViewModels\GarmentWeeklyPlanItemViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Garment.WeeklyPlanViewModels.GarmentWeeklyPlanViewModel" Collapsed="true">
+    <Position X="32" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABACACAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\GarmentMasterPlan\WeeklyPlanViewModels\GarmentWeeklyPlanViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentOmzetTargetViewModels.GarmentOmzetTargetViewModel" Collapsed="true">
+    <Position X="36.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACACAABACAAAACACAAAAAAAAAABAAAQAAA=</HashCode>
+      <FileName>ViewModels\GarmentOmzetTargetViewModels\GarmentOmzetTargetViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentPreSalesContractViewModels.GarmentPreSalesContractViewModel" Collapsed="true">
+    <Position X="43.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAoASAABABCAKAAQAACAAAAAIACAAAAAIQAQQ=</HashCode>
+      <FileName>ViewModels\GarmentPreSalesContractViewModels\GarmentPreSalesContractViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentROViewModels.RO_Garment_SizeBreakdown_DetailViewModel" Collapsed="true">
+    <Position X="45.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAgAAAAAAgAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>ViewModels\GarmentROViewModels\RO_Garment_SizeBreakdown_DetailViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentROViewModels.RO_Garment_SizeBreakdownViewModel" Collapsed="true">
+    <Position X="50" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAgAAAAAAAAQAAAAAAAgAAAAAA=</HashCode>
+      <FileName>ViewModels\GarmentROViewModels\RO_Garment_SizeBreakdownViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentROViewModels.RO_GarmentViewModel" Collapsed="true">
+    <Position X="54.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAGBADIACAAAAAAAAgAAAAAAAIQAIAAAAACAAAAAA=</HashCode>
+      <FileName>ViewModels\GarmentROViewModels\RO_GarmentViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentSalesContractViewModels.GarmentSalesContractItemViewModel" Collapsed="true">
+    <Position X="61.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAgAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>ViewModels\GarmentSalesContractViewModels\GarmentSalesContractItemViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentSalesContractViewModels.GarmentSalesContractViewModel" Collapsed="true">
+    <Position X="65.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEBGAwQAoQCgCIAAREUAAACAEAYEEABAAAQAgAIgEQw=</HashCode>
+      <FileName>ViewModels\GarmentSalesContractViewModels\GarmentSalesContractViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentSewingBlockingPlanViewModels.GarmentSewingBlockingPlanItemViewModel" Collapsed="true">
+    <Position X="74.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAGBAAEAAAJZAAAABAgAAAgABAAAAAAAEAAAUA=</HashCode>
+      <FileName>ViewModels\GarmentSewingBlockingPlanViewModels\GarmentSewingBlockingPlanItemViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentSewingBlockingPlanViewModels.GarmentSewingBlockingPlanViewModel" Collapsed="true">
+    <Position X="83.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAACAiAABBAAQAAAAAIIAAEAAAAAAAAAAAQA=</HashCode>
+      <FileName>ViewModels\GarmentSewingBlockingPlanViewModels\GarmentSewingBlockingPlanViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.GarmentPurchaseRequestViewModel.GarmentPurchaseRequestItemViewModel" Collapsed="true">
+    <Position X="97.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEACCAAAABAAAAAAAAAAAEAAAAAAAAgAAACAA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\GarmentPurchaseRequestViewModel\GarmentPurchaseRequestItemViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.GarmentPurchaseRequestViewModel.GarmentPurchaseRequestViewModel" Collapsed="true">
+    <Position X="108.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAICAACAAAIAIRAIAAGAAAAAABAIAAAAABgQA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\GarmentPurchaseRequestViewModel\GarmentPurchaseRequestViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.AccountBankViewModel" Collapsed="true">
+    <Position X="151.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAgAACACCgAAAAAABYAAAAAAAA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\AccountBankViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.AccountViewModel" Collapsed="true">
+    <Position X="126.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAACAAABAAAAAAAAAEAAAAQAAAAAAAAg=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\AccountViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.ProfileViewModel" Collapsed="true">
+    <Position X="158.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\AccountViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.AgentViewModel" Collapsed="true">
+    <Position X="155.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAICAAgAAQAAAIAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\AgentViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.BuyerViewModel" Collapsed="true">
+    <Position X="153.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAICAAgAAQAAAIAAAACEQAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\BuyerViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.CategoryViewModel" Collapsed="true">
+    <Position X="157" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\CategoryViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.ColorTypeViewModel" Collapsed="true">
+    <Position X="171" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\ColorTypeViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.CommodityViewModel" Collapsed="true">
+    <Position X="172.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAgAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\CommodityViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.CurrencyViewModel" Collapsed="true">
+    <Position X="155.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAACAAAAAAAgAAAAAAAgAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\CurrencyViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.DesignMotiveViewModel" Collapsed="true">
+    <Position X="20.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\DesignMotiveViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.DivisionViewModel" Collapsed="true">
+    <Position X="169.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\DivisionViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.DOSalesViewModel" Collapsed="true">
+    <Position X="171" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEACAAAAAAAAAAACAAAwAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\DOSalesViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.FinishTypeViewModel" Collapsed="true">
+    <Position X="38.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\FinishTypeViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.InstructionViewModel" Collapsed="true">
+    <Position X="151.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\InstructionViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.StepViewModel" Collapsed="true">
+    <Position X="148.25" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\InstructionViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.LampStandardViewModel" Collapsed="true">
+    <Position X="52.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\LampStandardViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.MachineViewModel" Collapsed="true">
+    <Position X="56.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAwAgAAQABCAgAAAAAAACAAAAAAA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\MachineViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.MaterialConstructionViewModel" Collapsed="true">
+    <Position X="155.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\MaterialConstructionViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.MaterialViewModel" Collapsed="true">
+    <Position X="68" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAgAAQAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\MaterialViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.OrderTypeViewModel" Collapsed="true">
+    <Position X="160.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\OrderTypeViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.ProcessTypeViewModel" Collapsed="true">
+    <Position X="86" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAgAAQAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\ProcessTypeViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.ProductViewModel" Collapsed="true">
+    <Position X="157" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAEAAAAAAAgAAQACAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\ProductViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.QualityViewModel" Collapsed="true">
+    <Position X="160.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\QualityViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.RolesViewModel" Collapsed="true">
+    <Position X="119.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\RolesViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.StandardTestsViewModel" Collapsed="true">
+    <Position X="128.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\StandardTestsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.TermOfPaymentViewModel" Collapsed="true">
+    <Position X="150" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAgAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\TermOfPaymentViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.UnitViewModel" Collapsed="true">
+    <Position X="153.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAgAAQAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\UnitViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.UomViewModel" Collapsed="true">
+    <Position X="155.25" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\UomViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.YarnMaterialViewModel" Collapsed="true">
+    <Position X="151.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>ViewModels\IntegrationViewModel\YarnMaterialViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.ProductionOrder.ProductionOrder_DetailViewModel" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAACAAIAAAAAAAAAAAAAEAAABAAAAgAAAAAA=</HashCode>
+      <FileName>ViewModels\ProductionOrder\ProductionOrder_DetailViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.ProductionOrder.ProductionOrder_LampStandardViewModel" Collapsed="true">
+    <Position X="16.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAgAAQAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>ViewModels\ProductionOrder\ProductionOrder_LampStandardViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.ProductionOrder.ProductionOrder_RunWidthViewModel" Collapsed="true">
+    <Position X="18.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>ViewModels\ProductionOrder\ProductionOrder_RunWidthViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.ProductionOrder.ProductionOrderViewModel" Collapsed="true">
+    <Position X="23" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEAAhZgAgACDAAQDBiAwAgREAAEEAFAAgACBAAIAIUI=</HashCode>
+      <FileName>ViewModels\ProductionOrder\ProductionOrderViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.ProductionOrder.ShinProductionOrderViewModel" Collapsed="true">
+    <Position X="27.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAhAAAgACDAAQBBCAgAAQAAAEAAFAAgAAAAAIAIUI=</HashCode>
+      <FileName>ViewModels\ProductionOrder\ShinProductionOrderViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Report.OrderStatusReport.YearlyOrderQuantity" Collapsed="true">
+    <Position X="153.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAAAAAAAAAI=</HashCode>
+      <FileName>ViewModels\Report\OrderStatusReport\MonthlyOrderQuantity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Report.OrderStatusReport.MonthlyOrderQuantity" Collapsed="true">
+    <Position X="150" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBAAAAEAAEQBAIAAAAAABQAAIAAAAAgAEABAhBEIAA=</HashCode>
+      <FileName>ViewModels\Report\OrderStatusReport\MonthlyOrderQuantity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Report.DailyOperationViewModel" Collapsed="true">
+    <Position X="158.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAABAAAAAAgAACAAAAAAgAAAAE=</HashCode>
+      <FileName>ViewModels\Report\DailyOperationViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Report.DailyAPiResult" Collapsed="true">
+    <Position X="157" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAQACAAACA=</HashCode>
+      <FileName>ViewModels\Report\DailyOperationViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Report.FabricQualityControlViewModel" Collapsed="true">
+    <Position X="158.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAQAAAgAAAAA=</HashCode>
+      <FileName>ViewModels\Report\FabricQualityControlViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Report.FabricAPiResult" Collapsed="true">
+    <Position X="157" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAQACAAACA=</HashCode>
+      <FileName>ViewModels\Report\FabricQualityControlViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Report.ProductionOrderDetailViewModel" Collapsed="true">
+    <Position X="172.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAQAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>ViewModels\Report\ProductionOrderDetailViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Report.ProductionOrderReportDetailViewModel" Collapsed="true">
+    <Position X="151.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>ViewModels\Report\ProductionOrderReportDetailViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Report.ProductionOrderReportViewModel" Collapsed="true">
+    <Position X="153.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAAEAQEQABBAAACAAAYAAAAAAAAAAAAJIgBAIgA=</HashCode>
+      <FileName>ViewModels\Report\ProductionOrderReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.SalesInvoice.SalesInvoiceDetailViewModel" Collapsed="true">
+    <Position X="88.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAKAAAAgQIAAAAAAgAIAAAA=</HashCode>
+      <FileName>ViewModels\SalesInvoice\SalesInvoiceDetailViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.SalesInvoice.SalesInvoiceViewModel" Collapsed="true">
+    <Position X="99.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAACwAAAgGAAiAAAQAoCAAgAQAQQAAIFAAAAAZwGQA=</HashCode>
+      <FileName>ViewModels\SalesInvoice\SalesInvoiceViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.SalesReceipt.SalesReceiptDetailViewModel" Collapsed="true">
+    <Position X="110.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAAAAAAgAgAiAAIQAAAAQAEAAAQAAIEAAAgAQQAAA=</HashCode>
+      <FileName>ViewModels\SalesReceipt\SalesReceiptDetailViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.SalesReceipt.SalesReceiptViewModel" Collapsed="true">
+    <Position X="122" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAACAAAAgAAAABQgAAAIBEDQAAAJAlAA=</HashCode>
+      <FileName>ViewModels\SalesReceipt\SalesReceiptViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Spinning.SpinningSalesContractReportViewModel" Collapsed="true">
+    <Position X="131" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAghAAAAAAEACSACAAAAAAAAAAAAABAAIEAABAAABAA=</HashCode>
+      <FileName>ViewModels\Spinning\SpinningSalesContractReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Spinning.SpinningSalesContractViewModel" Collapsed="true">
+    <Position X="135.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAFFUAAAQiQAABDQAEwAwAIAAAgAAAAAAAUAAAgAQA=</HashCode>
+      <FileName>ViewModels\Spinning\SpinningSalesContractViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Weaving.WeavingSalesContractReportViewModel" Collapsed="true">
+    <Position X="140" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAghAAAAAAEACSACAAAAAAAAAAAAABAAIEAABAAABAA=</HashCode>
+      <FileName>ViewModels\Weaving\WeavingSalesContractReportViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.Weaving.WeavingSalesContractViewModel" Collapsed="true">
+    <Position X="142.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAHFUgAAQiQAABDQAEwAwAIAAAEAAAAAAAVAAAgAQA=</HashCode>
+      <FileName>ViewModels\Weaving\WeavingSalesContractViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.ArticleColorViewModel" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ArticleColorViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.ViewModels.EfficiencyViewModel" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAgAAQAAAAAAAAAADAgAAAAAAA=</HashCode>
+      <FileName>ViewModels\EfficiencyViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.LocalMerchandiserDbContext" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="153.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACEAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>LocalMerchandiserDbContext.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Com.Ambassador.Service.Sales.Lib.SalesDbContext" Collapsed="true">
+    <Position X="160.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAgQAQAjAABiAFEAAIAAQACA8AhARIIAAQAAAiAUEJA=</HashCode>
+      <FileName>SalesDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.CostCalculationGarmentLogic.ICostCalculationGarment" Collapsed="true">
+    <Position X="45.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAIAAAQAAgUAAAEAAABAAAAAAISAAAAACAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\CostCalculationGarmentLogic\ICostCalculationGarment.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.CostCalculationGarmentLogic.ICostCalculationGarment_Material" Collapsed="true">
+    <Position X="50.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\CostCalculationGarmentLogic\ICostCalculationGarment_Material.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.CostCalculationGarmentLogic.ICostCalculationGarmentByBuyer1Report" Collapsed="true">
+    <Position X="47.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\CostCalculationGarmentLogic\ICostCalculationGarmentByBuyer1Report.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.CostCalculationGarmentLogic.ICostCalculationGarmentByBuyer2Report" Collapsed="true">
+    <Position X="2.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\CostCalculationGarmentLogic\ICostCalculationGarmentByBuyer2Report.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.CostCalculationGarmentLogic.ICostCalculationGarmentBySectionReport" Collapsed="true">
+    <Position X="5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\CostCalculationGarmentLogic\ICostCalculationGarmentBySectionReport.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.CostCalculationGarmentLogic.ICostCalculationGarmentByUnitReport" Collapsed="true">
+    <Position X="7.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\CostCalculationGarmentLogic\ICostCalculationGarmentByUnitReport.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.CostCalculationGarmentLogic.ICostCalculationGarmentValidationReport" Collapsed="true">
+    <Position X="9.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\CostCalculationGarmentLogic\ICostCalculationGarmentValidationReport.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.CostCalculationGarmentLogic.IDetailCMGarmentByUnitReport" Collapsed="true">
+    <Position X="14" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\CostCalculationGarmentLogic\IDetailCMGarmentByUnitReport.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.CostCalculationGarmentLogic.IDistributionROGarmentReport" Collapsed="true">
+    <Position X="18.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\CostCalculationGarmentLogic\IDistributionROGarmentReport.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.CostCalculationGarmentLogic.ISMVGarmentByUnitReport" Collapsed="true">
+    <Position X="23" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\CostCalculationGarmentLogic\ISMVGarmentByUnitReport.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.FinishingPrinting.IFinishingPrintingPreSalesContractFacade" Collapsed="true">
+    <Position X="12" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\FinishingPrinting\IFinishingPrintingPreSalesContractFacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.FinishingPrinting.IFinishingPrintingSalesContract" Collapsed="true">
+    <Position X="14.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\FinishingPrinting\IFinishingPrintingSalesContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.FinishingPrinting.IShinFinishingPrintingSalesContractFacade" Collapsed="true">
+    <Position X="18.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\FinishingPrinting\IShinFinishingPrintingSalesContractFacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.FinishingPrintingCostCalculation.IFinishingPrintingCostCalculationService" Collapsed="true">
+    <Position X="23.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAQAAAAAAAAEAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>BusinessLogic\Interface\FinishingPrintingCostCalculation\IFinishingPrintingCostCalculationService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.Garment.IAcceptedROReportFacade" Collapsed="true">
+    <Position X="29.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\Garment\IAcceptedROReportFacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.Garment.IAvailableBudgetReportFacade" Collapsed="true">
+    <Position X="32" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\Garment\IAvailableBudgetReportFacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.Garment.IAvailableROReportFacade" Collapsed="true">
+    <Position X="34.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\Garment\IAvailableROReportFacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.Garment.IBudgetJobOrderDisplayFacade" Collapsed="true">
+    <Position X="36.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\Garment\IBudgetJobOrderDisplayFacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.Garment.IGarmentProductionOrderReportFacade" Collapsed="true">
+    <Position X="38.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\Garment\IGarmentProductionOrderReportFacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.Garment.IGarmentPurchasingQualityObjectiveReportFacade" Collapsed="true">
+    <Position X="41" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\Garment\IGarmentPurchasingQualityObjectiveReportFacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.Garment.IMonitoringPreSalesContractFacade" Collapsed="true">
+    <Position X="43.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\Garment\IMonitoringPreSalesContractFacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.Garment.IMonitoringUnpostCostCalculationFacade" Collapsed="true">
+    <Position X="45.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\Garment\IMonitoringUnpostCostCalculationFacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.Garment.IGarment_BudgetValidationPPIC" Collapsed="true">
+    <Position X="155.25" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\Garment\IRO_Garment_Validation.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.GarmentBookingOrderInterface.ICanceledGarmentBookingOrderReportFacade" Collapsed="true">
+    <Position X="150" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\GarmentBookingOrderInterface\ICanceledGarmentBookingOrderReportFacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.GarmentBookingOrderInterface.IExpiredGarmentBookingOrder" Collapsed="true">
+    <Position X="52.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\GarmentBookingOrderInterface\IExpiredGarmentBookingOrder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.GarmentBookingOrderInterface.IGarmentBookingOrder" Collapsed="true">
+    <Position X="54.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAgACAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\GarmentBookingOrderInterface\IGarmentBookingOrder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.GarmentBookingOrderInterface.IGarmentBookingOrderMonitoringInterface" Collapsed="true">
+    <Position X="157" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\GarmentBookingOrderInterface\IGarmentBookingOrderMonitoringInterface.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.GarmentMasterPlan.GarmentSewingBlockingPlanInterfaces.IGarmentSewingBlockingPlan" Collapsed="true">
+    <Position X="3" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\GarmentMasterPlan\GarmentSewingBlockingPlanInterfaces\IGarmentSewingBlockingPlan.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.GarmentMasterPlan.MaxWHConfirmInterfaces.IMaxWHConfirmFacade" Collapsed="true">
+    <Position X="7.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\GarmentMasterPlan\MaxWHConfirmInterfaces\IMaxWHConfirmFacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.GarmentMasterPlan.MonitoringInterfaces.IAcceptedOrderMonitoringFacade" Collapsed="true">
+    <Position X="11.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\GarmentMasterPlan\MonitoringInterfaces\IAcceptedOrderMonitoringFacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.GarmentMasterPlan.MonitoringInterfaces.IMonitoringRemainingEHFacade" Collapsed="true">
+    <Position X="16.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\GarmentMasterPlan\MonitoringInterfaces\IMonitoringRemainingEHFacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.GarmentMasterPlan.MonitoringInterfaces.IOverScheduleMonitoringFacade" Collapsed="true">
+    <Position X="20.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\GarmentMasterPlan\MonitoringInterfaces\IOverScheduleMonitoringFacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.GarmentMasterPlan.MonitoringInterfaces.ISewingBlockingPlanReportFacade" Collapsed="true">
+    <Position X="25.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\GarmentMasterPlan\MonitoringInterfaces\ISewingBlockingPlanReportFacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.GarmentMasterPlan.MonitoringInterfaces.IWeeklyWorkingScheduleMonitoringFacade" Collapsed="true">
+    <Position X="27.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\GarmentMasterPlan\MonitoringInterfaces\IWeeklyWorkingScheduleMonitoringFacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.Garment.WeeklyPlanInterfaces.IWeeklyPlanFacade" Collapsed="true">
+    <Position X="16.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>BusinessLogic\Interface\GarmentMasterPlan\WeeklyPlanInterfaces\IWeeklyPlanFacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.GarmentOmzetTargetInterface.IGarmentOmzetTarget" Collapsed="true">
+    <Position X="21" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\GarmentOmzetTargetInterface\IGarmentOmzetTarget.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.GarmentPreSalesContractInterface.IGarmentPreSalesContract" Collapsed="true">
+    <Position X="25.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAQAAAQAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\GarmentPreSalesContractInterface\IGarmentPreSalesContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.GarmentSalesContractInterface.IGarmentSalesContract" Collapsed="true">
+    <Position X="27.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\GarmentSalesContractInterface\IGarmentSalesContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.LocalMerchandiserInterfaces.IHOrderFacade" Collapsed="true">
+    <Position X="158.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\LocalMerchandiserInterfaces\IHOrderFacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.ProductionOrder.IProductionOrder" Collapsed="true">
+    <Position X="30" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAJMAAAAAACgAAQAAAAAAAAAABAAAAAgAAAggAA=</HashCode>
+      <FileName>BusinessLogic\Interface\ProductionOrder\IProductionOrder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.ProductionOrder.IShinProductionOrder" Collapsed="true">
+    <Position X="32.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAJMAAAAAACgAAQAAAAAAAAAABAAAAAgAAAggAA=</HashCode>
+      <FileName>BusinessLogic\Interface\ProductionOrder\IShinProductionOrder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.ROGarmentInterface.IROGarment" Collapsed="true">
+    <Position X="34.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\ROGarmentInterface\IROGarment.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.SalesInvoice.ISalesInvoiceContract" Collapsed="true">
+    <Position X="36.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\SalesInvoice\ISalesInvoiceContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.SalesReceipt.ISalesReceiptContract" Collapsed="true">
+    <Position X="39" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\SalesReceipt\ISalesReceiptContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.Spinning.ISpinningSalesContract" Collapsed="true">
+    <Position X="41.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\Spinning\ISpinningSalesContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.Weaving.IWeavingSalesContract" Collapsed="true">
+    <Position X="43.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\Weaving\IWeavingSalesContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.IArticleColor" Collapsed="true">
+    <Position X="48" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\IArticleColor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.IAzureDocumentFacade" Collapsed="true">
+    <Position X="144.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABACAIAAAQAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\IAzureDocumentFacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.IAzureImageFacade" Collapsed="true">
+    <Position X="146.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAgAQAgAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\IAzureImagefacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.IDeleteable" Collapsed="true">
+    <Position X="153.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\IDeleteable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.IEfficiency" Collapsed="true">
+    <Position X="5.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\IEfficiency.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.IRate" Collapsed="true">
+    <Position X="9.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\IRate.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.IReadable" Collapsed="true">
+    <Position X="167.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\IReadable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Purchasing.Lib.Interfaces.ICreateable" Collapsed="true">
+    <Position X="151.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\ICreateable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Purchasing.Lib.Interfaces.IHttpClientService" Collapsed="true">
+    <Position X="160.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\IHttpClientService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Purchasing.Lib.Interfaces.IReadByIdable&lt;TModel&gt;" Collapsed="true">
+    <Position X="169.25" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\IReadableById.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Purchasing.Lib.Interfaces.IUpdateable&lt;TModel&gt;" Collapsed="true">
+    <Position X="171" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\IUpdateable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Purchasing.Lib.Interfaces.IValidateService" Collapsed="true">
+    <Position X="172.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Interface\IValidateService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.Services.IHttpClientService" Collapsed="true">
+    <Position X="162.25" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Services\IHttpClientService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.Services.IIdentityService" Collapsed="true">
+    <Position X="164" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAABAEA=</HashCode>
+      <FileName>Services\IIdentityService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.Services.IValidateService" Collapsed="true">
+    <Position X="144.75" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\IValidateService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.Utilities.BaseInterface.IBaseFacade&lt;TModel&gt;" Collapsed="true">
+    <Position X="28.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAgAAAAAAgAAAAAAIAAAIA=</HashCode>
+      <FileName>Utilities\BaseInterface\IBaseFacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.Utilities.BaseInterface.IBaseLogic&lt;TModel&gt;" Collapsed="true">
+    <Position X="148.25" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAgAAAAAEgAAAAAAAAAAIA=</HashCode>
+      <FileName>Utilities\BaseInterface\IBaseLogic.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.Utilities.BaseInterface.IBaseMonitoringFacade&lt;TViewModel&gt;" Collapsed="true">
+    <Position X="25.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utilities\BaseInterface\IBaseMonitoringFacade.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Com.Ambassador.Service.Sales.Lib.ILocalMerchandiserDbContext" Collapsed="true">
+    <Position X="165.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LocalMerchandiserDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

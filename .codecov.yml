@@ -1,0 +1,3 @@
+ignore:
+  - "Com.Ambassador.Service.Sales.Lib/Migrations"
+  - "Com.Ambassador.Service.Sales.WebApi/Startup.cs"
