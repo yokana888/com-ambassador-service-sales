@@ -34,7 +34,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 			#region Header
 			cb.BeginText();
 			cb.SetFontAndSize(bf, 10);
-			cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, "PT. DAN LIRIS", 10, 820, 0);
+			cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, "PT. AMBASSADOR GARMINDO", 10, 820, 0);
 			cb.SetFontAndSize(bf_bold, 12);
 			cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, "BUDGET EXPORT GARMENT" + (viewModel.IsPosted ? "" : " (DRAFT)"), 10, 805, 0);
 			cb.EndText();
