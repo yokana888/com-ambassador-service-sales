@@ -83,12 +83,10 @@ namespace Com.Ambassador.Service.Sales.WebApi.Controllers
 		[HttpGet("pdf/{id}")]
 		public async Task<IActionResult> GetPDF([FromRoute]int Id)
 		{
-			 
-
-				if (!ModelState.IsValid)
-				{
-					return BadRequest(ModelState);
-				}
+			if (!ModelState.IsValid)
+			{
+			    return BadRequest(ModelState);
+			}
 
 			try
 			{
@@ -488,6 +486,7 @@ namespace Com.Ambassador.Service.Sales.WebApi.Controllers
                 return StatusCode(Common.INTERNAL_ERROR_STATUS_CODE, Result);
             }
         }
+
 		[HttpGet("data")]
 		public IActionResult GetComodityQtyOrderHoursBuyerByRo([FromBody]string ro)
 		{

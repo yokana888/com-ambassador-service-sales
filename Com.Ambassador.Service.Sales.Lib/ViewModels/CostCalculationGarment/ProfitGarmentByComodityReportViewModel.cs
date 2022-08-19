@@ -12,6 +12,7 @@ namespace Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment
         public double Quantity { get; set; }
         public string UOMUnit { get; set; }
         public double Amount { get; set; }
+        public string TermPayment { get; set; }
         public double ProfitIDR { get; set; }
         public double ProfitUSD { get; set; }
         public double ProfitFOB { get; set; }

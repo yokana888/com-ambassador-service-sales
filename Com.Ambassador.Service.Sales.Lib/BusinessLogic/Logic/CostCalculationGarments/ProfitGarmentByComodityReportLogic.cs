@@ -119,12 +119,24 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
                         });
 
             newQ = newQ.OrderBy(o => o.Comodity);
+
+            var termQ = (from a in Query
+                         where a.IsApprovedKadivMD == true
+                         select new
+                         {
+                             a.RO_Number,
+                             IsFabricCM = a.CostCalculationGarment_Materials.Any(x => x.isFabricCM) ? "CMT" : "FOB"
+                         });
+
             var newQuery = (from c in newQ
+                            join d in termQ 
+                            on c.RO_Number equals d.RO_Number
                             group new { Qty = c.Quantity, Amt = c.Amount, Prft1 = c.ProfitUSD, Prft2 = c.ProfitIDR, Prft3 = c.ProfitFOB } by new
                             {
                                 c.Comodity,
                                 c.ComodityDescription,
                                 c.UOMUnit,
+                                d.IsFabricCM
                             } into GroupData
 
                             select new ProfitGarmentByComodityReportViewModel
@@ -134,6 +146,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
                                 UOMUnit = GroupData.Key.UOMUnit,
                                 Quantity = GroupData.Sum(m => m.Qty),
                                 Amount = Math.Round(GroupData.Sum(m => m.Amt), 2),
+                                TermPayment = GroupData.Key.IsFabricCM,
                                 ProfitUSD = Math.Round(GroupData.Sum(m => m.Prft1), 2),
                                 ProfitIDR = Math.Round(GroupData.Sum(m => m.Prft2), 2),
                                 ProfitFOB = Math.Round(GroupData.Sum(m => m.Prft3), 2),
