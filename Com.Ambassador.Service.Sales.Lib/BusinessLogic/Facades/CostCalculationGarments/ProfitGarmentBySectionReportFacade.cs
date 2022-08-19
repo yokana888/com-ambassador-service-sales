@@ -72,10 +72,11 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
             result.Columns.Add(new DataColumn() { ColumnName = "Profit IDR", DataType = typeof(Double) });
             result.Columns.Add(new DataColumn() { ColumnName = "Profit USD", DataType = typeof(Double) });
             result.Columns.Add(new DataColumn() { ColumnName = "Profit/FOB %", DataType = typeof(Double) });
+            result.Columns.Add(new DataColumn() { ColumnName = "Term Pembayaran", DataType = typeof(String) });
 
             Dictionary<string, string> Rowcount = new Dictionary<string, string>();
             if (Query.ToArray().Count() == 0)
-                result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", "", 0, 0, 0, 0, 0, 0, 0); // to allow column name to be generated properly for empty data as template
+                result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", "", 0, 0, 0, 0, 0, 0, 0, ""); // to allow column name to be generated properly for empty data as template
             else
             {
                 Dictionary<string, List<ProfitGarmentBySectionReportViewModel>> dataBySection = new Dictionary<string, List<ProfitGarmentBySectionReportViewModel>>();
@@ -118,6 +119,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
                         ProfitUSD = item.ProfitUSD,
                         ProfitFOB = item.ProfitFOB,
                         Commision = item.Commision,
+                        TermPayment = item.TermPayment
                     });
 
                     var currentUom = grandTotalByUom.FirstOrDefault(c => c.uom == item.UOMUnit);
@@ -187,13 +189,13 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
 
                         result.Rows.Add(index, item.RO_Number, item.Section, item.UnitName, item.BuyerCode, item.BuyerName, item.BrandCode, item.BrandName,
                                         item.Article, item.Comodity, item.ComodityDescription, item.FabAllow, item.AccAllow, ShipDate, item.Quantity, item.UOMUnit,
-                                        item.ConfirmPrice, item.CMPrice, item.FOBPrice, item.Amount, item.CurrencyRate, item.Commision, item.Profit, item.ProfitIDR, item.ProfitUSD, item.ProfitFOB);
+                                        item.ConfirmPrice, item.CMPrice, item.FOBPrice, item.Amount, item.CurrencyRate, item.Commision, item.Profit, item.ProfitIDR, item.ProfitUSD, item.ProfitFOB, item.TermPayment);
 
                         rowPosition += 1;
                         SECTION = item.Section;
                     }
 
-                    result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "SUB TOTAL  :", "", "", 0, "", 0, "SEKSI :", SECTION, 0, Math.Round(subTotalAmount[Seksi.Key], 2), 0, 0, Math.Round(subTotalPrftIDR[Seksi.Key], 2), Math.Round(subTotalPrftUSD[Seksi.Key], 2), 0);
+                    result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "SUB TOTAL  :", "", "", 0, "", 0, "SEKSI :", SECTION, 0, Math.Round(subTotalAmount[Seksi.Key], 2), 0, 0, Math.Round(subTotalPrftIDR[Seksi.Key], 2), Math.Round(subTotalPrftUSD[Seksi.Key], 2), 0, "");
 
                     rowPosition += 1;
                     totalAmount += subTotalAmount[Seksi.Key];
@@ -206,11 +208,11 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
                 {
                     if (i == 0)
                     {
-                        result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", "", "GRAND TOTAL", grandTotalByUom[i].quantity, grandTotalByUom[i].uom, grandTotalByUom[i].amount, "", "GRAND TOTAL AMOUNT", data.Sum(d => d.Amount), 0, 0, 0, 0, 0, 0);
+                        result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", "", "GRAND TOTAL", grandTotalByUom[i].quantity, grandTotalByUom[i].uom, grandTotalByUom[i].amount, "", "GRAND TOTAL AMOUNT", data.Sum(d => d.Amount), 0, 0, 0, 0, 0, 0, "");
                     }
                     else
                     {
-                        result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", "", "", grandTotalByUom[i].quantity, grandTotalByUom[i].uom, grandTotalByUom[i].amount, "", "", 0, 0, 0, 0, 0, 0, 0);
+                        result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", "", "", grandTotalByUom[i].quantity, grandTotalByUom[i].uom, grandTotalByUom[i].amount, "", "", 0, 0, 0, 0, 0, 0, 0, "");
                     }
                 }
             }

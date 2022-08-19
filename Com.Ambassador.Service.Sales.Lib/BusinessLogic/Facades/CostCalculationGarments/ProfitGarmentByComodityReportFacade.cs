@@ -54,10 +54,11 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
             result.Columns.Add(new DataColumn() { ColumnName = "Profit USD", DataType = typeof(double) });
             result.Columns.Add(new DataColumn() { ColumnName = "Profit IDR ", DataType = typeof(double) });
             result.Columns.Add(new DataColumn() { ColumnName = "Profit FOB", DataType = typeof(double) });
+            result.Columns.Add(new DataColumn() { ColumnName = "Term Pembayaran", DataType = typeof(String) });
 
             Dictionary<string, string> Rowcount = new Dictionary<string, string>();
             if (Query.ToArray().Count() == 0)
-                result.Rows.Add("", "", "", 0, "", 0, 0, 0, 0); // to allow column name to be generated properly for empty data as template
+                result.Rows.Add("", "", "", 0, "", 0, 0, 0, 0, ""); // to allow column name to be generated properly for empty data as template
             else
             {
                 Dictionary<string, List<ProfitGarmentByComodityReportViewModel>> dataByUOM = new Dictionary<string, List<ProfitGarmentByComodityReportViewModel>>();
@@ -82,6 +83,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
                         ProfitUSD = item.ProfitUSD,
                         ProfitIDR = item.ProfitIDR,
                         ProfitFOB = item.ProfitFOB,
+                        TermPayment = item.TermPayment
                     });
 
                     if (!subTotalAmount.ContainsKey(BgtUOM))
@@ -130,12 +132,12 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
                     {
                         index++;
 
-                        result.Rows.Add(index, item.ComodityCode, item.ComodityName, item.Quantity, item.UOMUnit, item.Amount, item.ProfitUSD, item.ProfitIDR, item.ProfitFOB);
+                        result.Rows.Add(index, item.ComodityCode, item.ComodityName, item.Quantity, item.UOMUnit, item.Amount, item.ProfitUSD, item.ProfitIDR, item.ProfitFOB, item.TermPayment);
 
                         rowPosition += 1;
                         U_o_M = item.UOMUnit;
                     }
-                    result.Rows.Add("", "", "SUB TOTAL", 0, U_o_M, Math.Round(subTotalAmount[UoM.Key], 2), Math.Round(subTotalProfit1[UoM.Key], 2), Math.Round(subTotalProfit1[UoM.Key], 2), Math.Round(subTotalProfit1[UoM.Key], 2));
+                    result.Rows.Add("", "", "SUB TOTAL", 0, U_o_M, Math.Round(subTotalAmount[UoM.Key], 2), Math.Round(subTotalProfit1[UoM.Key], 2), Math.Round(subTotalProfit1[UoM.Key], 2), Math.Round(subTotalProfit1[UoM.Key], 2), "");
 
                     rowPosition += 1;
                     totalAmount += subTotalAmount[UoM.Key];
@@ -143,7 +145,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
                     totalAmount2 += subTotalProfit1[UoM.Key];
                     totalAmount3 += subTotalProfit1[UoM.Key];
                 }
-                result.Rows.Add("", "", "T O T A L", 0, "", Math.Round(totalAmount, 2), Math.Round(totalAmount1, 2), Math.Round(totalAmount2, 2), Math.Round(totalAmount3, 2));
+                result.Rows.Add("", "", "T O T A L", 0, "", Math.Round(totalAmount, 2), Math.Round(totalAmount1, 2), Math.Round(totalAmount2, 2), Math.Round(totalAmount3, 2), "");
                 rowPosition += 1;
             }
 
