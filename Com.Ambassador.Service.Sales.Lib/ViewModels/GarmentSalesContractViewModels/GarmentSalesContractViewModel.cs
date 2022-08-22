@@ -47,6 +47,12 @@ namespace Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentSalesContractViewMo
         public string PaymentDetail { get; set; }
         public AccountBankViewModel AccountBank { get; set; }
         public bool DocPrinted { get; set; }
+        public double FreightCost { get; set; }
+        public string PaymentMethod { get; set; }
+        public string DownPayment { get; set; }
+        public int LatePayment { get; set; }
+        public int LateReturn { get; set; }
+        public double? Claim { get; set; }
         public List<GarmentSalesContractItemViewModel> Items { get; set; }
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
@@ -110,6 +116,15 @@ namespace Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentSalesContractViewMo
             {
                 if(Items.Count==0)
                     yield return new ValidationResult("Price harus diisi", new List<string> { "Price" });
+            }
+            if (this.LatePayment.Equals(null))
+            {
+                yield return new ValidationResult("Besar Denda harus diisi", new List<string> { "LatePayment" });
+            }
+
+            if (this.LateReturn.Equals(null))
+            {
+                yield return new ValidationResult("Hari Pengembalian harus diisi", new List<string> { "LateReturn" });
             }
 
             if (Items.Count > 0)
