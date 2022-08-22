@@ -71,7 +71,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 			table_detail1.WriteSelectedRows(0, -1, 10, row1Y, cb);
 			#endregion
 
-			bool isDollar = viewModel.Rate.Id != 0;
+			bool isDollar = viewModel.Rate.Value != 1;
 
 			#region Detail 2 (Bottom, Column 1)
 			PdfPTable table_detail2 = new PdfPTable(2);
