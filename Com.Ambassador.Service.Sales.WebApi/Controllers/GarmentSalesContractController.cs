@@ -57,8 +57,6 @@ namespace Com.Ambassador.Service.Sales.WebApi.Controllers
                 {
                     GarmentSalesContractViewModel viewModel = Mapper.Map<GarmentSalesContractViewModel>(model);
 
-                    GarmentSalesContractPDFTemplate PdfTemplate = new GarmentSalesContractPDFTemplate();
-
 
                     string BuyerUri = "master/garment-buyers";
                     string BuyerBrandUri = "master/garment-buyer-brands";
@@ -86,13 +84,30 @@ namespace Com.Ambassador.Service.Sales.WebApi.Controllers
                     var jsonBank = resultBank.Single(p => p.Key.Equals("data")).Value;
                     Dictionary<string, object> bank = JsonConvert.DeserializeObject<Dictionary<string, object>>(jsonBank.ToString());
 
-                    MemoryStream stream = PdfTemplate.GeneratePdfTemplate(viewModel,Facade, timeoffsset, buyer, bank);
-                   // model.DocPrinted = true;
-                   // await Facade.UpdatePrinted(Id, model);
-                    return new FileStreamResult(stream, "application/pdf")
+                    string buyerType = buyer["Type"] != null ? buyer["Type"].ToString() : "";
+                    if (buyerType!= "Ekspor")
                     {
-                        FileDownloadName = "Garment Sales Contract" + viewModel.SalesContractNo + ".pdf"
-                    };
+                        GarmentSalesContractLocalPDFTemplate PdfTemplate = new GarmentSalesContractLocalPDFTemplate();
+                        MemoryStream stream = PdfTemplate.GeneratePdfTemplate(viewModel, Facade, timeoffsset, buyer, bank);
+                        // model.DocPrinted = true;
+                        // await Facade.UpdatePrinted(Id, model);
+                        return new FileStreamResult(stream, "application/pdf")
+                        {
+                            FileDownloadName = "Sales Contract" + viewModel.SalesContractNo + ".pdf"
+                        };
+                    }
+                    else
+                    {
+                        GarmentSalesContractPDFTemplate PdfTemplate = new GarmentSalesContractPDFTemplate();
+                        MemoryStream stream = PdfTemplate.GeneratePdfTemplate(viewModel, Facade, timeoffsset, buyer, bank);
+                        // model.DocPrinted = true;
+                        // await Facade.UpdatePrinted(Id, model);
+                        return new FileStreamResult(stream, "application/pdf")
+                        {
+                            FileDownloadName = "Sales Contract" + viewModel.SalesContractNo + ".pdf"
+                        };
+                    }
+                    
                 }
             }
             catch (Exception e)

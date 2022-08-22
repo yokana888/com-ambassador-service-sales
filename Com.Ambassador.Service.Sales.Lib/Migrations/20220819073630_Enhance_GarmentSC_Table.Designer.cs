@@ -4,14 +4,16 @@ using Com.Ambassador.Service.Sales.Lib;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Com.Ambassador.Service.Sales.Lib.Migrations
 {
     [DbContext(typeof(SalesDbContext))]
-    partial class SalesDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220819073630_Enhance_GarmentSC_Table")]
+    partial class Enhance_GarmentSC_Table
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -2612,8 +2614,6 @@ namespace Com.Ambassador.Service.Sales.Lib.Migrations
 
                     b.Property<string>("BuyerBrandName");
 
-                    b.Property<double?>("Claim");
-
                     b.Property<string>("ComodityCode")
                         .HasMaxLength(500);
 
@@ -2691,10 +2691,6 @@ namespace Com.Ambassador.Service.Sales.Lib.Migrations
                         .HasMaxLength(255);
 
                     b.Property<DateTime>("LastModifiedUtc");
-
-                    b.Property<int>("LatePayment");
-
-                    b.Property<int>("LateReturn");
 
                     b.Property<string>("Material")
                         .HasMaxLength(3000);
