@@ -54,6 +54,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment
 
             var costCalculations = Query.Select(s => new CostCalculationGarment
             {
+                Id = s.Id,
                 DeliveryDate = s.DeliveryDate,
                 BuyerBrandName = s.BuyerBrandName,
                 Section = s.Section,
@@ -65,7 +66,8 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment
                 UOMUnit = s.UOMUnit,
                 ConfirmPrice = s.ConfirmPrice,
                 ConfirmDate = s.ConfirmDate,
-                 IsApprovedKadivMD = s.IsApprovedKadivMD 
+                IsApprovedKadivMD = s.IsApprovedKadivMD,
+                CostCalculationGarment_Materials = s.CostCalculationGarment_Materials
             }).OrderBy(o => o.DeliveryDate);
 
             var diffFirstDayInYearWithMonday = new DateTime(filter.year, 1, 1).DayOfWeek - DayOfWeek.Monday;
@@ -114,7 +116,8 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment
                 Amount = cc.Quantity * cc.ConfirmPrice,
                 ConfirmDate = cc.ConfirmDate.ToOffset(TimeSpan.FromHours(identityService.TimezoneOffset)).DateTime,
                 ShipmentDate = cc.DeliveryDate.ToOffset(TimeSpan.FromHours(identityService.TimezoneOffset)).DateTime,
-                ValidationPPIC = cc.IsApprovedKadivMD ? "SUDAH" : "BELUM"
+                ValidationPPIC = cc.IsApprovedKadivMD ? "SUDAH" : "BELUM",
+                TermPayment = cc.CostCalculationGarment_Materials.Any(x => x.isFabricCM == true) ? "CMT" : "FOB"
             };
         }
 

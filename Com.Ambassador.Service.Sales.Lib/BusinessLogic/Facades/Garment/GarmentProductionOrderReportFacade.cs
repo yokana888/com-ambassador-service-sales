@@ -40,6 +40,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
             result.Columns.Add(new DataColumn() { ColumnName = "Satuan", DataType = typeof(string) });
             result.Columns.Add(new DataColumn() { ColumnName = "Confirm Price", DataType = typeof(double) });
             result.Columns.Add(new DataColumn() { ColumnName = "Amount", DataType = typeof(double) });
+            result.Columns.Add(new DataColumn() { ColumnName = "Term Pembayaran", DataType = typeof(string) });
             result.Columns.Add(new DataColumn() { ColumnName = "Tgl Confirm", DataType = typeof(string) });
             result.Columns.Add(new DataColumn() { ColumnName = "Tgl Shipment", DataType = typeof(string) });
             result.Columns.Add(new DataColumn() { ColumnName = "Validasi Kadiv Md", DataType = typeof(string) });
@@ -63,7 +64,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
 
                         foreach (var detail in buyer.Details)
                         {
-                            result.Rows.Add(d.Week, buyer.Buyer, detail.Section, detail.Commodity, detail.Article, detail.RONo, detail.Date.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), detail.Quantity, detail.Uom, detail.ConfirmPrice, detail.Amount, detail.ConfirmDate.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), detail.ShipmentDate.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), detail.ValidationPPIC);
+                            result.Rows.Add(d.Week, buyer.Buyer, detail.Section, detail.Commodity, detail.Article, detail.RONo, detail.Date.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), detail.Quantity, detail.Uom, detail.ConfirmPrice, detail.Amount, detail.TermPayment, detail.ConfirmDate.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), detail.ShipmentDate.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), detail.ValidationPPIC);
 
                             buyerLastMergedRowPosition = rowPosition++;
 
@@ -84,7 +85,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
                             }
                         }
 
-                        result.Rows.Add(null, "SUB TOTAL", null, null, null, null, null, buyer.Quantities, null, null, buyer.Amounts, null, null, null);
+                        result.Rows.Add(null, "SUB TOTAL", null, null, null, null, null, buyer.Quantities, null, null, buyer.Amounts, null, null, null, null);
 
                         mergeCells.Add(($"B{rowPosition}:G{rowPosition}", ExcelHorizontalAlignment.Right, ExcelVerticalAlignment.Bottom));
 
@@ -102,26 +103,26 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
                     }
                 }
 
-                result.Rows.Add(null, null, null, null, null, null, null, null, null, null, null, null, null, null);
-                result.Rows.Add(null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+                result.Rows.Add(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+                result.Rows.Add(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
 
                 rowPosition++;
                 foreach (var i in Enumerable.Range(0, grandTotalByUom.Count))
                 {
                     if (i == 0)
                     {
-                        result.Rows.Add(null, null, "GRAND TOTAL", grandTotalByUom[i].quantity, grandTotalByUom[i].uom, grandTotalByUom[i].amount, null, null, "GRAND TOTAL", data.Sum(d => d.Buyers.Sum(b => b.Details.Sum(dtl => dtl.Amount))), null, null, null, null);
+                        result.Rows.Add(null, null, "GRAND TOTAL", grandTotalByUom[i].quantity, grandTotalByUom[i].uom, grandTotalByUom[i].amount, null, null, "GRAND TOTAL", data.Sum(d => d.Buyers.Sum(b => b.Details.Sum(dtl => dtl.Amount))), null, null, null, null, null);
                     }
                     else
                     {
-                        result.Rows.Add(null, null, null, grandTotalByUom[i].quantity, grandTotalByUom[i].uom, grandTotalByUom[i].amount, null, null, null, null, null, null, null, null);
+                        result.Rows.Add(null, null, null, grandTotalByUom[i].quantity, grandTotalByUom[i].uom, grandTotalByUom[i].amount, null, null, null, null, null, null, null, null, null);
                     }
                     mergeCells.Add(($"D{++rowPosition}:D{rowPosition}", ExcelHorizontalAlignment.Right, ExcelVerticalAlignment.Bottom));
                 }
             }
             else
             {
-                result.Rows.Add(null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+                result.Rows.Add(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
             }
 
             var excel = Excel.CreateExcel(new List<(DataTable, string, List<(string, Enum, Enum)>)>() { (result, "OrderProduksi", mergeCells) }, false);

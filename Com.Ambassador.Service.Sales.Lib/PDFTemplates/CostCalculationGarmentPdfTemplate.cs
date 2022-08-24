@@ -47,7 +47,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 			#region Header
 			cb.BeginText();
 			cb.SetFontAndSize(bf, 10);
-			cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, "PT. DAN LIRIS", 10, 820, 0);
+			cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, "PT. AMBASSADOR GARMINDO", 10, 820, 0);
 			cb.SetFontAndSize(bf_bold, 12);
 			cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, "COST CALCULATION EXPORT GARMENT" + (viewModel.IsPosted ? "" : " (DRAFT)"), 10, 805, 0);
 			cb.EndText();
@@ -159,7 +159,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 			table_detail1.WriteSelectedRows(0, -1, 10, row1Y, cb);
 			#endregion
 
-			bool isDollar = viewModel.Rate.Id != 0;
+			bool isDollar = viewModel.Rate.Value != 1;
 
             #region Detail 2.1 (Bottom, Column 1.1)
             string fabric = "";
@@ -505,7 +505,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             table_signature.AddCell(cell_signature);
             cell_signature.Phrase = new Phrase("Ka. Sie/Ka. Bag Penjualan", normal_font);
             table_signature.AddCell(cell_signature);
-            cell_signature.Phrase = new Phrase("Ka. Div Penjualan", normal_font);
+            cell_signature.Phrase = new Phrase("Direktur Penjualan", normal_font);
             table_signature.AddCell(cell_signature);
             #endregion
 
