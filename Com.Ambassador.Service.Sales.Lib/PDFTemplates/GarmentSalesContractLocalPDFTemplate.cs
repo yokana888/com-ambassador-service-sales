@@ -200,14 +200,18 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             cellDetailOrder.Phrase = new Phrase("Harga", bold_font);
             tableDetailOrder.AddCell(cellDetailOrder);
             int index = 0;
-
-            foreach (var detail in viewModel.Items)
+            var currencyBankObj = new CurrencyViewModel();
+            object objResult = new object();
+            if (bank.TryGetValue("Currency", out objResult))
             {
-                var currencyBankObj = new CurrencyViewModel();
-                object objResult = new object();
-                if (bank.TryGetValue("Currency", out objResult))
+                currencyBankObj = JsonConvert.DeserializeObject<CurrencyViewModel>(objResult.ToString());
+            }
+
+            if (viewModel.Items!=null && viewModel.Items.Count > 0)
+            {
+                foreach (var detail in viewModel.Items)
                 {
-                    currencyBankObj = JsonConvert.DeserializeObject<CurrencyViewModel>(objResult.ToString());
+                    
                     index++;
                     if (index == 1)
                     {
@@ -222,10 +226,14 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
                         tableDetailOrder.AddCell(CellDetailCenter);
                     }
                 }
-                
+
             }
-
-
+            else
+            {
+                CellDetailCenter.Phrase = new Phrase(currencyBankObj.Code + " " + viewModel.Price.ToString(), normal_font);
+                tableDetailOrder.AddCell(CellDetailCenter);
+            }
+            
             cellDetailOrder.Phrase = new Phrase("Total Harga", bold_font);
             tableDetailOrder.AddCell(cellDetailOrder);
             //cellDetailOrder.Phrase = new Phrase(Convert.ToString(viewModel.Amount), normal_font);
@@ -301,7 +309,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             tablePembayaran.AddCell(bodyContentPembayaran);
             bodyContentPembayaran.Phrase = new Phrase(":", normal_font);
             tablePembayaran.AddCell(bodyContentPembayaran);
-            bodyContentPembayaran.Phrase = new Phrase(viewModel.AccountBank.BankName + " - " + viewModel.AccountBank.AccountNumber, normal_font);
+            bodyContentPembayaran.Phrase = new Phrase(viewModel.AccountBank.BankName + " - " + bank["AccountName"] + " - " + bank["AccountNumber"], normal_font);
             tablePembayaran.AddCell(bodyContentPembayaran);
 
             bodyContentPembayaran.Phrase = new Phrase("4.", normal_font);
