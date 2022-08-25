@@ -445,10 +445,10 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             #endregion
 
             #region Signature
-            PdfPTable table_signature = new PdfPTable(3);
+            PdfPTable table_signature = new PdfPTable(4);
 			table_signature.TotalWidth = 570f;
 
-			float[] signature_widths = new float[] { 1f, 1f, 1f };
+			float[] signature_widths = new float[] { 1f, 1f, 1f, 1f };
 			table_signature.SetWidths(signature_widths);
 
 			PdfPCell cell_signature = new PdfPCell() { Border = Rectangle.NO_BORDER, HorizontalAlignment = Element.ALIGN_CENTER, VerticalAlignment = Element.ALIGN_MIDDLE, Padding = 2 };
@@ -465,7 +465,9 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 			}
 			cell_signature.Phrase = new Phrase(signatureArea, normal_font);
 			table_signature.AddCell(cell_signature);
-			cell_signature.Phrase = new Phrase(signatureArea, normal_font);
+            cell_signature.Phrase = new Phrase(signatureArea, normal_font);
+            table_signature.AddCell(cell_signature);
+            cell_signature.Phrase = new Phrase(signatureArea, normal_font);
 			table_signature.AddCell(cell_signature);
 			cell_signature.Phrase = new Phrase(signatureArea, normal_font);
 			table_signature.AddCell(cell_signature);
@@ -496,12 +498,16 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 
             cell_signature.Phrase = new Phrase("(  " + AssignMD + "  )", normal_font);
             table_signature.AddCell(cell_signature);
+            cell_signature.Phrase = new Phrase("(  ____________________  )", normal_font);
+            table_signature.AddCell(cell_signature);
             cell_signature.Phrase = new Phrase("(  " + AssignmentKabag + "  )", normal_font);
             table_signature.AddCell(cell_signature);
             cell_signature.Phrase = new Phrase("(  " + AssignmentKadiv + "  )", normal_font);
             table_signature.AddCell(cell_signature);
 
             cell_signature.Phrase = new Phrase("Bag. Penjualan", normal_font);
+            table_signature.AddCell(cell_signature);
+            cell_signature.Phrase = new Phrase("Marketing", normal_font);
             table_signature.AddCell(cell_signature);
             cell_signature.Phrase = new Phrase("Ka. Sie/Ka. Bag Penjualan", normal_font);
             table_signature.AddCell(cell_signature);
