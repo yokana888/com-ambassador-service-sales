@@ -253,7 +253,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             tableDetailOrder.AddCell(CellDetailCenter);
             cellDetailOrder.Phrase = new Phrase("Alamat Pengiriman", bold_font);
             tableDetailOrder.AddCell(cellDetailOrder);
-            CellDetailCenter.Phrase = new Phrase(viewModel.Delivery, normal_font);
+            CellDetailCenter.Phrase = new Phrase(viewModel.Country, normal_font);
             tableDetailOrder.AddCell(CellDetailCenter);
             //CheckBox checkBox1 = new CheckBox(20, 20, 15, 15, "checkBox1");
             //page.Annotations.Add(checkBox1);
