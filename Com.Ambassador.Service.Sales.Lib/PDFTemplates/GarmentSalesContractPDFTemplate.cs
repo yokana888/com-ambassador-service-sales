@@ -33,10 +33,10 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 
             #region Header
 
-            //string codeNoString = "FM-00-PJ-02-001/R1";
-            //Paragraph codeNo = new Paragraph(codeNoString, bold_font) { Alignment = Element.ALIGN_RIGHT };
-            //codeNo.SpacingAfter = 10f;
-            //document.Add(codeNo);
+            string codeNoString = "FM-00-PJ-02-001/R1";
+            Paragraph codeNo = new Paragraph(codeNoString, bold_font) { Alignment = Element.ALIGN_RIGHT };
+            codeNo.SpacingAfter = 10f;
+            document.Add(codeNo);
 
             PdfPTable tableHeader = new PdfPTable(4);
             tableHeader.SetWidths(new float[] { 1f,0.2f, 3f, 3f });
@@ -564,7 +564,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 
             string[] headOffices = {
                 "Head Office : JL. MERAPI NO. 23, BANARAN, GROGOL, SUKOHARJO JAWA TENGAH 57552 - INDONESIA",
-                "TELP. 0271-732888, PO BOX 166 SOLO 57100",
+                "TELP. 0271-732888",
                 "Website : www.ambassadorgarmindo.com",
             };
             for (int i = 0; i < headOffices.Length; i++)
@@ -586,7 +586,9 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             }
             imageIso.SetAbsolutePosition(width - imageIso.ScaledWidth - marginRight, height - imageIso.ScaledHeight - marginTop + 60);
             cb.AddImage(imageIso, inlineImage: true);
-            cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, "CERTIFICATE ID09 / 01238", width - (imageIso.ScaledWidth / 2) - marginRight, height - imageIso.ScaledHeight - marginTop + 50, 0);
+
+            cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, "CERTIFICATE ID09 / 01238", width - (imageIso.ScaledWidth / 2) - marginRight, height - imageIso.ScaledHeight - marginTop + 58, 0);
+
 
             #endregion
 
