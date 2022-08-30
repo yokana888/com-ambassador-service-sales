@@ -32,5 +32,6 @@ namespace Com.Ambassador.Service.Sales.Lib.ViewModels.Garment
         public DateTime ConfirmDate { get; set; }
         public DateTime ShipmentDate { get; set; }
         public string ValidationPPIC { get; set; }
+        public string TermPayment { get; set; }
     }
 }

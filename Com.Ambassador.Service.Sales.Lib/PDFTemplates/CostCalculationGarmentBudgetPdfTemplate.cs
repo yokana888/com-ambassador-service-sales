@@ -34,7 +34,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 			#region Header
 			cb.BeginText();
 			cb.SetFontAndSize(bf, 10);
-			cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, "PT. DAN LIRIS", 10, 820, 0);
+			cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, "PT. AMBASSADOR GARMINDO", 10, 820, 0);
 			cb.SetFontAndSize(bf_bold, 12);
 			cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, "BUDGET EXPORT GARMENT" + (viewModel.IsPosted ? "" : " (DRAFT)"), 10, 805, 0);
 			cb.EndText();
@@ -71,7 +71,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 			table_detail1.WriteSelectedRows(0, -1, 10, row1Y, cb);
 			#endregion
 
-			bool isDollar = viewModel.Rate.Id != 0;
+			bool isDollar = viewModel.Rate.Value != 1;
 
 			#region Detail 2 (Bottom, Column 1)
 			PdfPTable table_detail2 = new PdfPTable(2);
@@ -192,44 +192,126 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 			cell_detail3_colspan8.HorizontalAlignment = Element.ALIGN_CENTER;
 			cell_detail3_colspan8.Phrase = new Phrase($"ALLOWANCE >> FABRIC = {viewModel.FabricAllowance}%, ACC = {viewModel.AccessoriesAllowance}%", normal_font);
 			table_detail3.AddCell(cell_detail3_colspan8);
-			#endregion
+            #endregion
 
-			#region Signature
-			PdfPTable table_signature = new PdfPTable(5);
-			table_signature.TotalWidth = 570f;
+            #region Signature
+            //PdfPTable table_signature = new PdfPTable(5);
+            //table_signature.TotalWidth = 570f;
 
-			float[] signature_widths = new float[] { 1f, 1f, 1f, 1f, 1f };
-			table_signature.SetWidths(signature_widths);
+            //float[] signature_widths = new float[] { 1f, 1f, 1f, 1f, 1f };
+            //table_signature.SetWidths(signature_widths);
 
-			PdfPCell cell_signature = new PdfPCell() { Border = Rectangle.NO_BORDER, HorizontalAlignment = Element.ALIGN_CENTER, VerticalAlignment = Element.ALIGN_MIDDLE, Padding = 2 };
+            //PdfPCell cell_signature = new PdfPCell() { Border = Rectangle.NO_BORDER, HorizontalAlignment = Element.ALIGN_CENTER, VerticalAlignment = Element.ALIGN_MIDDLE, Padding = 2 };
 
-			cell_signature.Phrase = new Phrase("", normal_font);
-			table_signature.AddCell(cell_signature);
-			cell_signature.Phrase = new Phrase("", normal_font);
-			table_signature.AddCell(cell_signature);
-			cell_signature.Phrase = new Phrase("", normal_font);
-			table_signature.AddCell(cell_signature);
-			cell_signature.Phrase = new Phrase("", normal_font);
-			table_signature.AddCell(cell_signature);
-			cell_signature.Phrase = new Phrase("", normal_font);
-			table_signature.AddCell(cell_signature);
+            //cell_signature.Phrase = new Phrase("", normal_font);
+            //table_signature.AddCell(cell_signature);
+            //cell_signature.Phrase = new Phrase("", normal_font);
+            //table_signature.AddCell(cell_signature);
+            //cell_signature.Phrase = new Phrase("", normal_font);
+            //table_signature.AddCell(cell_signature);
+            //cell_signature.Phrase = new Phrase("", normal_font);
+            //table_signature.AddCell(cell_signature);
+            //cell_signature.Phrase = new Phrase("", normal_font);
+            //table_signature.AddCell(cell_signature);
 
-			string signatureArea = string.Empty;
-			for (int i = 0; i < 5; i++)
-			{
-				signatureArea += Environment.NewLine;
-			}
+            //string signatureArea = string.Empty;
+            //for (int i = 0; i < 5; i++)
+            //{
+            //	signatureArea += Environment.NewLine;
+            //}
 
-			cell_signature.Phrase = new Phrase(signatureArea, normal_font);
-			table_signature.AddCell(cell_signature);
-			table_signature.AddCell(cell_signature);
-			table_signature.AddCell(cell_signature);
-			table_signature.AddCell(cell_signature);
-			table_signature.AddCell(cell_signature);
+            //cell_signature.Phrase = new Phrase(signatureArea, normal_font);
+            //table_signature.AddCell(cell_signature);
+            //table_signature.AddCell(cell_signature);
+            //table_signature.AddCell(cell_signature);
+            //table_signature.AddCell(cell_signature);
+            //table_signature.AddCell(cell_signature);
+
+            //         var AssignmentKabag = "";
+            //         var AssignmentPurch = "";
+            //         var AssignmentKadiv = "";
+
+            //         if (viewModel.ApprovalMD.IsApproved)
+            //         {
+            //             AssignmentKabag = viewModel.ApprovalMD.ApprovedBy;
+            //         }
+            //         else
+            //         {
+            //             AssignmentKabag = " ____________________ ";
+            //         }
+
+            //         if (viewModel.ApprovalPurchasing.IsApproved)
+            //         {
+            //             AssignmentPurch = viewModel.ApprovalPurchasing.ApprovedBy;
+            //         }
+            //         else
+            //         {
+            //             AssignmentPurch = " ____________________ ";
+            //         }
+
+            //         if (viewModel.ApprovalKadivMD.IsApproved)
+            //         {
+            //             AssignmentKadiv = viewModel.ApprovalKadivMD.ApprovedBy;
+            //         }
+            //         else
+            //         {
+            //             AssignmentKadiv = " ____________________ ";
+            //         }
+
+            //         string AssignMD = viewModel.IsPosted ? viewModel.CreatedBy : " ";
+
+            //         cell_signature.Phrase = new Phrase("(  " + AssignMD + "  )", normal_font);
+            //         table_signature.AddCell(cell_signature);
+            //         cell_signature.Phrase = new Phrase("(  " + AssignmentKabag + "  )", normal_font);
+            //         table_signature.AddCell(cell_signature);
+            //         cell_signature.Phrase = new Phrase("(  " + AssignmentPurch + "  )", normal_font);
+            //         table_signature.AddCell(cell_signature);
+            //         cell_signature.Phrase = new Phrase("( ____________________ )", normal_font);
+            //         table_signature.AddCell(cell_signature);
+            //         cell_signature.Phrase = new Phrase("(  " + AssignmentKadiv + "  )", normal_font);
+            //         table_signature.AddCell(cell_signature);
+
+            //         cell_signature.Phrase = new Phrase("Bag. Penjualan", normal_font);
+            //         table_signature.AddCell(cell_signature);
+            //         cell_signature.Phrase = new Phrase("Ka. Sie/Ka. Bag Penjualan", normal_font);
+            //         table_signature.AddCell(cell_signature);
+            //         cell_signature.Phrase = new Phrase("Ka. Bag Pembelian", normal_font);
+            //         table_signature.AddCell(cell_signature);
+            //         cell_signature.Phrase = new Phrase("Ka. Div Produksi Garment", normal_font);
+            //         table_signature.AddCell(cell_signature);
+            //         cell_signature.Phrase = new Phrase("Ka. Div Penjualan", normal_font);
+            //         table_signature.AddCell(cell_signature);
+            #endregion
+
+            #region New Signature
+            PdfPTable table_signature = new PdfPTable(3);
+            table_signature.TotalWidth = 570f;
+
+            float[] signature_widths = new float[] { 1f, 1f, 1f };
+            table_signature.SetWidths(signature_widths);
+
+            PdfPCell cell_signature = new PdfPCell() { Border = Rectangle.NO_BORDER, HorizontalAlignment = Element.ALIGN_CENTER, VerticalAlignment = Element.ALIGN_MIDDLE, Padding = 2 };
+
+            cell_signature.Phrase = new Phrase("", normal_font);
+            table_signature.AddCell(cell_signature);
+            cell_signature.Phrase = new Phrase("", normal_font);
+            table_signature.AddCell(cell_signature);
+            cell_signature.Phrase = new Phrase("", normal_font);
+            table_signature.AddCell(cell_signature);
+
+            string signatureArea = string.Empty;
+            for (int i = 0; i < 3; i++)
+            {
+                signatureArea += Environment.NewLine;
+            }
+
+            cell_signature.Phrase = new Phrase(signatureArea, normal_font);
+            table_signature.AddCell(cell_signature);
+            table_signature.AddCell(cell_signature);
+            table_signature.AddCell(cell_signature);
 
             var AssignmentKabag = "";
             var AssignmentPurch = "";
-            var AssignmentKadiv = "";
 
             if (viewModel.ApprovalMD.IsApproved)
             {
@@ -249,15 +331,6 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
                 AssignmentPurch = " ____________________ ";
             }
 
-            if (viewModel.ApprovalKadivMD.IsApproved)
-            {
-                AssignmentKadiv = viewModel.ApprovalKadivMD.ApprovedBy;
-            }
-            else
-            {
-                AssignmentKadiv = " ____________________ ";
-            }
-
             string AssignMD = viewModel.IsPosted ? viewModel.CreatedBy : " ";
 
             cell_signature.Phrase = new Phrase("(  " + AssignMD + "  )", normal_font);
@@ -266,20 +339,12 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             table_signature.AddCell(cell_signature);
             cell_signature.Phrase = new Phrase("(  " + AssignmentPurch + "  )", normal_font);
             table_signature.AddCell(cell_signature);
-            cell_signature.Phrase = new Phrase("( ____________________ )", normal_font);
-            table_signature.AddCell(cell_signature);
-            cell_signature.Phrase = new Phrase("(  " + AssignmentKadiv + "  )", normal_font);
-            table_signature.AddCell(cell_signature);
 
             cell_signature.Phrase = new Phrase("Bag. Penjualan", normal_font);
             table_signature.AddCell(cell_signature);
             cell_signature.Phrase = new Phrase("Ka. Sie/Ka. Bag Penjualan", normal_font);
             table_signature.AddCell(cell_signature);
-            cell_signature.Phrase = new Phrase("Ka. Bag Pembelian", normal_font);
-            table_signature.AddCell(cell_signature);
-            cell_signature.Phrase = new Phrase("Ka. Div Produksi Garment", normal_font);
-            table_signature.AddCell(cell_signature);
-            cell_signature.Phrase = new Phrase("Ka. Div Penjualan", normal_font);
+            cell_signature.Phrase = new Phrase("Ka. Sie/Ka .Bag Pembelian", normal_font);
             table_signature.AddCell(cell_signature);
             #endregion
 

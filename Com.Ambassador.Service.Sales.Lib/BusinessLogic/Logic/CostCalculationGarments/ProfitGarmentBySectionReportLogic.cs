@@ -107,7 +107,48 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
                             ProfitUSD = Math.Round(((((G.Key.ConfirmPrice - G.Key.Insurance - G.Key.Freight) * G.Key.RateValue) - G.Key.CommissionRate - Math.Round(G.Sum(m => m.GmtCost), 2) - G.Key.OTL1CalculatedRate - G.Key.OTL2CalculatedRate - ((G.Key.Risk / 100) * (Math.Round(G.Sum(m => m.GmtCost), 2) + G.Key.OTL1CalculatedRate + G.Key.OTL2CalculatedRate)) - Math.Round(G.Sum(m => m.Shipfee), 2)) / G.Key.RateValue), 2),
                             ProfitFOB = Math.Round(((((((G.Key.ConfirmPrice - G.Key.Insurance - G.Key.Freight) * G.Key.RateValue) - G.Key.CommissionRate - Math.Round(G.Sum(m => m.GmtCost), 2) - G.Key.OTL1CalculatedRate - G.Key.OTL2CalculatedRate - ((G.Key.Risk / 100) * (Math.Round(G.Sum(m => m.GmtCost), 2) + G.Key.OTL1CalculatedRate + G.Key.OTL2CalculatedRate)) - Math.Round(G.Sum(m => m.Shipfee), 2)) / G.Key.RateValue) * 100) / (((Math.Round(G.Sum(m => m.CMP), 2) / G.Key.RateValue) * 1.05) + G.Key.ConfirmPrice)), 2),
                         });
-            return newQ;
+
+            var termQ = (from a in Query
+                         where a.IsApprovedKadivMD == true
+                         select new
+                         {
+                             a.RO_Number,
+                             IsFabricCM = a.CostCalculationGarment_Materials.Any(x => x.isFabricCM) ? "CMT" : "FOB"
+                         });
+
+            var result = (from a in newQ
+                          join b in termQ on a.RO_Number equals b.RO_Number
+                          select new ProfitGarmentBySectionReportViewModel
+                          {
+                              UnitName = a.UnitName,
+                              Section = a.Section,
+                              BuyerCode = a.BuyerCode,
+                              BuyerName = a.BuyerName,
+                              BrandCode = a.BrandCode,
+                              BrandName = a.BrandName,
+                              RO_Number = a.RO_Number,
+                              Comodity = a.Comodity,
+                              ComodityDescription = a.ComodityDescription,
+                              Profit = a.Profit,
+                              Article = a.Article,
+                              Quantity = a.Quantity,
+                              UOMUnit = a.UOMUnit,
+                              DeliveryDate = a.DeliveryDate,
+                              ConfirmPrice = a.ConfirmPrice,
+                              CurrencyRate = a.CurrencyRate,
+                              CMPrice = a.CMPrice,
+                              FOBPrice = a.FOBPrice,
+                              FabAllow = a.FabAllow,
+                              AccAllow = a.AccAllow,
+                              Amount = a.Amount,
+                              Commision = a.Commision,
+                              ProfitIDR = a.ProfitIDR,
+                              ProfitUSD = a.ProfitUSD,
+                              ProfitFOB = a.ProfitFOB,
+                              TermPayment = b.IsFabricCM
+                          });
+
+            return result;
         }
 
         private class Filter
