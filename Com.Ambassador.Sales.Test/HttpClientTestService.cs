@@ -23,7 +23,7 @@ namespace Com.Ambassador.Sales.Test
             return Task.Run(() => new HttpResponseMessage()
             {
                 StatusCode = System.Net.HttpStatusCode.OK,
-                Content = new StringContent("{data:{'data':'data', 'Buyers':{'Id':1}, 'Address' :'ad', 'BankAddress':'ad', 'SwiftCode':'ad', 'BankName':'ad', 'Currency' : {'Id':1}}}")
+                Content = new StringContent("{data:{'data':'data', 'Buyers':{'Id':1}, 'Address' :'ad', 'BankAddress':'ad', 'SwiftCode':'ad', 'BankName':'ad', 'Currency' : {'Id':1,'Code':'USD'},Type:'Ekspor'},Name:'a'}")
             });
         }
 
