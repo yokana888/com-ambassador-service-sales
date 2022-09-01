@@ -88,10 +88,10 @@ namespace Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentSalesContractViewMo
                 yield return new ValidationResult("Bank Detail harus di isi", new List<string> { "AccountBankId" });
             }
 
-            if (string.IsNullOrWhiteSpace(NoHS))
-            {
-                yield return new ValidationResult("NoHS harus diisi", new List<string> { "NoHS" });
-            }
+            //if (string.IsNullOrWhiteSpace(NoHS))
+            //{
+            //    yield return new ValidationResult("NoHS harus diisi", new List<string> { "NoHS" });
+            //}
             if (string.IsNullOrWhiteSpace(Packing))
             {
                 yield return new ValidationResult("Packing harus diisi", new List<string> { "Packing" });

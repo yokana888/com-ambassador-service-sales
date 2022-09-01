@@ -5,6 +5,7 @@ using iTextSharp.text.pdf;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
@@ -36,7 +37,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 			cb.SetFontAndSize(bf, 10);
 			cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, "PT. AMBASSADOR GARMINDO", 10, 820, 0);
 			cb.SetFontAndSize(bf_bold, 12);
-			cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, "BUDGET EXPORT GARMENT" + (viewModel.IsPosted ? "" : " (DRAFT)"), 10, 805, 0);
+			cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, "BUDGET GARMENT" + (viewModel.IsPosted ? "" : " (DRAFT)"), 10, 805, 0);
 			cb.EndText();
 			#endregion
 
@@ -127,11 +128,13 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 			PdfPCell cell_detail3_colspan6 = new PdfPCell() { Border = Rectangle.TOP_BORDER | Rectangle.LEFT_BORDER | Rectangle.RIGHT_BORDER, HorizontalAlignment = Element.ALIGN_LEFT, VerticalAlignment = Element.ALIGN_MIDDLE, PaddingRight = 2, PaddingBottom = 7, PaddingLeft = 2, PaddingTop = 7, Colspan = 6 };
 			PdfPCell cell_detail3_colspan8 = new PdfPCell() { Border = Rectangle.TOP_BORDER | Rectangle.LEFT_BORDER | Rectangle.BOTTOM_BORDER | Rectangle.RIGHT_BORDER, HorizontalAlignment = Element.ALIGN_LEFT, VerticalAlignment = Element.ALIGN_MIDDLE, PaddingRight = 2, PaddingBottom = 7, PaddingLeft = 2, PaddingTop = 7, Colspan = 8 };
 
-			cell_detail3.Border = Rectangle.TOP_BORDER | Rectangle.LEFT_BORDER;
+            double newtotalBudget = viewModel.CostCalculationGarment_Materials.Sum(a => (a.isFabricCM == true ? 0 : a.BudgetQuantity) * (a.Price ?? 0));
+            double newbudgetCost = newtotalBudget > 0 && viewModel.Quantity >0 ? newtotalBudget / viewModel.Quantity.GetValueOrDefault() : 0;
+            cell_detail3.Border = Rectangle.TOP_BORDER | Rectangle.LEFT_BORDER;
 			cell_detail3.Phrase = new Phrase("TOTAL BUDGET", normal_font);
 			table_detail3.AddCell(cell_detail3);
 			cell_detail3.Border = Rectangle.TOP_BORDER | Rectangle.RIGHT_BORDER;
-			cell_detail3.Phrase = new Phrase($"{Number.ToRupiah(totalBudget)}", normal_font);
+			cell_detail3.Phrase = new Phrase($"{Number.ToRupiah(newtotalBudget)}", normal_font);
 			table_detail3.AddCell(cell_detail3);
 			cell_detail3_colspan6.Phrase = new Phrase("STANDARD MINUTE VALUE", normal_font);
 			table_detail3.AddCell(cell_detail3_colspan6);
@@ -184,7 +187,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 			cell_detail3.Phrase = new Phrase($"{viewModel.SMV_Total}", normal_font);
 			table_detail3.AddCell(cell_detail3);
 
-			cell_detail3_colspan8.Phrase = new Phrase("BUDGET COST / PCS" + "".PadRight(5) + $"{Number.ToRupiah(budgetCost)}", normal_font);
+			cell_detail3_colspan8.Phrase = new Phrase("BUDGET COST / PCS" + "".PadRight(5) + $"{Number.ToRupiah(newbudgetCost)}", normal_font);
 			table_detail3.AddCell(cell_detail3_colspan8);
 			cell_detail3_colspan8.Phrase = isDollar ? new Phrase($"US$ 1 = {Number.ToRupiah(viewModel.Rate.Value)}" + "".PadRight(10) + $"CONFIRM PRICE : {Number.ToDollar(viewModel.ConfirmPrice)} / PCS", normal_font) : new Phrase($"CONFIRM PRICE : {Number.ToRupiah(viewModel.ConfirmPrice)} / PCS", normal_font);
 			table_detail3.AddCell(cell_detail3_colspan8);
