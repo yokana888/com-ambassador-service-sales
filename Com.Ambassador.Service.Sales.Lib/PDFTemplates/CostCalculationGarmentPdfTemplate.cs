@@ -49,7 +49,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 			cb.SetFontAndSize(bf, 10);
 			cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, "PT. AMBASSADOR GARMINDO", 10, 820, 0);
 			cb.SetFontAndSize(bf_bold, 12);
-			cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, "COST CALCULATION EXPORT GARMENT" + (viewModel.IsPosted ? "" : " (DRAFT)"), 10, 805, 0);
+			cb.ShowTextAligned(PdfContentByte.ALIGN_LEFT, "COST CALCULATION GARMENT" + (viewModel.IsPosted ? "" : " (DRAFT)"), 10, 805, 0);
 			cb.EndText();
 			#endregion
 
@@ -363,7 +363,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 			table_bottom_column2_1.AddCell(cell_bottom_column2_1); ;
 			double confirmPrice = viewModel.ConfirmPrice ?? 0 + viewModel.Rate.Value ?? 0;
 			double confirmPriceWithRate = isDollar ? confirmPrice * viewModel.Rate.Value ?? 1 : confirmPrice;
-			cell_bottom_column2_1_colspan2.Phrase = new Phrase(string.Format("{0:n4}", confirmPriceWithRate), normal_font);
+			cell_bottom_column2_1_colspan2.Phrase = new Phrase(string.Format("{0:n2}", confirmPriceWithRate), normal_font);
 			table_bottom_column2_1.AddCell(cell_bottom_column2_1_colspan2);
 			#endregion
 
