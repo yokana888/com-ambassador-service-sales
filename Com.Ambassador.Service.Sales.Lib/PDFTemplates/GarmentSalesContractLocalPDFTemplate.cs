@@ -1,4 +1,5 @@
 ﻿using Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.GarmentSalesContractInterface;
+using Com.Ambassador.Service.Sales.Lib.Helpers;
 using Com.Ambassador.Service.Sales.Lib.Utilities;
 using Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentSalesContractViewModels;
 using Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel;
@@ -7,6 +8,7 @@ using iTextSharp.text.pdf;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Text;
 
@@ -186,7 +188,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             PdfPTable tableDetailOrder = new PdfPTable(2);
             //tableDetailOrder.WidthPercentage = 20;
             //tableDetailOrder.SetWidths(new float[] { 20f, 20f });
-            tableDetailOrder.TotalWidth = 216f;
+            tableDetailOrder.TotalWidth = 400f;
             tableDetailOrder.LockedWidth = true;
             float[] widthsDetail = new float[] { 1f, 1f };
             tableDetailOrder.SetWidths(widthsDetail);
@@ -200,13 +202,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             cellDetailOrder.Phrase = new Phrase("Harga", bold_font);
             tableDetailOrder.AddCell(cellDetailOrder);
             int index = 0;
-            var currencyBankObj = new CurrencyViewModel();
-            object objResult = new object();
-            if (bank.TryGetValue("Currency", out objResult))
-            {
-                currencyBankObj = JsonConvert.DeserializeObject<CurrencyViewModel>(objResult.ToString());
-            }
-
+            
             if (viewModel.Items!=null && viewModel.Items.Count > 0)
             {
                 foreach (var detail in viewModel.Items)
@@ -215,14 +211,14 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
                     index++;
                     if (index == 1)
                     {
-                        CellDetailCenter.Phrase = new Phrase(currencyBankObj.Code + " " + detail.Price.ToString(), normal_font);
+                        CellDetailCenter.Phrase = new Phrase($"{Number.ToRupiah(detail.Price)} (Exclude PPN)", normal_font);
                         tableDetailOrder.AddCell(CellDetailCenter);
                     }
                     else
                     {
                         CellDetailCenter.Phrase = new Phrase(" ", normal_font);
                         tableDetailOrder.AddCell(CellDetailCenter);
-                        CellDetailCenter.Phrase = new Phrase(currencyBankObj.Code + "  " + detail.Price, normal_font);
+                        CellDetailCenter.Phrase = new Phrase($"{Number.ToRupiah(detail.Price)} (Exclude PPN)", normal_font);
                         tableDetailOrder.AddCell(CellDetailCenter);
                     }
                 }
@@ -230,14 +226,17 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             }
             else
             {
-                CellDetailCenter.Phrase = new Phrase(currencyBankObj.Code + " " + viewModel.Price.ToString(), normal_font);
+                CellDetailCenter.Phrase = new Phrase($"{Number.ToRupiah(viewModel.Price)} (Exclude PPN)", normal_font);
                 tableDetailOrder.AddCell(CellDetailCenter);
             }
-            
+            cellDetailOrder.Phrase = new Phrase("FOB", bold_font);
+            tableDetailOrder.AddCell(cellDetailOrder);
+            CellDetailCenter.Phrase = new Phrase(viewModel.FOB, normal_font);
+            tableDetailOrder.AddCell(CellDetailCenter);
             cellDetailOrder.Phrase = new Phrase("Total Harga", bold_font);
             tableDetailOrder.AddCell(cellDetailOrder);
             //cellDetailOrder.Phrase = new Phrase(Convert.ToString(viewModel.Amount), normal_font);
-            CellDetailCenter.Phrase = new Phrase(viewModel.AccountBank.AccountCurrencyCode + " " + viewModel.Amount.ToString(), normal_font);
+            CellDetailCenter.Phrase = new Phrase($"{Number.ToRupiah(viewModel.Amount)} (Exclude PPN)", normal_font);
             tableDetailOrder.AddCell(CellDetailCenter);
             cellDetailOrder.Phrase = new Phrase("Jenis Packing", bold_font);
             tableDetailOrder.AddCell(cellDetailOrder);
@@ -245,7 +244,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             tableDetailOrder.AddCell(CellDetailCenter);
             cellDetailOrder.Phrase = new Phrase("Jadwal Pengiriman", bold_font);
             tableDetailOrder.AddCell(cellDetailOrder);
-            CellDetailCenter.Phrase = new Phrase(viewModel.DeliveryDate.ToOffset(new TimeSpan(timeoffset, 0, 0)).ToString("dd/MM/yyyy"), normal_font);
+            CellDetailCenter.Phrase = new Phrase(viewModel.DeliveryDate.ToOffset(new TimeSpan(timeoffset, 0, 0)).ToString("dd/MM/yyyy", new CultureInfo("id-ID")), normal_font);
             tableDetailOrder.AddCell(CellDetailCenter);
             cellDetailOrder.Phrase = new Phrase("Ongkos Angkut", bold_font);
             tableDetailOrder.AddCell(cellDetailOrder);
@@ -314,7 +313,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 
             bodyContentPembayaran.Phrase = new Phrase("4.", normal_font);
             tablePembayaran.AddCell(bodyContentPembayaran);
-            bodyContentPembayaran.Phrase = new Phrase("Pembayaran dianggap sah / lunas jika diterima penjual sesusai dengan nilai tagihan.", normal_font);
+            bodyContentPembayaran.Phrase = new Phrase("Pembayaran dianggap sah / lunas jika diterima penjual sesuai dengan nilai tagihan.", normal_font);
             bodyContentPembayaran.Colspan = 3;
             tablePembayaran.AddCell(bodyContentPembayaran);
             //bodyContentPembayaran.Phrase = new Phrase("", normal_font);
