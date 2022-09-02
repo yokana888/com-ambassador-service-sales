@@ -38,7 +38,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
 
 		public async Task<CostCalculationGarment> CustomCodeGenerator(CostCalculationGarment Model)
 		{
-			List<string> convectionOption = new List<string> { "C2A", "C2B", "C2C", "C1A", "C1B" };
+			List<string> convectionOption = new List<string> { "AG1", "AG2" };
 			int convectionCode = convectionOption.IndexOf(Model.UnitCode) + 1;
 
 			var lastData = await this.DbSet.Where(w => w.IsDeleted == false && w.UnitCode == Model.UnitCode).OrderByDescending(o => o.CreatedUtc).FirstOrDefaultAsync();
