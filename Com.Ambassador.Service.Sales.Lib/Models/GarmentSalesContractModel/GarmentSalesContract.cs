@@ -58,6 +58,14 @@ namespace Com.Ambassador.Service.Sales.Lib.Models.GarmentSalesContractModel
         [MaxLength(500)]
         public string AccountName { get; set; }
         public bool DocPrinted { get; set; }
+        public double FreightCost { get; set; }
+        [MaxLength(500)]
+        public string PaymentMethod { get; set; }
+        [MaxLength(500)]
+        public string DownPayment { get; set; }
+        public int LatePayment { get; set; }
+        public int LateReturn { get; set; }
+        public double? Claim { get; set; }
         public virtual ICollection<GarmentSalesContractItem> Items { get; set; }
     }
 }

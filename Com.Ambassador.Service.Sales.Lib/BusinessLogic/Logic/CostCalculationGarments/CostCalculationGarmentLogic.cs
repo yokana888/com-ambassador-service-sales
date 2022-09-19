@@ -69,8 +69,8 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
             List<string> SelectedFields = new List<string>()
             {
                   "Id", "Code", "PreSCNo", "RO_Number", "Quantity", "ConfirmPrice", "Article", "Unit", "LastModifiedUtc","UnitName",
-                    "Comodity", "UOM", "Buyer", "DeliveryDate", "BuyerBrand", "ApprovalMD", "ApprovalPurchasing", "ApprovalIE", "ApprovalKadivMD", "ApprovalPPIC",
-                    "IsPosted","SectionName","CreatedBy","Section","CommodityDescription"
+                  "Comodity", "UOM", "Buyer", "DeliveryDate", "BuyerBrand", "ApprovalMD", "ApprovalPurchasing", "ApprovalIE", "ApprovalKadivMD", "ApprovalPPIC",
+                  "IsPosted","SectionName","CreatedBy","Section","CommodityDescription"
             };
 
             Query = Query
@@ -147,7 +147,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
 		{
 			int lastFabricNumber = GetLastMaterialFabricNumberByCategoryName(model.UnitCode);
 			int lastNonFabricNumber = GetLastMaterialNonFabricNumberByCategoryName(model.UnitCode);
-            List<string> convectionOption = new List<string> { "C2A", "C2B", "C2C", "C1A", "C1B" };
+            List<string> convectionOption = new List<string> { "AG1", "AG2" };
             int convectionCode = convectionOption.IndexOf(model.UnitCode) + 1;
 
             DateTime Now = DateTime.Now;
@@ -194,6 +194,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
 													  select b).AsNoTracking().OrderByDescending(o => o.CreatedUtc.Year).ThenByDescending(t => t.AutoIncrementNumber).FirstOrDefault();
 			return result == null ? 0 : result.AutoIncrementNumber;
 		}
+
 		public override void UpdateAsync(long id, CostCalculationGarment model)
 		{
             GeneratePONumbers(model);
@@ -566,6 +567,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
 
 			return data;
 		}
+
 		internal List<string> ReadUnpostReasonCreators(string keyword, int page, int size)
         {
             IQueryable<CostCalculationGarmentUnpostReason> Query = DbContext.Set<CostCalculationGarmentUnpostReason>();

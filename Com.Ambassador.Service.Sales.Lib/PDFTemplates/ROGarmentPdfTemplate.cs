@@ -31,8 +31,8 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             Font bold_font = FontFactory.GetFont(BaseFont.HELVETICA_BOLD, BaseFont.CP1250, BaseFont.NOT_EMBEDDED, 7);
 
             #region Header
-            document.Add(new Paragraph("PT.Ambassador", company_font) { Alignment = Element.ALIGN_LEFT, Leading = 0, MultipliedLeading = 1 });
-            document.Add(new Paragraph("RO EKSPOR GARMENT", title_font) { Alignment = Element.ALIGN_LEFT, Leading = 0, MultipliedLeading = 1 });
+            document.Add(new Paragraph("PT.AMBASSADOR GARMINDO", company_font) { Alignment = Element.ALIGN_LEFT, Leading = 0, MultipliedLeading = 1 });
+            document.Add(new Paragraph("RO GARMENT", title_font) { Alignment = Element.ALIGN_LEFT, Leading = 0, MultipliedLeading = 1 });
             #endregion
 
             #region Top
@@ -716,7 +716,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             cell_signature.Phrase = new Phrase("Kasie/Kabag Penjualan", normal_font);
             table_signature.AddCell(cell_signature);
 
-            cell_signature_noted.Phrase = new Phrase("(                                         )", normal_font);
+            cell_signature_noted.Phrase = new Phrase($"( {viewModel.CreatedBy} )", normal_font);
             table_signature.AddCell(cell_signature_noted);
             cell_signature_noted.Phrase = new Phrase("(                                         )", normal_font);
             table_signature.AddCell(cell_signature_noted);
