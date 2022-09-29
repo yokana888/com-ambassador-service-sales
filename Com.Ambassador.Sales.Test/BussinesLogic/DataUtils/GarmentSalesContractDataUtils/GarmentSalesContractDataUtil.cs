@@ -24,7 +24,7 @@ namespace Com.Ambassador.Sales.Test.BussinesLogic.DataUtils.GarmentSalesContract
 
             var data = await base.GetNewData();
 
-            data.SalesContractNo = "SC/DL/001";
+            data.SalesContractNo = "SC/AG/001";
             data.CostCalculationId = (int)costCalculationGarmentData.Id;
             data.RONumber = costCalculationGarmentData.RO_Number;
             data.DeliveryDate =  costCalculationGarmentData.DeliveryDate;

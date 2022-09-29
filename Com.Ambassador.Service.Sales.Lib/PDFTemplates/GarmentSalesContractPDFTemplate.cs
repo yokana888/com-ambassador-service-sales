@@ -589,7 +589,6 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 
             cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, "CERTIFICATE ID09 / 01238", width - (imageIso.ScaledWidth / 2) - marginRight, height - imageIso.ScaledHeight - marginTop + 58, 0);
 
-
             #endregion
 
             #region LINE
