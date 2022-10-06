@@ -50,7 +50,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
 			{
 				Model.AutoIncrementNumber = 1;
 				string Number = Model.AutoIncrementNumber.ToString().PadLeft(4, '0');
-				Model.RO_Number = $"{Year}{convectionCode.ToString()}{Number}";
+				Model.RO_Number = $"AG{Year}{convectionCode.ToString()}{Number}";
 			}
 			else
 			{
@@ -58,13 +58,13 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
 				{
 					Model.AutoIncrementNumber = 1;
 					string Number = Model.AutoIncrementNumber.ToString().PadLeft(4, '0');
-					Model.RO_Number = $"{Year}{convectionCode.ToString()}{Number}";
+					Model.RO_Number = $"AG{Year}{convectionCode.ToString()}{Number}";
 				}
 				else
 				{
 					Model.AutoIncrementNumber = lastData.AutoIncrementNumber + 1;
 					string Number = Model.AutoIncrementNumber.ToString().PadLeft(4, '0');
-					Model.RO_Number = $"{Year}{convectionCode.ToString()}{Number}";
+					Model.RO_Number = $"AG{Year}{convectionCode.ToString()}{Number}";
 				}
 			}
 
