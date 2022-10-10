@@ -1,4 +1,5 @@
-﻿using Com.Ambassador.Service.Sales.Lib.Models.CostCalculationGarments;
+﻿using Com.Ambassador.Service.Sales.Lib.Helpers;
+using Com.Ambassador.Service.Sales.Lib.Models.CostCalculationGarments;
 using Com.Ambassador.Service.Sales.Lib.Services;
 using Com.Ambassador.Service.Sales.Lib.Utilities.BaseClass;
 using Com.Ambassador.Service.Sales.Lib.ViewModels.Garment;
@@ -14,11 +15,13 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment
     {
         private SalesDbContext dbContext;
         private IIdentityService identityService;
+        private IHttpClientService httpClientService;
 
-        public GarmentProductionOrderReportLogic(SalesDbContext dbContext, IIdentityService identityService)
+        public GarmentProductionOrderReportLogic(SalesDbContext dbContext, IIdentityService identityService, IHttpClientService httpClientService)
         {
             this.dbContext = dbContext;
             this.identityService = identityService;
+            this.httpClientService = httpClientService;
         }
 
         public override IQueryable<GarmentProductionOrderReportViewModel> GetQuery(string filterString)
@@ -56,6 +59,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment
             {
                 Id = s.Id,
                 DeliveryDate = s.DeliveryDate,
+                BuyerCode = s.BuyerCode,
                 BuyerBrandName = s.BuyerBrandName,
                 Section = s.Section,
                 Commodity = s.Commodity,
@@ -69,6 +73,8 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment
                 IsApprovedKadivMD = s.IsApprovedKadivMD,
                 CostCalculationGarment_Materials = s.CostCalculationGarment_Materials
             }).OrderBy(o => o.DeliveryDate);
+
+            IQueryable<ViewModels.IntegrationViewModel.BuyerViewModel> buyerQ = GetGarmentBuyer().AsQueryable();
 
             var diffFirstDayInYearWithMonday = new DateTime(filter.year, 1, 1).DayOfWeek - DayOfWeek.Monday;
             diffFirstDayInYearWithMonday = diffFirstDayInYearWithMonday + (diffFirstDayInYearWithMonday > -1 ? 0 : 7);
@@ -86,6 +92,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment
                         .Select(groupBuyer => new GarmentProductionOrderReportBuyerViewModel
                         {
                             Buyer = groupBuyer.Key,
+                            Type = buyerQ.Where(x => x.Code == groupBuyer.First().BuyerCode).Select(x => x.Type).FirstOrDefault(),
                             Quantities = groupBuyer.Sum(s => s.Quantity),
                             Amounts = groupBuyer.Sum(s => s.Quantity * s.ConfirmPrice),
                             Details = groupBuyer
@@ -128,6 +135,25 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment
             public string unit { get; set; }
             public string section { get; set; }
             public string buyer { get; set; }
+        }
+
+        public List<ViewModels.IntegrationViewModel.BuyerViewModel> GetGarmentBuyer()
+        {
+            string buyerUri = "master/garment-buyers/all";
+            var response = httpClientService.GetAsync($@"{APIEndpoint.Core}{buyerUri}").Result.Content.ReadAsStringAsync();
+
+            if (response != null)
+            {
+                Dictionary<string, object> result = JsonConvert.DeserializeObject<Dictionary<string, object>>(response.Result);
+                var json = result.Single(p => p.Key.Equals("data")).Value;
+                List<ViewModels.IntegrationViewModel.BuyerViewModel> buyerList = JsonConvert.DeserializeObject<List<ViewModels.IntegrationViewModel.BuyerViewModel>>(json.ToString());
+
+                return buyerList;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

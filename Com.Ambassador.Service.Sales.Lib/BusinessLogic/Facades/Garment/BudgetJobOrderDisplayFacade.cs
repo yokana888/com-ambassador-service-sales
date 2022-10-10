@@ -42,6 +42,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
             result.Columns.Add(new DataColumn() { ColumnName = "Nama Agent Buyer", DataType = typeof(string) });
             result.Columns.Add(new DataColumn() { ColumnName = "Kode Brand", DataType = typeof(string) });
             result.Columns.Add(new DataColumn() { ColumnName = "Nama Brand Buyer", DataType = typeof(string) });
+            result.Columns.Add(new DataColumn() { ColumnName = "Tipe Buyer", DataType = typeof(string) });
             result.Columns.Add(new DataColumn() { ColumnName = "Artikel", DataType = typeof(string) });
             result.Columns.Add(new DataColumn() { ColumnName = "Komoditi", DataType = typeof(string) });
             result.Columns.Add(new DataColumn() { ColumnName = "Qty Order", DataType = typeof(string) });
@@ -65,7 +66,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
                 string BgtPrc = string.Format("{0:N2}", d.Price);
                 string BgtAmt = string.Format("{0:N2}", d.BudgetQuantity * d.Price);
 
-                result.Rows.Add(i + 1, d.RO_Number, d.BuyerCode, d.BuyerName, d.BrandCode, d.BrandName, d.Article, d.ComodityCode, QtyOrder, d.UOMUnit, ShipDate,
+                result.Rows.Add(i + 1, d.RO_Number, d.BuyerCode, d.BuyerName, d.BrandCode, d.BrandName, d.Type, d.Article, d.ComodityCode, QtyOrder, d.UOMUnit, ShipDate,
                                 d.ProductCode, d.Description, d.ProductRemark, BgtQty, d.UomPriceName, BgtPrc, BgtAmt, d.POSerialNumber);
             }
 

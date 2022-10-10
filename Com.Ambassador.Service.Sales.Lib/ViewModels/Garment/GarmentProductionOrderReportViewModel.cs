@@ -13,6 +13,7 @@ namespace Com.Ambassador.Service.Sales.Lib.ViewModels.Garment
     public class GarmentProductionOrderReportBuyerViewModel
     {
         public string Buyer { get; set; }
+        public string Type { get; set; }
         public double Quantities { get; set; }
         public double Amounts { get; set; }
         public List<GarmentProductionOrderReportDetailViewModel> Details { get; set; }
