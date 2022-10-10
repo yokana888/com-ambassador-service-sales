@@ -33,5 +33,6 @@ namespace Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment
         public double AccAllow { get; set; }
         public double Amount { get; set; }
         public string TermPayment { get; set; }
+        public string Type { get; set; }
     }
 }

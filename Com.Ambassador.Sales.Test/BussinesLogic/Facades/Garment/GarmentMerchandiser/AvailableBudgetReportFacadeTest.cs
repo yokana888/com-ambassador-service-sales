@@ -10,6 +10,7 @@ using Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment;
 using Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentPreSalesContractLogics;
 using Com.Ambassador.Service.Sales.Lib.Models.CostCalculationGarments;
 using Com.Ambassador.Service.Sales.Lib.Services;
+using Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
@@ -18,6 +19,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Text;
 using Xunit;
@@ -51,7 +53,16 @@ namespace Com.Ambassador.Sales.Test.BussinesLogic.Facades.Garment.GarmentMerchan
 
         protected virtual Mock<IServiceProvider> GetServiceProviderMock(SalesDbContext dbContext)
         {
+
+            HttpResponseMessage message = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
+            message.Content = new StringContent("{\"apiVersion\":\"1.0\",\"statusCode\":200,\"message\":\"Ok\",\"data\":[{\"Id\":7,\"code\":\"USD\",\"rate\":13700.0,\"date\":\"2018/10/20\"}],\"info\":{\"count\":1,\"page\":1,\"size\":1,\"total\":2,\"order\":{\"date\":\"desc\"},\"select\":[\"Id\",\"code\",\"rate\",\"date\"]}}");
+
             var serviceProviderMock = new Mock<IServiceProvider>();
+            var clientServiceMock = new Mock<IHttpClientService>();
+
+            clientServiceMock
+                .Setup(x => x.GetAsync(It.IsAny<string>()))
+                .ReturnsAsync(message);
 
             IIdentityService identityService = new IdentityService { Username = "Username" };
 
@@ -84,6 +95,10 @@ namespace Com.Ambassador.Sales.Test.BussinesLogic.Facades.Garment.GarmentMerchan
             serviceProviderMock
                 .Setup(x => x.GetService(typeof(IAzureImageFacade)))
                 .Returns(azureImageFacadeMock.Object);
+
+            serviceProviderMock
+                .Setup(x => x.GetService(typeof(IHttpClientService)))
+                .Returns(clientServiceMock.Object);
 
             return serviceProviderMock;
         }
