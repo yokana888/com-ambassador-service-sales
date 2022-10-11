@@ -13,8 +13,8 @@ namespace Com.Ambassador.Service.Sales.Lib.Models.GarmentSalesContractModel
         public string Description { get; set; }
         public double Quantity { get; set; }
         public double Price { get; set; }
-        public virtual long GSCId { get; set; }
-        [ForeignKey("GSCId")]
-        public virtual GarmentSalesContract GarmentSalesContract { get; set; }
+        public virtual long SalesContractROId{ get; set; }
+        [ForeignKey("SalesContractROId")]
+        public virtual GarmentSalesContractRO GarmentSalesContractRO { get; set; }
     }
 }

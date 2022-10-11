@@ -4,14 +4,16 @@ using Com.Ambassador.Service.Sales.Lib;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Com.Ambassador.Service.Sales.Lib.Migrations
 {
     [DbContext(typeof(SalesDbContext))]
-    partial class SalesDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221006042925_update_SC_ManyRO")]
+    partial class update_SC_ManyRO
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -2637,6 +2639,8 @@ namespace Com.Ambassador.Service.Sales.Lib.Migrations
                     b.Property<string>("Delivery")
                         .HasMaxLength(255);
 
+                    b.Property<DateTimeOffset>("DeliveryDate");
+
                     b.Property<string>("DocPresented")
                         .HasMaxLength(3000);
 
@@ -2678,6 +2682,9 @@ namespace Com.Ambassador.Service.Sales.Lib.Migrations
 
                     b.Property<int>("LateReturn");
 
+                    b.Property<string>("Material")
+                        .HasMaxLength(3000);
+
                     b.Property<string>("NoHS")
                         .HasMaxLength(3000);
 
@@ -2689,14 +2696,7 @@ namespace Com.Ambassador.Service.Sales.Lib.Migrations
                     b.Property<string>("PaymentMethod")
                         .HasMaxLength(500);
 
-                    b.Property<string>("RecipientAddress")
-                        .HasMaxLength(3000);
-
-                    b.Property<string>("RecipientJob")
-                        .HasMaxLength(100);
-
-                    b.Property<string>("RecipientName")
-                        .HasMaxLength(255);
+                    b.Property<double>("Price");
 
                     b.Property<string>("SCType")
                         .HasMaxLength(20);
@@ -2783,8 +2783,6 @@ namespace Com.Ambassador.Service.Sales.Lib.Migrations
 
                     b.Property<bool>("Active");
 
-                    b.Property<double>("Amount");
-
                     b.Property<string>("Article")
                         .HasMaxLength(1000);
 
@@ -2818,8 +2816,6 @@ namespace Com.Ambassador.Service.Sales.Lib.Migrations
 
                     b.Property<DateTime>("DeletedUtc");
 
-                    b.Property<DateTimeOffset>("DeliveryDate");
-
                     b.Property<string>("Description")
                         .HasMaxLength(3000);
 
@@ -2834,11 +2830,6 @@ namespace Com.Ambassador.Service.Sales.Lib.Migrations
                         .HasMaxLength(255);
 
                     b.Property<DateTime>("LastModifiedUtc");
-
-                    b.Property<string>("Material")
-                        .HasMaxLength(3000);
-
-                    b.Property<double>("Price");
 
                     b.Property<double>("Quantity");
 

@@ -40,17 +40,17 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentSalesCon
 
         public async Task<int> CreateAsync(GarmentSalesContract model)
         {
-            //do
-            //{
-            //    model.Code = CodeGenerator.Generate();
-            //}
-            //while (this.DbSet.Any(d => d.Code.Equals(model.Code)));
-            CostCalculationGarment costCal = await costCalGarmentLogic.ReadByIdAsync(model.CostCalculationId); //await DbContext.CostCalculationGarments.FirstOrDefaultAsync(a => a.Id.Equals(model.CostCalculationId));
-            //costCal.SCGarmentId=
-            garmentSalesContractLogic.Create(model);
+            int result = 0;
 
-            int result =  await DbContext.SaveChangesAsync();
-            return result += await UpdateCostCalAsync(costCal, (int)model.Id);
+            garmentSalesContractLogic.Create(model);
+            result =  await DbContext.SaveChangesAsync();
+
+            foreach (var ro in model.SalesContractROs)
+            {
+                CostCalculationGarment costCal = await costCalGarmentLogic.ReadByIdAsync(ro.CostCalculationId);
+                result += await UpdateCostCalAsync(costCal, (int)ro.Id);
+            }
+            return result;
         }
 
         public async Task<int> UpdateCostCalAsync(CostCalculationGarment costCalculationGarment, int Id)
@@ -64,9 +64,13 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentSalesCon
         public async Task<int> DeleteAsync(int id)
         {
             GarmentSalesContract sc = await ReadByIdAsync(id);
-            CostCalculationGarment costCal = await DbContext.CostCalculationGarments.Include(cc => cc.CostCalculationGarment_Materials).FirstOrDefaultAsync(a => a.Id.Equals(sc.CostCalculationId));
-            costCal.SCGarmentId = null;
-            await costCalGarmentLogic.UpdateAsync((int)sc.CostCalculationId, costCal);
+            foreach(var ro in sc.SalesContractROs)
+            {
+                CostCalculationGarment costCal = await DbContext.CostCalculationGarments.Include(cc => cc.CostCalculationGarment_Materials).FirstOrDefaultAsync(a => a.Id.Equals(ro.CostCalculationId));
+                costCal.SCGarmentId = null;
+                await costCalGarmentLogic.UpdateAsync((int)ro.CostCalculationId, costCal);
+            }
+            
             await garmentSalesContractLogic.DeleteAsync(id);
             return await DbContext.SaveChangesAsync();
         }

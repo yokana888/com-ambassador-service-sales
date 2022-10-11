@@ -54,13 +54,14 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
             Query = Query.OrderBy(o => o.BuyerBrandName).ThenBy(o => o.RO_Number);
 
             var newQ = (from a in Query
-                        join b in dbContext.GarmentSalesContracts on a.Id equals b.CostCalculationId
+                        join b in dbContext.GarmentSalesContractROs on a.Id equals b.CostCalculationId
+                        join c in dbContext.GarmentSalesContracts on b.SalesContractId equals c.Id
 
                         select new CostCalculationGarmentByBuyer2ReportViewModel
                        {
                           RO_Number = a.RO_Number,
                           DeliveryDate = a.DeliveryDate,
-                          SalesContractNo = b.SalesContractNo,
+                          SalesContractNo = c.SalesContractNo,
                           Article = a.Article,
                           BuyerCode = a.BuyerCode,
                           BuyerName = a.BuyerName,

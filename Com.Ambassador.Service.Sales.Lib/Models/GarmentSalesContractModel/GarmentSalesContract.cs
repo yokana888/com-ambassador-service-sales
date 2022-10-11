@@ -10,35 +10,18 @@ namespace Com.Ambassador.Service.Sales.Lib.Models.GarmentSalesContractModel
     {
         [MaxLength(255)]
         public string SalesContractNo { get; set; }
-        public int CostCalculationId { get; set; }
-        [MaxLength(255)]
-        public string RONumber { get; set; }
         public int BuyerBrandId { get; set; }
         public string BuyerBrandCode { get; set; }
         public string BuyerBrandName { get; set; }
-        public int ComodityId { get; set; }
-        [MaxLength(500)]
-        public string ComodityName { get; set; }
-        [MaxLength(500)]
-        public string ComodityCode { get; set; }
+        [MaxLength(20)]
+        public string SCType { get; set; }
         [MaxLength(1000)]
         public string Packing { get; set; }
-        [MaxLength(1000)]
-        public string Article { get; set; }
-        public double Quantity { get; set; }
-        public string UomId { get; set; }
-        public string UomUnit { get; set; }
-        [MaxLength(3000)]
-        public string Description { get; set; }
-        [MaxLength(3000)]
-        public string Material { get; set; }
         [MaxLength(3000)]
         public string DocPresented { get; set; }
         [MaxLength(3000)]
         public string FOB { get; set; }
-        public double Price { get; set; }
         public double Amount { get; set; }
-        public DateTimeOffset DeliveryDate { get; set; }
         [MaxLength(255)]
         public string Delivery { get; set; }
         [MaxLength(255)]
@@ -66,6 +49,13 @@ namespace Com.Ambassador.Service.Sales.Lib.Models.GarmentSalesContractModel
         public int LatePayment { get; set; }
         public int LateReturn { get; set; }
         public double? Claim { get; set; }
-        public virtual ICollection<GarmentSalesContractItem> Items { get; set; }
+
+        [MaxLength(255)]
+        public string RecipientName { get; set; }
+        [MaxLength(3000)]
+        public string RecipientAddress { get; set; }
+        [MaxLength(100)]
+        public string RecipientJob { get; set; }
+        public virtual ICollection<GarmentSalesContractRO> SalesContractROs { get; set; }
     }
 }

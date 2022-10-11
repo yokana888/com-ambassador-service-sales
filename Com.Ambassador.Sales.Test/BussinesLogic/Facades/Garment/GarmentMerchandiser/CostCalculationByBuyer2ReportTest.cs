@@ -90,8 +90,9 @@ namespace Com.Ambassador.Sales.Test.BussinesLogic.Facades.Garment.GarmentMerchan
                 .Setup(x => x.GetService(typeof(ICostCalculationGarment)))
                 .Returns(mockCostCalculation.Object);
 
+            GarmentSalesContractROLogic garmentSalesContractROLogic = new GarmentSalesContractROLogic(serviceProviderMock.Object, identityService, dbContext);
             GarmentSalesContractItemLogic garmentSalesContractItemLogic = new GarmentSalesContractItemLogic(serviceProviderMock.Object, identityService, dbContext);
-            GarmentSalesContractLogic garmentSalesContractLogic = new GarmentSalesContractLogic(garmentSalesContractItemLogic, serviceProviderMock.Object, identityService, dbContext);
+            GarmentSalesContractLogic garmentSalesContractLogic = new GarmentSalesContractLogic(garmentSalesContractROLogic,garmentSalesContractItemLogic, serviceProviderMock.Object, identityService, dbContext);
 
             serviceProviderMock
                 .Setup(x => x.GetService(typeof(GarmentSalesContractItemLogic)))

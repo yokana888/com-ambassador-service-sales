@@ -25,25 +25,12 @@ namespace Com.Ambassador.Sales.Test.BussinesLogic.DataUtils.GarmentSalesContract
             var data = await base.GetNewData();
 
             data.SalesContractNo = "SC/AG/001";
-            data.CostCalculationId = (int)costCalculationGarmentData.Id;
-            data.RONumber = costCalculationGarmentData.RO_Number;
-            data.DeliveryDate =  costCalculationGarmentData.DeliveryDate;
-            data.Article = costCalculationGarmentData.Article;
             data.BuyerBrandId = costCalculationGarmentData.BuyerBrandId;
             data.BuyerBrandCode = costCalculationGarmentData.BuyerBrandCode;
             data.BuyerBrandName = costCalculationGarmentData.BuyerBrandName;
-            data.ComodityId = 1;
-            data.ComodityCode = "XX";
-            data.ComodityName = "Test Comodity";
             data.Packing = "Text Packing";
-            data.Quantity = 1;
-            data.UomId = "1";
-            data.UomUnit = "Test UOM";
-            data.Description = "Test Description";
-            data.Material = "Test Material";
             data.DocPresented = "Test DocPresented";
             data.FOB = "Test";
-            data.Price = 8.7;
             data.Amount = 8.7;
             data.Delivery = "Test";
             data.Country = "Test";
@@ -57,14 +44,33 @@ namespace Com.Ambassador.Sales.Test.BussinesLogic.DataUtils.GarmentSalesContract
             data.AccountBankId = 1;
             data.AccountName = "Test Account Name";
             data.DocPrinted = false;
-
-            data.Items = new List<GarmentSalesContractItem>()
+            data.SalesContractROs = new List<GarmentSalesContractRO>()
             {
-                new GarmentSalesContractItem
+                new GarmentSalesContractRO
                 {
+
+                    ComodityId = 1,
+                    ComodityCode = "XX",
+                    ComodityName = "Test Comodity",
                     Quantity = 1,
-                    Price    = 8.7,
-                    Description = "Test",
+                    UomId = "1",
+                    UomUnit = "Test UOM",
+                    Description = "Test Description",
+                    CostCalculationId = (int)costCalculationGarmentData.Id,
+                    RONumber = costCalculationGarmentData.RO_Number,
+                    Article = costCalculationGarmentData.Article,
+                    Material = "Test Material",
+                    DeliveryDate = costCalculationGarmentData.DeliveryDate,
+                    Items =new List<GarmentSalesContractItem>()
+                    {
+                        new GarmentSalesContractItem
+                        {
+                            Quantity = 1,
+                            Price    = 8.7,
+                            Description = "Test",
+                        }
+                    },
+                    Price = 8.7
                 }
             };
             return data;
