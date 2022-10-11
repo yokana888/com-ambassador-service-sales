@@ -14,7 +14,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment
         private SalesDbContext dbContext;
         private readonly IIdentityService identityService;
 
-        public AvailableROGarmentReportLogic(SalesDbContext dbContext, IIdentityService identityService)
+        public AvailableROGarmentReportLogic(SalesDbContext dbContext, IIdentityService identityService, IHttpClientService httpClientService)
         {
             this.dbContext = dbContext;
             this.identityService = identityService;
@@ -68,6 +68,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment
                 Article = cc.Article,
                 BuyerBrandCode = cc.BuyerBrandCode,
                 BuyerBrandName = cc.BuyerBrandName,
+                BuyerCode = cc.BuyerCode,
                 Quantity = cc.Quantity,
                 UOMUnit = cc.UOMUnit,
                 LeadTime = cc.LeadTime,

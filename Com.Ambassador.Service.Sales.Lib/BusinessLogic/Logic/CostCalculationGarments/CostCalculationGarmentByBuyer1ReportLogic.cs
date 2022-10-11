@@ -1,4 +1,5 @@
-﻿using Com.Ambassador.Service.Sales.Lib.Models.CostCalculationGarments;
+﻿using Com.Ambassador.Service.Sales.Lib.Helpers;
+using Com.Ambassador.Service.Sales.Lib.Models.CostCalculationGarments;
 using Com.Ambassador.Service.Sales.Lib.Services;
 using Com.Ambassador.Service.Sales.Lib.Utilities.BaseClass;
 using Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment;
@@ -14,12 +15,16 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
     public class CostCalculationByBuyer1ReportLogic : BaseMonitoringLogic<CostCalculationGarmentByBuyer1ReportViewModel>
     {
         private IIdentityService identityService;
+        private IHttpClientService httpClientService;
         private SalesDbContext dbContext;
         private DbSet<CostCalculationGarment> dbSet;
 
-        public CostCalculationByBuyer1ReportLogic(IIdentityService identityService, SalesDbContext dbContext)
+        private string buyerUri = "master/garment-buyers/all";
+
+        public CostCalculationByBuyer1ReportLogic(IIdentityService identityService, SalesDbContext dbContext, IHttpClientService httpClientService)
         {
             this.identityService = identityService;
+            this.httpClientService = httpClientService;
             this.dbContext = dbContext;
             dbSet = dbContext.Set<CostCalculationGarment>();
         }
@@ -51,6 +56,8 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
                 Query = Query.Where(d => d.BuyerBrandCode == buyerBrand.ToString());
             }
 
+            IQueryable<ViewModels.IntegrationViewModel.BuyerViewModel> buyerQ = GetGarmentBuyer().AsQueryable();
+
             Query = Query.OrderBy(o => o.BuyerBrandName).ThenBy(o => o.RO_Number);
 
             var newQ = (from a in Query
@@ -69,9 +76,28 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
                         ConfirmPrice = a.ConfirmPrice,
                         UOMUnit = a.UOMUnit,
                         Amount = a.Quantity * a.ConfirmPrice,
+                        Type = buyerQ.Where(x => x.Code == a.BuyerCode).Select(x => x.Type).FirstOrDefault()
                     });
 
             return newQ;
+        }
+
+        public List<ViewModels.IntegrationViewModel.BuyerViewModel> GetGarmentBuyer()
+        {
+            var response = httpClientService.GetAsync($@"{APIEndpoint.Core}{buyerUri}").Result.Content.ReadAsStringAsync();
+
+            if (response != null)
+            {
+                Dictionary<string, object> result = JsonConvert.DeserializeObject<Dictionary<string, object>>(response.Result);
+                var json = result.Single(p => p.Key.Equals("data")).Value;
+                List<ViewModels.IntegrationViewModel.BuyerViewModel> buyerList = JsonConvert.DeserializeObject<List<ViewModels.IntegrationViewModel.BuyerViewModel>>(json.ToString());
+
+                return buyerList;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

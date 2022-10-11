@@ -88,7 +88,7 @@ namespace Com.Ambassador.Sales.Test.WebApi.Controllers
             GarmentSalesContractViewModel vm = new GarmentSalesContractViewModel()
             {
                 AccountBank = new Service.Sales.Lib.ViewModels.IntegrationViewModel.AccountBankViewModel(),
-                ItemROs= new List<GarmentSalesContractROViewModel>()
+                SalesContractROs = new List<GarmentSalesContractROViewModel>()
                 {
                     new GarmentSalesContractROViewModel
                     {

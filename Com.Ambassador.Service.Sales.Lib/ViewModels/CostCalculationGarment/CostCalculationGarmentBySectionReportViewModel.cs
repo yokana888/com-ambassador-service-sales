@@ -24,5 +24,6 @@ namespace Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment
         public double Quantity { get; set; }
         public string UOMUnit { get; set; }
         public double Amount { get; set; }
+        public string Type { get; set; }
     }
 }

@@ -55,12 +55,13 @@ namespace Com.Ambassador.Sales.Test.BussinesLogic.Facades.Garment.GarmentMerchan
         protected virtual Mock<IServiceProvider> GetServiceProviderMock(SalesDbContext dbContext)
         {
             var serviceProviderMock = new Mock<IServiceProvider>();
+            var clientServiceMock = new Mock<IHttpClientService>();
 
             IIdentityService identityService = new IdentityService { Username = "Username" };
 
             CostCalculationGarmentMaterialLogic costCalculationGarmentMaterialLogic = new CostCalculationGarmentMaterialLogic(serviceProviderMock.Object, identityService, dbContext);
             CostCalculationGarmentLogic costCalculationGarmentLogic = new CostCalculationGarmentLogic(costCalculationGarmentMaterialLogic, serviceProviderMock.Object, identityService, dbContext);
-            ProfitGarmentByComodityReportLogic profitgarmentByComodityReportLogic = new ProfitGarmentByComodityReportLogic(identityService, dbContext);
+            ProfitGarmentByComodityReportLogic profitgarmentByComodityReportLogic = new ProfitGarmentByComodityReportLogic(identityService, dbContext, clientServiceMock.Object);
 
             GarmentPreSalesContractLogic garmentPreSalesContractLogic = new GarmentPreSalesContractLogic(identityService, dbContext);
 

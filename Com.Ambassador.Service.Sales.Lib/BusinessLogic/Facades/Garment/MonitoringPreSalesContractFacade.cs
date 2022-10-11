@@ -1,10 +1,12 @@
 ﻿using Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.Garment;
 using Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment;
+using Com.Ambassador.Service.Sales.Lib.Helpers;
 using Com.Ambassador.Service.Sales.Lib.Models.CostCalculationGarments;
 using Com.Ambassador.Service.Sales.Lib.Services;
 using Com.Ambassador.Service.Sales.Lib.ViewModels.Garment;
 using Com.Ambassador.Service.Sales.Lib.ViewModels.IntegrationViewModel.GarmentPurchaseRequestViewModel;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 using OfficeOpenXml.Table;
@@ -23,12 +25,16 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
         private MonitoringUnpostCostCalculationLogic lgc;
         private MonitoringPreSalesContractLogic logic;
         private IIdentityService identityService;
+        private IServiceProvider service;
+
+        private string buyerUri = "master/garment-buyers/all";
 
         public MonitoringPreSalesContractFacade(IServiceProvider serviceProvider)
         {
             lgc = serviceProvider.GetService<MonitoringUnpostCostCalculationLogic>();
             logic = serviceProvider.GetService<MonitoringPreSalesContractLogic>();
             identityService = serviceProvider.GetService<IIdentityService>();
+            service = serviceProvider;
         }
 
         public Tuple<MemoryStream, string> GenerateExcel(string filter = "{}")
@@ -42,6 +48,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
             result.Columns.Add(new DataColumn() { ColumnName = "Jenis Sales Contract", DataType = typeof(string) });
             result.Columns.Add(new DataColumn() { ColumnName = "Buyer Agent", DataType = typeof(string) });
             result.Columns.Add(new DataColumn() { ColumnName = "Buyer Brand", DataType = typeof(string) });
+            result.Columns.Add(new DataColumn() { ColumnName = "Tipe Buyer", DataType = typeof(string) });
             result.Columns.Add(new DataColumn() { ColumnName = "Jumlah Order", DataType = typeof(double) });
             result.Columns.Add(new DataColumn() { ColumnName = "No PR Master", DataType = typeof(string) });
             result.Columns.Add(new DataColumn() { ColumnName = "No RO Master", DataType = typeof(string) });
@@ -80,27 +87,27 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
 
                         if (pr != null && cc != null)
                         {
-                            result.Rows.Add(d.Section, d.SCNo, d.SCDate.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), d.SCType, d.BuyerAgent, d.BuyerBrand, d.OrderQuantity, pr.PRNo, pr.RONo, pr.PRType, pr.Unit, pr.Date.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), pr.Article, cc.Date.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), cc.RONo, cc.Article, cc.Unit, cc.Quantity, cc.Uom, cc.ConfirmPrice);
+                            result.Rows.Add(d.Section, d.SCNo, d.SCDate.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), d.SCType, d.BuyerAgent, d.BuyerBrand, d.Type, d.OrderQuantity, pr.PRNo, pr.RONo, pr.PRType, pr.Unit, pr.Date.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), pr.Article, cc.Date.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), cc.RONo, cc.Article, cc.Unit, cc.Quantity, cc.Uom, cc.ConfirmPrice);
                         }
                         else if (pr != null && cc == null)
                         {
-                            result.Rows.Add(d.Section, d.SCNo, d.SCDate.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), d.SCType, d.BuyerAgent, d.BuyerBrand, d.OrderQuantity, pr.PRNo, pr.RONo, pr.PRType, pr.Unit, pr.Date.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), pr.Article, null, null, null, null, null, null, null);
+                            result.Rows.Add(d.Section, d.SCNo, d.SCDate.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), d.SCType, d.BuyerAgent, d.BuyerBrand, d.Type, d.OrderQuantity, pr.PRNo, pr.RONo, pr.PRType, pr.Unit, pr.Date.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), pr.Article, null, null, null, null, null, null, null);
                         }
                         else if (pr == null && cc != null)
                         {
-                            result.Rows.Add(d.Section, d.SCNo, d.SCDate.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), d.SCType, d.BuyerAgent, d.BuyerBrand, d.OrderQuantity, null, null, null, null, null, null, cc.Date.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), cc.RONo, cc.Article, cc.Unit, cc.Quantity, cc.Uom, cc.ConfirmPrice);
+                            result.Rows.Add(d.Section, d.SCNo, d.SCDate.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), d.SCType, d.BuyerAgent, d.BuyerBrand, d.Type, d.OrderQuantity, null, null, null, null, null, null, cc.Date.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), cc.RONo, cc.Article, cc.Unit, cc.Quantity, cc.Uom, cc.ConfirmPrice);
                         }
                         else if (pr == null && cc == null)
                         {
-                            result.Rows.Add(d.Section, d.SCNo, d.SCDate.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), d.SCType, d.BuyerAgent, d.BuyerBrand, d.OrderQuantity, null, null, null, null, null, null, null, null, null, null, null, null, null);
+                            result.Rows.Add(d.Section, d.SCNo, d.SCDate.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), d.SCType, d.BuyerAgent, d.BuyerBrand, d.Type, d.OrderQuantity, null, null, null, null, null, null, null, null, null, null, null, null, null);
                         }
                         lastMergedRowPosition = rowPosition++;
                     }
-                    foreach (var col in new[] { "A", "B", "C", "D", "E", "F", "G" })
+                    foreach (var col in new[] { "A", "B", "C", "D", "E", "F", "G", "H" })
                     {
                         if (firstMergedRowPosition != lastMergedRowPosition)
                         {
-                            mergeCells.Add(($"{col}{firstMergedRowPosition}:{col}{lastMergedRowPosition}", col == "G" ? ExcelHorizontalAlignment.Right : ExcelHorizontalAlignment.Left, ExcelVerticalAlignment.Center));
+                            mergeCells.Add(($"{col}{firstMergedRowPosition}:{col}{lastMergedRowPosition}", col == "H" ? ExcelHorizontalAlignment.Right : ExcelHorizontalAlignment.Left, ExcelVerticalAlignment.Center));
                         }
                     }
 
@@ -110,7 +117,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
             }
             else
             {
-                result.Rows.Add(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+                result.Rows.Add(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
             }
 
             sheet.Cells["A1"].LoadFromDataTable(result, true, TableStyles.Light16);
@@ -144,6 +151,8 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
 
             List<CostCalculationGarment> dataCostCalculations = new List<CostCalculationGarment>();
             List<GarmentPurchaseRequestViewModel> dataPurchaseRequests = new List<GarmentPurchaseRequestViewModel>();
+
+            IQueryable<ViewModels.IntegrationViewModel.BuyerViewModel> buyerQ = GetGarmentBuyer().AsQueryable();
 
             if (allSCNo.Count > 0)
             {
@@ -179,9 +188,29 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
                     Uom = cc.UOMUnit,
                     ConfirmPrice = cc.ConfirmPrice
                 }).ToList(),
+                Type = buyerQ.Where(x => x.Code == sc.BuyerAgentCode).Select(x => x.Type).FirstOrDefault()
             }).ToList();
 
             return data;
+        }
+
+        public List<ViewModels.IntegrationViewModel.BuyerViewModel> GetGarmentBuyer()
+        {
+            IHttpClientService httpClientService = (IHttpClientService)service.GetService(typeof(IHttpClientService));
+            var response = httpClientService.GetAsync($@"{APIEndpoint.Core}{buyerUri}").Result.Content.ReadAsStringAsync();
+
+            if (response != null)
+            {
+                Dictionary<string, object> result = JsonConvert.DeserializeObject<Dictionary<string, object>>(response.Result);
+                var json = result.Single(p => p.Key.Equals("data")).Value;
+                List<ViewModels.IntegrationViewModel.BuyerViewModel> buyerList = JsonConvert.DeserializeObject<List<ViewModels.IntegrationViewModel.BuyerViewModel>>(json.ToString());
+
+                return buyerList;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }
