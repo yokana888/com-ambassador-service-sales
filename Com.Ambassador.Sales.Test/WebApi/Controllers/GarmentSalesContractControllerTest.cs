@@ -88,11 +88,18 @@ namespace Com.Ambassador.Sales.Test.WebApi.Controllers
             GarmentSalesContractViewModel vm = new GarmentSalesContractViewModel()
             {
                 AccountBank = new Service.Sales.Lib.ViewModels.IntegrationViewModel.AccountBankViewModel(),
-                Uom = new Service.Sales.Lib.ViewModels.IntegrationViewModel.UomViewModel(),
-                Items = new List<GarmentSalesContractItemViewModel>()
+                ItemROs= new List<GarmentSalesContractROViewModel>()
                 {
-                    new GarmentSalesContractItemViewModel()
+                    new GarmentSalesContractROViewModel
+                    {
+                        Uom = new Service.Sales.Lib.ViewModels.IntegrationViewModel.UomViewModel(),
+                        Items = new List<GarmentSalesContractItemViewModel>()
+                        {
+                            new GarmentSalesContractItemViewModel()
+                        }
+                    }
                 }
+                
             };
             mocks.Mapper.Setup(s => s.Map<GarmentSalesContractViewModel>(It.IsAny<GarmentSalesContract>()))
                 .Returns(vm);

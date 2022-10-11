@@ -85,9 +85,10 @@ namespace Com.Ambassador.Sales.Test.BussinesLogic.Facades.GarmentSalesContract
                .Setup(x => x.GetService(typeof(GarmentPreSalesContractLogic)))
                .Returns(gpscLogic);
 
+            var garmentSCRO = new GarmentSalesContractROLogic(serviceProviderMock.Object, identityService, dbContext);
             var garmentSCItem = new GarmentSalesContractItemLogic(serviceProviderMock.Object, identityService, dbContext);
 
-            var spinningLogic = new GarmentSalesContractLogic(garmentSCItem, serviceProviderMock.Object, identityService, dbContext);
+            var spinningLogic = new GarmentSalesContractLogic(garmentSCRO,garmentSCItem, serviceProviderMock.Object, identityService, dbContext);
             
             serviceProviderMock
                 .Setup(x => x.GetService(typeof(GarmentSalesContractLogic)))
@@ -115,15 +116,23 @@ namespace Com.Ambassador.Sales.Test.BussinesLogic.Facades.GarmentSalesContract
             {
                 new GarmentSalesContractViewModel
                 {
-                    CostCalculationId = data.CostCalculationId,
-                    Items = new List<GarmentSalesContractItemViewModel>()
+                    ItemROs= new List<GarmentSalesContractROViewModel>()
                     {
-                        new GarmentSalesContractItemViewModel()
+                        new GarmentSalesContractROViewModel
+                        {
+                            CostCalculationId = data.SalesContractROs.First().CostCalculationId,
+                            Items = new List<GarmentSalesContractItemViewModel>()
+                            {
+                                new GarmentSalesContractItemViewModel()
+                            }
+                        }
+                        
                     }
+                    
                 },
                 new GarmentSalesContractViewModel
                 {
-                    Items = new List<GarmentSalesContractItemViewModel>()
+                    ItemROs = new List<GarmentSalesContractROViewModel>()
                 }
             };
 
