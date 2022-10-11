@@ -64,7 +64,7 @@ namespace Com.Ambassador.Sales.Test.BussinesLogic.Logic.GarmentSalesContractLogi
             IIdentityService identityService = new IdentityService { Username = "Username" };
             var model = new GarmentSalesContractItem()
             {
-                GarmentSalesContract =new GarmentSalesContract()
+                GarmentSalesContractRO =new GarmentSalesContractRO()
             };
 
             dbContext.GarmentSalesContractItems.Add(model);

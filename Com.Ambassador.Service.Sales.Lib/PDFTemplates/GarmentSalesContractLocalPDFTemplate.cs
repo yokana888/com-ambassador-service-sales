@@ -151,15 +151,15 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             tableOrder.SpacingAfter = 20f;
             PdfPCell cellOrder = new PdfPCell() { MinimumHeight = 10, Border = Rectangle.BOTTOM_BORDER | Rectangle.LEFT_BORDER | Rectangle.RIGHT_BORDER | Rectangle.TOP_BORDER, HorizontalAlignment = Element.ALIGN_CENTER };
 
-            cellOrder.Phrase = new Phrase("Jenis Produk", bold_font);
-            tableOrder.AddCell(cellOrder);
-            cellOrder.Phrase = new Phrase("Material/Konstruksi", bold_font);
-            tableOrder.AddCell(cellOrder);
-            cellOrder.Phrase = new Phrase(viewModel.Description, normal_font);
-            tableOrder.AddCell(cellOrder);
-            cellOrder.Phrase = new Phrase(viewModel.Material, normal_font);
-            tableOrder.AddCell(cellOrder);
-            tableOrder.AddCell(cellOrder);
+            //cellOrder.Phrase = new Phrase("Jenis Produk", bold_font);
+            //tableOrder.AddCell(cellOrder);
+            //cellOrder.Phrase = new Phrase("Material/Konstruksi", bold_font);
+            //tableOrder.AddCell(cellOrder);
+            //cellOrder.Phrase = new Phrase(viewModel.Description, normal_font);
+            //tableOrder.AddCell(cellOrder);
+            //cellOrder.Phrase = new Phrase(viewModel.Material, normal_font);
+            //tableOrder.AddCell(cellOrder);
+            //tableOrder.AddCell(cellOrder);
 
 
 
@@ -197,38 +197,38 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             PdfPCell CellDetailCenter = new PdfPCell() { MinimumHeight = 10, Border = Rectangle.BOTTOM_BORDER | Rectangle.LEFT_BORDER | Rectangle.RIGHT_BORDER | Rectangle.TOP_BORDER, HorizontalAlignment = Element.ALIGN_CENTER };
             cellDetailOrder.Phrase = new Phrase("Jumlah", bold_font);
             tableDetailOrder.AddCell(cellDetailOrder);
-            CellDetailCenter.Phrase = new Phrase(viewModel.Quantity.ToString() + " " + viewModel.Uom.Unit, normal_font);
-            tableDetailOrder.AddCell(CellDetailCenter);
-            cellDetailOrder.Phrase = new Phrase("Harga", bold_font);
-            tableDetailOrder.AddCell(cellDetailOrder);
-            int index = 0;
+            //CellDetailCenter.Phrase = new Phrase(viewModel.Quantity.ToString() + " " + viewModel.Uom.Unit, normal_font);
+            //tableDetailOrder.AddCell(CellDetailCenter);
+            //cellDetailOrder.Phrase = new Phrase("Harga", bold_font);
+            //tableDetailOrder.AddCell(cellDetailOrder);
+            //int index = 0;
             
-            if (viewModel.Items!=null && viewModel.Items.Count > 0)
-            {
-                foreach (var detail in viewModel.Items)
-                {
+            //if (viewModel.Items!=null && viewModel.Items.Count > 0)
+            //{
+            //    foreach (var detail in viewModel.Items)
+            //    {
                     
-                    index++;
-                    if (index == 1)
-                    {
-                        CellDetailCenter.Phrase = new Phrase($"{Number.ToRupiah(detail.Price)} (Exclude PPN)", normal_font);
-                        tableDetailOrder.AddCell(CellDetailCenter);
-                    }
-                    else
-                    {
-                        CellDetailCenter.Phrase = new Phrase(" ", normal_font);
-                        tableDetailOrder.AddCell(CellDetailCenter);
-                        CellDetailCenter.Phrase = new Phrase($"{Number.ToRupiah(detail.Price)} (Exclude PPN)", normal_font);
-                        tableDetailOrder.AddCell(CellDetailCenter);
-                    }
-                }
+            //        index++;
+            //        if (index == 1)
+            //        {
+            //            CellDetailCenter.Phrase = new Phrase($"{Number.ToRupiah(detail.Price)} (Exclude PPN)", normal_font);
+            //            tableDetailOrder.AddCell(CellDetailCenter);
+            //        }
+            //        else
+            //        {
+            //            CellDetailCenter.Phrase = new Phrase(" ", normal_font);
+            //            tableDetailOrder.AddCell(CellDetailCenter);
+            //            CellDetailCenter.Phrase = new Phrase($"{Number.ToRupiah(detail.Price)} (Exclude PPN)", normal_font);
+            //            tableDetailOrder.AddCell(CellDetailCenter);
+            //        }
+            //    }
 
-            }
-            else
-            {
-                CellDetailCenter.Phrase = new Phrase($"{Number.ToRupiah(viewModel.Price)} (Exclude PPN)", normal_font);
-                tableDetailOrder.AddCell(CellDetailCenter);
-            }
+            //}
+            //else
+            //{
+            //    CellDetailCenter.Phrase = new Phrase($"{Number.ToRupiah(viewModel.Price)} (Exclude PPN)", normal_font);
+            //    tableDetailOrder.AddCell(CellDetailCenter);
+            //}
             cellDetailOrder.Phrase = new Phrase("FOB", bold_font);
             tableDetailOrder.AddCell(cellDetailOrder);
             CellDetailCenter.Phrase = new Phrase(viewModel.FOB, normal_font);
@@ -244,8 +244,8 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             tableDetailOrder.AddCell(CellDetailCenter);
             cellDetailOrder.Phrase = new Phrase("Jadwal Pengiriman", bold_font);
             tableDetailOrder.AddCell(cellDetailOrder);
-            CellDetailCenter.Phrase = new Phrase(viewModel.DeliveryDate.ToOffset(new TimeSpan(timeoffset, 0, 0)).ToString("dd/MM/yyyy", new CultureInfo("id-ID")), normal_font);
-            tableDetailOrder.AddCell(CellDetailCenter);
+            //CellDetailCenter.Phrase = new Phrase(viewModel.DeliveryDate.ToOffset(new TimeSpan(timeoffset, 0, 0)).ToString("dd/MM/yyyy", new CultureInfo("id-ID")), normal_font);
+            //tableDetailOrder.AddCell(CellDetailCenter);
             cellDetailOrder.Phrase = new Phrase("Ongkos Angkut", bold_font);
             tableDetailOrder.AddCell(cellDetailOrder);
             CellDetailCenter.Phrase = new Phrase(viewModel.FreightCost.ToString(), normal_font);

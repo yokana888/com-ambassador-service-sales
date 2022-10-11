@@ -36,6 +36,7 @@ namespace Com.Ambassador.Service.Sales.Lib
 		public DbSet<CostCalculationGarment> CostCalculationGarments { get; set; }
 		public DbSet<CostCalculationGarment_Material> CostCalculationGarment_Materials { get; set; }
         public DbSet<GarmentSalesContract> GarmentSalesContracts { get; set; }
+        public DbSet<GarmentSalesContractRO> GarmentSalesContractROs { get; set; }
         public DbSet<GarmentSalesContractItem> GarmentSalesContractItems { get; set; }
 
         #region PRODUCTION ORDER DBSET
