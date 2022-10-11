@@ -104,6 +104,8 @@ namespace Com.Ambassador.Service.Sales.Lib.Models.CostCalculationGarments
         public string BuyerBrandCode { get; set; }
         [MaxLength(255)]
         public string BuyerBrandName { get; set; }
+
+        //SCGarmentROId
         public long? SCGarmentId { get; set; }
 
         public long PreSCId { get; set; }
