@@ -81,12 +81,13 @@ namespace Com.Ambassador.Sales.Test.WebApi.Controllers
         }
 
         [Fact]
-        public void Get_PDF_OK()
+        public void Get_PDF_OK_Ekspor()
         {
             var mocks = GetMocks();
             mocks.Facade.Setup(x => x.ReadByIdAsync(It.IsAny<int>())).ReturnsAsync(Model);
             GarmentSalesContractViewModel vm = new GarmentSalesContractViewModel()
             {
+                SCType = "Ekspor",
                 AccountBank = new Service.Sales.Lib.ViewModels.IntegrationViewModel.AccountBankViewModel(),
                 SalesContractROs = new List<GarmentSalesContractROViewModel>()
                 {
@@ -110,7 +111,71 @@ namespace Com.Ambassador.Sales.Test.WebApi.Controllers
 
         }
 
-        
+        [Fact]
+        public void Get_PDF_Lokal_OK()
+        {
+            var mocks = GetMocks();
+            mocks.Facade.Setup(x => x.ReadByIdAsync(It.IsAny<int>())).ReturnsAsync(Model);
+            GarmentSalesContractViewModel vm = new GarmentSalesContractViewModel()
+            {
+                SCType = "Lokal",
+                AccountBank = new Service.Sales.Lib.ViewModels.IntegrationViewModel.AccountBankViewModel(),
+                SalesContractROs = new List<GarmentSalesContractROViewModel>()
+                {
+                    new GarmentSalesContractROViewModel
+                    {
+                        Uom = new Service.Sales.Lib.ViewModels.IntegrationViewModel.UomViewModel(),
+                        Items = new List<GarmentSalesContractItemViewModel>()
+                        {
+                            new GarmentSalesContractItemViewModel()
+                        }
+                    }
+                }
+
+            };
+            mocks.Mapper.Setup(s => s.Map<GarmentSalesContractViewModel>(It.IsAny<GarmentSalesContract>()))
+                .Returns(vm);
+            var controller = GetController(mocks);
+            var response = controller.GetPDF(1).Result;
+
+            Assert.NotNull(response);
+
+
+        }
+
+        [Fact]
+        public void Get_PDF_Lokal_OK_NoItems()
+        {
+            var mocks = GetMocks();
+            mocks.Facade.Setup(x => x.ReadByIdAsync(It.IsAny<int>())).ReturnsAsync(Model);
+            GarmentSalesContractViewModel vm1 = new GarmentSalesContractViewModel()
+            {
+                SCType = "Lokal",
+                AccountBank = new Service.Sales.Lib.ViewModels.IntegrationViewModel.AccountBankViewModel()
+                {
+                    AccountName="aa",
+                    BankName="bb"
+                },
+                SalesContractROs = new List<GarmentSalesContractROViewModel>()
+                {
+                    new GarmentSalesContractROViewModel
+                    {
+                        Uom = new Service.Sales.Lib.ViewModels.IntegrationViewModel.UomViewModel(),
+
+                    }
+                }
+
+            };
+            mocks.Mapper.Setup(s => s.Map<GarmentSalesContractViewModel>(It.IsAny<GarmentSalesContract>()))
+                .Returns(vm1);
+            var controller1 = GetController(mocks);
+            var response1 = controller1.GetPDF(1).Result;
+
+            Assert.NotNull(response1);
+
+        }
+
+
     }
 }
 
