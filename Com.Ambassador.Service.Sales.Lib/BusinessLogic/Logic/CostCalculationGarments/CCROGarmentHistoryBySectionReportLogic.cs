@@ -1,4 +1,5 @@
-﻿using Com.Ambassador.Service.Sales.Lib.Models.CostCalculationGarments;
+﻿using Com.Ambassador.Service.Sales.Lib.Helpers;
+using Com.Ambassador.Service.Sales.Lib.Models.CostCalculationGarments;
 using Com.Ambassador.Service.Sales.Lib.Services;
 using Com.Ambassador.Service.Sales.Lib.Utilities.BaseClass;
 using Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment;
@@ -14,12 +15,16 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
     public class CCROGarmentHistoryBySectionReportLogic : BaseMonitoringLogic<CCROGarmentHistoryBySectionReportViewModel>
     {
         private IIdentityService identityService;
+        private IHttpClientService httpClientService;
         private SalesDbContext dbContext;
         private DbSet<CostCalculationGarment> dbSet;
 
-        public CCROGarmentHistoryBySectionReportLogic(IIdentityService identityService, SalesDbContext dbContext)
+        private string buyerUri = "master/garment-buyers/all";
+
+        public CCROGarmentHistoryBySectionReportLogic(IIdentityService identityService, SalesDbContext dbContext, IHttpClientService httpClientService)
         {
             this.identityService = identityService;
+            this.httpClientService = httpClientService;
             this.dbContext = dbContext;
             dbSet = dbContext.Set<CostCalculationGarment>();
         }
@@ -54,6 +59,8 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
                 Query = Query.Where(cc => cc.ValidationMDDate.AddHours(identityService.TimezoneOffset).Date < filterDate);
             }
 
+            IQueryable<ViewModels.IntegrationViewModel.BuyerViewModel> buyerQ = GetGarmentBuyer().AsQueryable();
+
             Query = Query.OrderBy(o => o.Section).ThenBy(o => o.BuyerBrandName);
 
             var newQ = (from a in Query where a.IsValidatedROMD == true 
@@ -70,7 +77,8 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
                         ApprovalPurchDate = a.ApprovedPurchasingDate,
                         ApprovalKadivMDDate = a.ApprovedKadivMDDate,
                         ValidatedMDDate = a.ValidationMDDate,
-                        ValidatedSampleDate = a.ValidationSampleDate,                       
+                        ValidatedSampleDate = a.ValidationSampleDate,
+                        Type = buyerQ.Where(x => x.Code == a.BuyerCode).Select(x => x.Type).FirstOrDefault()
                     });
 
             return newQ;
@@ -82,6 +90,24 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
             public string roNo { get; set; }
             public DateTimeOffset? dateFrom { get; set; }
             public DateTimeOffset? dateTo { get; set; }
+        }
+
+        public List<ViewModels.IntegrationViewModel.BuyerViewModel> GetGarmentBuyer()
+        {
+            var response = httpClientService.GetAsync($@"{APIEndpoint.Core}{buyerUri}").Result.Content.ReadAsStringAsync();
+
+            if (response != null)
+            {
+                Dictionary<string, object> result = JsonConvert.DeserializeObject<Dictionary<string, object>>(response.Result);
+                var json = result.Single(p => p.Key.Equals("data")).Value;
+                List<ViewModels.IntegrationViewModel.BuyerViewModel> buyerList = JsonConvert.DeserializeObject<List<ViewModels.IntegrationViewModel.BuyerViewModel>>(json.ToString());
+
+                return buyerList;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

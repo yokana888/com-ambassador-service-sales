@@ -1,4 +1,5 @@
-﻿using Com.Ambassador.Service.Sales.Lib.Models.CostCalculationGarments;
+﻿using Com.Ambassador.Service.Sales.Lib.Helpers;
+using Com.Ambassador.Service.Sales.Lib.Models.CostCalculationGarments;
 using Com.Ambassador.Service.Sales.Lib.Services;
 using Com.Ambassador.Service.Sales.Lib.Utilities.BaseClass;
 using Newtonsoft.Json;
@@ -69,6 +70,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment
                 Article = cc.Article,
                 BuyerBrandCode = cc.BuyerBrandCode,
                 BuyerBrandName = cc.BuyerBrandName,
+                BuyerCode = cc.BuyerCode,
                 Quantity = cc.Quantity,
                 UOMUnit = cc.UOMUnit,
                 LeadTime = cc.LeadTime,

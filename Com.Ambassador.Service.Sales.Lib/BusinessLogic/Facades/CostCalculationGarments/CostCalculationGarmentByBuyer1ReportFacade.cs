@@ -52,6 +52,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
             result.Columns.Add(new DataColumn() { ColumnName = "Nama Agent", DataType = typeof(String) });
             result.Columns.Add(new DataColumn() { ColumnName = "Kode Brand", DataType = typeof(String) });
             result.Columns.Add(new DataColumn() { ColumnName = "Nama Brand", DataType = typeof(String) });
+            result.Columns.Add(new DataColumn() { ColumnName = "Tipe Buyer", DataType = typeof(String) });
             result.Columns.Add(new DataColumn() { ColumnName = "Komisi %", DataType = typeof(String) });
             result.Columns.Add(new DataColumn() { ColumnName = "Jumlah", DataType = typeof(String) });
             result.Columns.Add(new DataColumn() { ColumnName = "Satuan", DataType = typeof(String) });
@@ -60,7 +61,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
 
             Dictionary<string, string> Rowcount = new Dictionary<string, string>();
             if (Query.ToArray().Count() == 0)
-                     result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", "", ""); // to allow column name to be generated properly for empty data as template
+                     result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", "", "", ""); // to allow column name to be generated properly for empty data as template
             else
             {
                     Dictionary<string, List<CostCalculationGarmentByBuyer1ReportViewModel>> dataByBrand = new Dictionary<string, List<CostCalculationGarmentByBuyer1ReportViewModel>>();
@@ -81,6 +82,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
                             BuyerName = item.BuyerName,
                             BrandCode = item.BrandCode,
                             BrandName = item.BrandName,
+                            Type = item.Type,
                             Quantity = item.Quantity,
                             ConfirmPrice = item.ConfirmPrice,
                             UOMUnit = item.UOMUnit,
@@ -122,17 +124,17 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
                             string CnfmPrice = string.Format("{0:N4}", item.ConfirmPrice);
 
                             result.Rows.Add(index, item.RO_Number, ShipDate, item.Article, item.Description, item.BuyerCode, 
-                                            item.BuyerName, item.BrandCode, item.BrandName, Commission, QtyOrder, item.UOMUnit, CnfmPrice, Amount );
+                                            item.BuyerName, item.BrandCode, item.BrandName, item.Type, Commission, QtyOrder, item.UOMUnit, CnfmPrice, Amount );
                             rowPosition += 1;
                             BrandCode = item.BrandName;
                         }
-                        result.Rows.Add("", "", "", "", "", "", "SUB TOTAL", "", BrandCode, "", Math.Round(subTotalQty[BuyerBrand.Key], 2), "", "", Math.Round(subTotalAmount[BuyerBrand.Key], 2));
+                        result.Rows.Add("", "", "", "", "", "", "SUB TOTAL", "", BrandCode, "", "", Math.Round(subTotalQty[BuyerBrand.Key], 2), "", "", Math.Round(subTotalAmount[BuyerBrand.Key], 2));
 
                         rowPosition += 1;
                         totalQty += subTotalQty[BuyerBrand.Key];
                         totalAmount += subTotalAmount[BuyerBrand.Key];
                     }
-                        result.Rows.Add("", "", "", "", "", "", "T O T A L", "", "", "", Math.Round(totalQty, 2), "", "", Math.Round(totalAmount, 2));
+                        result.Rows.Add("", "", "", "", "", "", "T O T A L", "", "", "", "", Math.Round(totalQty, 2), "", "", Math.Round(totalAmount, 2));
                         rowPosition += 1;
             }
             ExcelPackage package = new ExcelPackage();

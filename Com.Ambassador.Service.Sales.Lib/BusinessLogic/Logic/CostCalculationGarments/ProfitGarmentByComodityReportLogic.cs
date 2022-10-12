@@ -1,4 +1,5 @@
-﻿using Com.Ambassador.Service.Sales.Lib.Models.CostCalculationGarments;
+﻿using Com.Ambassador.Service.Sales.Lib.Helpers;
+using Com.Ambassador.Service.Sales.Lib.Models.CostCalculationGarments;
 using Com.Ambassador.Service.Sales.Lib.Services;
 using Com.Ambassador.Service.Sales.Lib.Utilities.BaseClass;
 using Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment;
@@ -14,12 +15,16 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
     public class ProfitGarmentByComodityReportLogic : BaseMonitoringLogic<ProfitGarmentByComodityReportViewModel>
     {
         private IIdentityService identityService;
+        private IHttpClientService httpClientService;
         private SalesDbContext dbContext;
         private DbSet<CostCalculationGarment> dbSet;
 
-        public ProfitGarmentByComodityReportLogic(IIdentityService identityService, SalesDbContext dbContext)
+        private string buyerUri = "master/garment-buyers/all";
+
+        public ProfitGarmentByComodityReportLogic(IIdentityService identityService, SalesDbContext dbContext, IHttpClientService httpClientService)
         {
             this.identityService = identityService;
+            this.httpClientService = httpClientService;
             this.dbContext = dbContext;
             dbSet = dbContext.Set<CostCalculationGarment>();
         }

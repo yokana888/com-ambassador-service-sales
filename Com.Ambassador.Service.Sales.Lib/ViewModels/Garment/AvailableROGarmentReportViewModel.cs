@@ -11,6 +11,7 @@ namespace Com.Ambassador.Service.Sales.Lib.ViewModels.Garment
         public int DateDiff { get; set; }
         public string BuyerCode { get; set; }
         public string Buyer { get; set; }
+        public string Type { get; set; }
         public double Quantity { get; set; }
         public string Uom { get; set; }
         public double LeadTime { get; set; }

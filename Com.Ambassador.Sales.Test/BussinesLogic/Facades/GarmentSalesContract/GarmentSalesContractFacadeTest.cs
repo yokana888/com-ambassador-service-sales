@@ -88,7 +88,7 @@ namespace Com.Ambassador.Sales.Test.BussinesLogic.Facades.GarmentSalesContract
             var garmentSCRO = new GarmentSalesContractROLogic(serviceProviderMock.Object, identityService, dbContext);
             var garmentSCItem = new GarmentSalesContractItemLogic(serviceProviderMock.Object, identityService, dbContext);
 
-            var spinningLogic = new GarmentSalesContractLogic(garmentSCRO,garmentSCItem, serviceProviderMock.Object, identityService, dbContext);
+            var spinningLogic = new GarmentSalesContractLogic(serviceProviderMock.Object, identityService, dbContext);
             
             serviceProviderMock
                 .Setup(x => x.GetService(typeof(GarmentSalesContractLogic)))
@@ -116,7 +116,7 @@ namespace Com.Ambassador.Sales.Test.BussinesLogic.Facades.GarmentSalesContract
             {
                 new GarmentSalesContractViewModel
                 {
-                    ItemROs= new List<GarmentSalesContractROViewModel>()
+                    SalesContractROs= new List<GarmentSalesContractROViewModel>()
                     {
                         new GarmentSalesContractROViewModel
                         {
@@ -132,7 +132,7 @@ namespace Com.Ambassador.Sales.Test.BussinesLogic.Facades.GarmentSalesContract
                 },
                 new GarmentSalesContractViewModel
                 {
-                    ItemROs = new List<GarmentSalesContractROViewModel>()
+                    SalesContractROs = new List<GarmentSalesContractROViewModel>()
                 }
             };
 
