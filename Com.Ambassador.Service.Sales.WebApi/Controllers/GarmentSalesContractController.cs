@@ -85,7 +85,7 @@ namespace Com.Ambassador.Service.Sales.WebApi.Controllers
                     Dictionary<string, object> bank = JsonConvert.DeserializeObject<Dictionary<string, object>>(jsonBank.ToString());
 
                     string buyerType = buyer["Type"] != null ? buyer["Type"].ToString() : "";
-                    if (buyerType!= "Ekspor")
+                    if (viewModel.SCType != "Ekspor")
                     {
                         GarmentSalesContractLocalPDFTemplate PdfTemplate = new GarmentSalesContractLocalPDFTemplate();
                         MemoryStream stream = PdfTemplate.GeneratePdfTemplate(viewModel, Facade, timeoffsset, buyer, bank);
