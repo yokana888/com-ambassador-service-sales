@@ -43,9 +43,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
                     model.IsApprovedKadivMD = true;
                     model.ApprovedKadivMDDate = model.LastModifiedUtc;
                     model.ApprovedKadivMDBy = model.LastModifiedBy;
-                    model.IsApprovedPPIC = true;
-                    model.ApprovedPPICDate = model.LastModifiedUtc;
-                    model.ApprovedPPICBy = model.LastModifiedBy;
+                   
 
                     foreach (var material in model.CostCalculationGarment_Materials)
                     {

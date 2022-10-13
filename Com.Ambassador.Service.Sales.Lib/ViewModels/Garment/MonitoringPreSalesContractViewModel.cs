@@ -12,6 +12,7 @@ namespace Com.Ambassador.Service.Sales.Lib.ViewModels.Garment
         public string SCType { get; set; }
         public string BuyerAgent { get; set; }
         public string BuyerBrand { get; set; }
+        public string Type { get; set; }
         public int OrderQuantity { get; set; }
         public List<MonitoringPreSalesContractGPRViewModel> GarmentPurchaseRequests { get; set; }
         public List<MonitoringPreSalesContractCCViewModel> CostCalculations { get; set; }

@@ -15,8 +15,6 @@ namespace Com.Ambassador.Service.Sales.Lib.AutoMapperProfiles.GarmentSalesContra
             .ForPath(d => d.AccountBank.Id, opt => opt.MapFrom(s => s.AccountBankId))
             .ForPath(d => d.AccountBank.BankName, opt => opt.MapFrom(s => s.AccountBankName))
             .ForPath(d => d.AccountBank.AccountName, opt => opt.MapFrom(s => s.AccountName))
-            .ForPath(d => d.Uom.Id, opt => opt.MapFrom(s => s.UomId))
-            .ForPath(d => d.Uom.Unit, opt => opt.MapFrom(s => s.UomUnit))
 
             .ReverseMap();
         }

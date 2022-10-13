@@ -41,7 +41,10 @@ namespace Com.Ambassador.Sales.Test.BussinesLogic.Facades.GarmentSalesContract
             GarmentPreSalesContractFacade gpsCFacade = new GarmentPreSalesContractFacade(serviceProvider.Object, dbContext);
             GarmentPreSalesContractDataUtil gpCDataUtil = new GarmentPreSalesContractDataUtil(gpsCFacade);
             CostCalculationGarmentDataUtil ccDataUtil = new CostCalculationGarmentDataUtil(ccFacade, gpCDataUtil);
-            GarmentSalesContractDataUtil dataUtil = Activator.CreateInstance(typeof(GarmentSalesContractDataUtil), facade, ccDataUtil) as GarmentSalesContractDataUtil;
+            GarmentSalesContractFacade gSCDataUtil = new GarmentSalesContractFacade(serviceProvider.Object, dbContext);
+
+            GarmentSalesContractDataUtil dataUtil = new GarmentSalesContractDataUtil(facade,ccDataUtil);
+            //GarmentSalesContractDataUtil dataUtil = Activator.CreateInstance(typeof(GarmentSalesContractDataUtil), facade, ccDataUtil) as GarmentSalesContractDataUtil;
             return dataUtil;
         }
 
@@ -85,18 +88,29 @@ namespace Com.Ambassador.Sales.Test.BussinesLogic.Facades.GarmentSalesContract
                .Setup(x => x.GetService(typeof(GarmentPreSalesContractLogic)))
                .Returns(gpscLogic);
 
+            var garmentSCRO = new GarmentSalesContractROLogic(serviceProviderMock.Object, identityService, dbContext);
             var garmentSCItem = new GarmentSalesContractItemLogic(serviceProviderMock.Object, identityService, dbContext);
 
-            var spinningLogic = new GarmentSalesContractLogic(garmentSCItem, serviceProviderMock.Object, identityService, dbContext);
-            
             serviceProviderMock
-                .Setup(x => x.GetService(typeof(GarmentSalesContractLogic)))
-                .Returns(spinningLogic);
+               .Setup(x => x.GetService(typeof(GarmentSalesContractROLogic)))
+               .Returns(garmentSCRO);
+
+            serviceProviderMock
+                .Setup(x => x.GetService(typeof(GarmentSalesContractItemLogic)))
+                .Returns(garmentSCItem);
 
             serviceProviderMock
                 .Setup(x => x.GetService(typeof(SalesDbContext)))
                 .Returns(dbContext);
 
+
+            var SCLogic = new GarmentSalesContractLogic(serviceProviderMock.Object, identityService, dbContext);
+            
+            serviceProviderMock
+                .Setup(x => x.GetService(typeof(GarmentSalesContractLogic)))
+                .Returns(SCLogic);
+
+           
             return serviceProviderMock;
         }
 
@@ -115,15 +129,23 @@ namespace Com.Ambassador.Sales.Test.BussinesLogic.Facades.GarmentSalesContract
             {
                 new GarmentSalesContractViewModel
                 {
-                    CostCalculationId = data.CostCalculationId,
-                    Items = new List<GarmentSalesContractItemViewModel>()
+                    SalesContractROs= new List<GarmentSalesContractROViewModel>()
                     {
-                        new GarmentSalesContractItemViewModel()
+                        new GarmentSalesContractROViewModel
+                        {
+                            CostCalculationId = data.SalesContractROs.First().CostCalculationId,
+                            Items = new List<GarmentSalesContractItemViewModel>()
+                            {
+                                new GarmentSalesContractItemViewModel()
+                            }
+                        }
+                        
                     }
+                    
                 },
                 new GarmentSalesContractViewModel
                 {
-                    Items = new List<GarmentSalesContractItemViewModel>()
+                    SalesContractROs = new List<GarmentSalesContractROViewModel>()
                 }
             };
 

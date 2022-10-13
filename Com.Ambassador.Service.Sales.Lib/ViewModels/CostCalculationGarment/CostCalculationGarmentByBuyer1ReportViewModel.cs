@@ -20,6 +20,7 @@ namespace Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment
         public string UOMUnit { get; set; }
         public double Amount { get; set; }
         public double Commission { get; set; }
+        public string Type { get; set; }
 
     }
 }

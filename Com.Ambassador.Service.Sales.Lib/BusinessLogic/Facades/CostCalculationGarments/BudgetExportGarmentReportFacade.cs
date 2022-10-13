@@ -49,6 +49,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
             result.Columns.Add(new DataColumn() { ColumnName = "Seksi", DataType = typeof(String) });
             result.Columns.Add(new DataColumn() { ColumnName = "Kode Buyer", DataType = typeof(String) });
             result.Columns.Add(new DataColumn() { ColumnName = "Nama Buyer", DataType = typeof(String) });
+            result.Columns.Add(new DataColumn() { ColumnName = "Tipe Buyer", DataType = typeof(String) });
             result.Columns.Add(new DataColumn() { ColumnName = "Article", DataType = typeof(String) });
             result.Columns.Add(new DataColumn() { ColumnName = "Tgl Shipmnet", DataType = typeof(String) });
             result.Columns.Add(new DataColumn() { ColumnName = "No Plan PO", DataType = typeof(String) });
@@ -62,7 +63,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
 
             Dictionary<string, string> Rowcount = new Dictionary<string, string>();
             if (Query.ToArray().Count() == 0)
-                     result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""); // to allow column name to be generated properly for empty data as template
+                     result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""); // to allow column name to be generated properly for empty data as template
             else
             {
                 Dictionary<string, List<BudgetExportGarmentReportViewModel>> dataByRO = new Dictionary<string, List<BudgetExportGarmentReportViewModel>>();
@@ -91,6 +92,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
                         BudgetUOM = item.BudgetUOM,
                         BudgetPrice = item.BudgetPrice,
                         BudgetAmount = item.BudgetAmount,
+                        Type = item.Type
                     });
 
                         if (!subTotalAmount.ContainsKey(RONumber))
@@ -119,28 +121,28 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
                             string BgtPrice = string.Format("{0:N4}", item.BudgetPrice);
                             string BgtAmt = string.Format("{0:N2}", item.BudgetAmount);
 
-                            result.Rows.Add(index, item.RO_Number, item.UnitName, item.Section, item.BuyerCode, item.BuyerName, item.Article, ShipDate, 
+                            result.Rows.Add(index, item.RO_Number, item.UnitName, item.Section, item.BuyerCode, item.BuyerName, item.Type, item.Article, ShipDate, 
                                             item.PONumber, item.CategoryName, item.ProductCode, item.ProductName, BgtQty, item.BudgetUOM, BgtPrice, BgtAmt);
                             rowPosition += 1;
                             RO_No = item.RO_Number;
                         }
-                        result.Rows.Add("", "", "", "", "", "", "", "", "", "SUB TOTAL", "", RO_No, "", "", "", Math.Round(subTotalAmount[RONo.Key], 2));
+                        result.Rows.Add("", "", "", "", "", "", "", "", "", "", "SUB TOTAL", "", RO_No, "", "", "", Math.Round(subTotalAmount[RONo.Key], 2));
 
                         rowPosition += 1;
                         totalAmount += subTotalAmount[RONo.Key];
                     }
-                        result.Rows.Add("", "", "", "", "", "", "", "", "", "", "T O T A L", "", "", "", "", Math.Round(totalAmount, 2));
+                        result.Rows.Add("", "", "", "", "", "", "", "", "", "", "T O T A L", "", "", "", "", "", Math.Round(totalAmount, 2));
                         rowPosition += 1;
             }
             ExcelPackage package = new ExcelPackage();
-            var sheet = package.Workbook.Worksheets.Add("BUDGET EXPORT GARMENT");
+            var sheet = package.Workbook.Worksheets.Add("BUDGET GARMENT");
             sheet.Cells["A1"].LoadFromDataTable(result, true, OfficeOpenXml.Table.TableStyles.Light16);
 
             sheet.Cells[sheet.Dimension.Address].AutoFitColumns();
             MemoryStream streamExcel = new MemoryStream();
             package.SaveAs(streamExcel);
 
-            string fileName = string.Concat("Budget Export Garment", ".xlsx");
+            string fileName = string.Concat("Budget Garment", ".xlsx");
 
             return Tuple.Create(streamExcel, fileName);
         }
