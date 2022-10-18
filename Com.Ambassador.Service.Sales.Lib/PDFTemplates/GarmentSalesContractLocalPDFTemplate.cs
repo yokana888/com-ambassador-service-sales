@@ -371,7 +371,6 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             tableSignature.SetWidths(widthsSignature);
             tableSignature.HorizontalAlignment = 0;
             tableSignature.SpacingBefore = 20f;
-            tableSignature.SpacingAfter = 20f;
             tableSignature.HorizontalAlignment = Element.ALIGN_RIGHT;
             PdfPCell cellSignature = new PdfPCell() { MinimumHeight = 10, Border = Rectangle.BOTTOM_BORDER | Rectangle.LEFT_BORDER | Rectangle.RIGHT_BORDER | Rectangle.TOP_BORDER, HorizontalAlignment = Element.ALIGN_CENTER };
             PdfPCell cellBottomSignature = new PdfPCell() { MinimumHeight = 40, Border = Rectangle.BOTTOM_BORDER | Rectangle.LEFT_BORDER | Rectangle.RIGHT_BORDER | Rectangle.TOP_BORDER, HorizontalAlignment = Element.ALIGN_CENTER };
@@ -385,7 +384,6 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             tableSignature.AddCell(cellBottomSignature);
             PdfPCell cellSignatures = new PdfPCell(tableSignature); // dont remove
             tableSignature.ExtendLastRow = false;
-            tableSignature.SpacingAfter = 15f;
             document.Add(tableSignature);
             #endregion
 
@@ -528,9 +526,10 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             signature.AddCell(cell_signature);
             cell_signature.Phrase = new Phrase("(" + viewModel.RecipientName + ")", normal_font);
             signature.AddCell(cell_signature);
-            cell_signature.Phrase = new Phrase("Direktur Marketing", normal_font);
+            cell_signature.Phrase = new Phrase("PT Ambassador Garmindo", normal_font);
             signature.AddCell(cell_signature);
-            cell_signature.Phrase = new Phrase("", normal_font);
+            string buyerName = buyer["Name"] != null ? buyer["Name"].ToString() : "";
+            cell_signature.Phrase = new Phrase(buyerName, normal_font);
             signature.AddCell(cell_signature);
             cellIContentRights.Phrase = new Phrase("");
             signature.AddCell(cellIContentRights);

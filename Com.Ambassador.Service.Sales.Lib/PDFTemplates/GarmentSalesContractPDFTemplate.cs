@@ -517,7 +517,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 
     class GarmentSalesContractPDFTemplatePageEvent : PDFPages
     {
-        public override void OnStartPage(PdfWriter writer, Document document)
+        public override void OnEndPage(PdfWriter writer, Document document)
         {
             PdfContentByte cb = writer.DirectContent;
             cb.BeginText();
@@ -588,7 +588,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             imageIso.SetAbsolutePosition(width - imageIso.ScaledWidth - marginRight, height - imageIso.ScaledHeight - marginTop + 60);
             cb.AddImage(imageIso, inlineImage: true);
 
-            cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, "CERTIFICATE ID09 / 01238", width - (imageIso.ScaledWidth / 2) - marginRight, height - imageIso.ScaledHeight - marginTop + 58, 0);
+            cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, "CERTIFICATE ID19 / 05073", width - (imageIso.ScaledWidth / 2) - marginRight, height - imageIso.ScaledHeight - marginTop + 55, 0);
 
             #endregion
 
