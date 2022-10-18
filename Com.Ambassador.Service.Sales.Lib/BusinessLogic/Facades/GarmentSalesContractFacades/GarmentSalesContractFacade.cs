@@ -18,6 +18,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using Com.Ambassador.Service.Sales.Lib.Models.CostCalculationGarments;
 using Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.CostCalculationGarmentLogic;
+using System.Linq;
 
 namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentSalesContractFacades
 {
@@ -87,8 +88,45 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentSalesCon
 
         public async Task<int> UpdateAsync(int id, GarmentSalesContract model)
         {
+            
+            List<int> costCalIds = new List<int>();
+            foreach(var newRO in model.SalesContractROs)
+            {
+                if (newRO.Id <= 0)
+                {
+                    costCalIds.Add(newRO.CostCalculationId);
+                }
+            }
+
+            int result = 0;
             garmentSalesContractLogic.UpdateAsync(id, model);
-            return await DbContext.SaveChangesAsync();
+            result = await DbContext.SaveChangesAsync();
+            if (costCalIds.Count > 0)
+            {
+                foreach (var cc in costCalIds)
+                {
+                    var newRO= model.SalesContractROs.FirstOrDefault(a => a.CostCalculationId == cc);
+                    CostCalculationGarment costCal = await costCalGarmentLogic.ReadByIdAsync(newRO.CostCalculationId);
+                    result += await UpdateCostCalAsync(costCal, (int)newRO.Id);
+                }
+            }
+            GarmentSalesContract scExist = await ReadByIdAsync(id);
+            foreach (var sc in scExist.SalesContractROs)
+            {
+                if (sc.Id > 0)
+                {
+                    GarmentSalesContractRO existRO = model.SalesContractROs.FirstOrDefault(a => a.Id == sc.Id);
+                    if (existRO == null || existRO.IsDeleted)
+                    {
+                        CostCalculationGarment costCal = await DbContext.CostCalculationGarments.Include(cc => cc.CostCalculationGarment_Materials).FirstOrDefaultAsync(a => a.Id.Equals(sc.CostCalculationId));
+                        costCal.SCGarmentId = null;
+                        await costCalGarmentLogic.UpdateAsync((int)sc.CostCalculationId, costCal);
+                    }
+
+                }
+            }
+
+            return result;
         }
 
         public async Task<int> UpdatePrinted(int id, GarmentSalesContract model)

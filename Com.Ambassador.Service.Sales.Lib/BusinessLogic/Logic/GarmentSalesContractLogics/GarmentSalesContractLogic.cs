@@ -125,10 +125,11 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentSalesContr
                     foreach (var detail in model.SalesContractROs)
                     {
                         garmentSalesContractROLogic.Create(detail);
-                        //EntityExtension.FlagForCreate(detail, IdentityService.Username, "sales-service");
+                        EntityExtension.FlagForCreate(detail, IdentityService.Username, "sales-service");
                         foreach(var item in detail.Items)
                         {
                             garmentSalesContractItemLogic.Create(item);
+                            EntityExtension.FlagForCreate(item, IdentityService.Username, "sales-service");
                         }
                     }
                 }
@@ -141,12 +142,18 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentSalesContr
                         if (data == null)
                         {
 
-                            GarmentSalesContractRO dataRO = DbContext.GarmentSalesContractROs.FirstOrDefault(prop => prop.Id.Equals(roId));
-                            foreach(var item in dataRO.Items)
+                            GarmentSalesContractRO dataRO = DbContext.GarmentSalesContractROs.AsNoTracking().Include(a=>a.Items).FirstOrDefault(prop => prop.Id.Equals(roId));
+                            if (dataRO.Items != null)
                             {
-                                GarmentSalesContractItem dataItem = DbContext.GarmentSalesContractItems.FirstOrDefault(prop => prop.Id.Equals(item.Id));
-                                EntityExtension.FlagForDelete(dataItem, IdentityService.Username, "sales-service");
+                                foreach (var item in dataRO.Items)
+                                {
+                                    GarmentSalesContractItem dataItem = DbContext.GarmentSalesContractItems.AsNoTracking().FirstOrDefault(prop => prop.Id.Equals(item.Id));
+                                    EntityExtension.FlagForDelete(dataItem, IdentityService.Username, "sales-service");
+                                    garmentSalesContractItemLogic.UpdateAsync(dataItem.Id, item);
+                                }
                             }
+
+                            garmentSalesContractROLogic.UpdateAsync(dataRO.Id,dataRO);
                             EntityExtension.FlagForDelete(dataRO, IdentityService.Username, "sales-service");
                             
                         }
