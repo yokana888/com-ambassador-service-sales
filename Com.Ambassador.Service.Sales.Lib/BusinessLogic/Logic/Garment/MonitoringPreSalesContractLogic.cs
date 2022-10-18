@@ -138,6 +138,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment
                 SCType = sc.SCType,
                 BuyerAgentName = sc.BuyerAgentName,
                 BuyerBrandName = sc.BuyerBrandName,
+                BuyerAgentCode = sc.BuyerAgentCode,
                 OrderQuantity = sc.OrderQuantity
             });
 

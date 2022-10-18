@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
@@ -33,43 +34,43 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 
             #region Header
 
-            string codeNoString = "FM-00-PJ-02-001/R1";
-            Paragraph codeNo = new Paragraph(codeNoString, bold_font) { Alignment = Element.ALIGN_RIGHT };
-            codeNo.SpacingAfter = 10f;
-            document.Add(codeNo);
+            //string codeNoString = "FM-00-PJ-02-001/R1";
+            //Paragraph codeNo = new Paragraph(codeNoString, bold_font) { Alignment = Element.ALIGN_RIGHT };
+            //codeNo.SpacingAfter = 10f;
+            //document.Add(codeNo);
 
             PdfPTable tableHeader = new PdfPTable(4);
             tableHeader.SetWidths(new float[] { 1f,0.2f, 3f, 3f });
 
-            PdfPCell cellHeaderContentLeft = new PdfPCell() { Border = Rectangle.NO_BORDER , HorizontalAlignment = Element.ALIGN_LEFT };
-            cellHeaderContentLeft.Phrase=new Phrase("R/O NO", normal_font);
+            PdfPCell cellHeaderContentLeft = new PdfPCell() { Border = Rectangle.NO_BORDER, HorizontalAlignment = Element.ALIGN_LEFT };
+            cellHeaderContentLeft.Phrase = new Phrase("R/O NO", normal_font);
             tableHeader.AddCell(cellHeaderContentLeft);
             cellHeaderContentLeft.Phrase = new Phrase(": ", normal_font);
             tableHeader.AddCell(cellHeaderContentLeft);
-            cellHeaderContentLeft.Phrase=new Phrase(viewModel.RONumber, normal_font);
+            cellHeaderContentLeft.Phrase = new Phrase(viewModel.SalesContractROs.First().RONumber, normal_font);
             tableHeader.AddCell(cellHeaderContentLeft);
 
             DateTime date = viewModel.CreatedUtc.AddHours(timeoffset);
             PdfPCell cellHeaderContentRight = new PdfPCell() { Border = Rectangle.NO_BORDER, HorizontalAlignment = Element.ALIGN_RIGHT };
-            cellHeaderContentRight.Phrase=new Phrase("DATE, " + date.ToString("MMMM dd, yyyy"), normal_font);
+            cellHeaderContentRight.Phrase = new Phrase("DATE, " + date.ToString("MMMM dd, yyyy"), normal_font);
             tableHeader.AddCell(cellHeaderContentRight);
 
-            cellHeaderContentLeft.Phrase=new Phrase("MESSR.", normal_font);
+            cellHeaderContentLeft.Phrase = new Phrase("MESSR.", normal_font);
             tableHeader.AddCell(cellHeaderContentLeft);
             cellHeaderContentLeft.Phrase = new Phrase(": ", normal_font);
             tableHeader.AddCell(cellHeaderContentLeft);
-            cellHeaderContentLeft.Phrase=new Phrase( viewModel.BuyerBrandName, normal_font);
+            cellHeaderContentLeft.Phrase = new Phrase(viewModel.BuyerBrandName, normal_font);
             tableHeader.AddCell(cellHeaderContentLeft);
 
 
-            cellHeaderContentLeft.Phrase=new Phrase("", normal_font);
-            tableHeader.AddCell(cellHeaderContentLeft);
-            cellHeaderContentLeft.Phrase=new Phrase("", normal_font);
+            cellHeaderContentLeft.Phrase = new Phrase("", normal_font);
             tableHeader.AddCell(cellHeaderContentLeft);
             cellHeaderContentLeft.Phrase = new Phrase("", normal_font);
             tableHeader.AddCell(cellHeaderContentLeft);
-            string buyerAddress = buyer["Address"] !=null? buyer["Address"].ToString() : "";
-            cellHeaderContentLeft.Phrase=new Phrase( buyerAddress, normal_font);
+            cellHeaderContentLeft.Phrase = new Phrase("", normal_font);
+            tableHeader.AddCell(cellHeaderContentLeft);
+            string buyerAddress = buyer["Address"] != null ? buyer["Address"].ToString() : "";
+            cellHeaderContentLeft.Phrase = new Phrase(buyerAddress, normal_font);
             tableHeader.AddCell(cellHeaderContentLeft);
 
             cellHeaderContentLeft.Phrase = new Phrase("", normal_font);
@@ -83,7 +84,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             string titleString = "SALES CONTRACT";
             bold_font.SetStyle(Font.UNDERLINE);
             Paragraph title = new Paragraph(titleString, bold_font) { Alignment = Element.ALIGN_CENTER };
-           // title.SpacingAfter = 20f;
+            // title.SpacingAfter = 20f;
             document.Add(title);
             bold_font.SetStyle(Font.NORMAL);
 
@@ -96,7 +97,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 
             #region body
             PdfPTable tableBody = new PdfPTable(3);
-            tableBody.SetWidths(new float[] { 0.75f,0.1f, 2f });
+            tableBody.SetWidths(new float[] { 0.75f, 0.1f, 2f });
             PdfPCell bodyContentCenter = new PdfPCell() { Border = Rectangle.NO_BORDER, HorizontalAlignment = Element.ALIGN_CENTER };
             PdfPCell bodyContentLeft = new PdfPCell() { Border = Rectangle.NO_BORDER, HorizontalAlignment = Element.ALIGN_LEFT };
             PdfPCell bodyContentRight = new PdfPCell() { Border = Rectangle.NO_BORDER, HorizontalAlignment = Element.ALIGN_RIGHT };
@@ -104,57 +105,57 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase(": ");
             tableBody.AddCell(bodyContentLeft);
-            bodyContentLeft.Phrase = new Phrase(viewModel.Description, normal_font);
+            bodyContentLeft.Phrase = new Phrase(viewModel.SalesContractROs.First().Description, normal_font);
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase("Material", normal_font);
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase(": ");
             tableBody.AddCell(bodyContentLeft);
-            bodyContentLeft.Phrase = new Phrase( viewModel.Material, normal_font);
+            bodyContentLeft.Phrase = new Phrase(viewModel.SalesContractROs.First().Material, normal_font);
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase("Packing", normal_font);
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase(": ");
             tableBody.AddCell(bodyContentLeft);
-            bodyContentLeft.Phrase = new Phrase( viewModel.Packing, normal_font);
+            bodyContentLeft.Phrase = new Phrase(viewModel.Packing, normal_font);
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase("Style/Order/Article No.", normal_font);
             tableBody.AddCell(bodyContentLeft);
-            bodyContentLeft.Phrase = new Phrase(": " );
+            bodyContentLeft.Phrase = new Phrase(": ");
             tableBody.AddCell(bodyContentLeft);
-            bodyContentLeft.Phrase = new Phrase( viewModel.Article, normal_font);
+            bodyContentLeft.Phrase = new Phrase(viewModel.SalesContractROs.First().Article, normal_font);
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase("Quantity", normal_font);
             tableBody.AddCell(bodyContentLeft);
-            bodyContentLeft.Phrase = new Phrase(": " , normal_font);
+            bodyContentLeft.Phrase = new Phrase(": ", normal_font);
             tableBody.AddCell(bodyContentLeft);
-            bodyContentLeft.Phrase = new Phrase( viewModel.Quantity + " " + viewModel.Uom.Unit, normal_font);
+            bodyContentLeft.Phrase = new Phrase(viewModel.SalesContractROs.First().Quantity + " " + viewModel.SalesContractROs.First().Uom.Unit, normal_font);
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase("Unit Price", normal_font);
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase(": ", normal_font);
             tableBody.AddCell(bodyContentLeft);
-            if(viewModel.Items.Count > 0)
+            if (viewModel.SalesContractROs.First().Items.Count > 0)
             {
                 bodyContentLeft.Phrase = new Phrase(viewModel.FOB, normal_font);
                 tableBody.AddCell(bodyContentLeft);
             }
             else
             {
-                bodyContentLeft.Phrase = new Phrase(viewModel.FOB + " US$ " + string.Format("{0:n2}", viewModel.Price) + " /" + viewModel.Uom.Unit, normal_font);
+                bodyContentLeft.Phrase = new Phrase(viewModel.FOB + " US$ " + string.Format("{0:n2}", viewModel.SalesContractROs.First().Price) + " /" + viewModel.SalesContractROs.First().Uom.Unit, normal_font);
                 tableBody.AddCell(bodyContentLeft);
             }
-            
 
-            if (viewModel.Items.Count > 0)
+
+            if (viewModel.SalesContractROs.First().Items.Count > 0)
             {
-                foreach(var item in viewModel.Items)
+                foreach (var item in viewModel.SalesContractROs.First().Items)
                 {
                     bodyContentLeft.Phrase = new Phrase("", normal_font);
                     tableBody.AddCell(bodyContentLeft);
                     bodyContentLeft.Phrase = new Phrase("", normal_font);
                     tableBody.AddCell(bodyContentLeft);
-                    bodyContentLeft.Phrase = new Phrase( item.Description + "  : " + item.Quantity + " "+ viewModel.Uom.Unit + " | US$ " + string.Format("{0:n2}", item.Price) + " / " + viewModel.Uom.Unit, normal_font);
+                    bodyContentLeft.Phrase = new Phrase(item.Description + "  : " + item.Quantity + " " + viewModel.SalesContractROs.First().Uom.Unit + " | US$ " + string.Format("{0:n2}", item.Price) + " / " + viewModel.SalesContractROs.First().Uom.Unit, normal_font);
                     tableBody.AddCell(bodyContentLeft);
 
                 }
@@ -164,13 +165,13 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase(": ", normal_font);
             tableBody.AddCell(bodyContentLeft);
-            bodyContentLeft.Phrase = new Phrase("US$ " + string.Format("{0:n2}",viewModel.Amount) , normal_font);
+            bodyContentLeft.Phrase = new Phrase("US$ " + string.Format("{0:n2}", viewModel.Amount), normal_font);
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase("Shipment/Delivery", normal_font);
             tableBody.AddCell(bodyContentLeft);
-            bodyContentLeft.Phrase = new Phrase(": " , normal_font);
+            bodyContentLeft.Phrase = new Phrase(": ", normal_font);
             tableBody.AddCell(bodyContentLeft);
-            bodyContentLeft.Phrase = new Phrase( viewModel.DeliveryDate.ToOffset(new TimeSpan(timeoffset, 0, 0)).ToString("dd/MM/yyyy") + " " + viewModel.Delivery, normal_font);
+            bodyContentLeft.Phrase = new Phrase(viewModel.DeliveryDate.ToOffset(new TimeSpan(timeoffset, 0, 0)).ToString("dd/MM/yyyy") + " " + viewModel.Delivery, normal_font);
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase("Destination", normal_font);
             tableBody.AddCell(bodyContentLeft);
@@ -188,7 +189,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase(": ", normal_font);
             tableBody.AddCell(bodyContentLeft);
-            bodyContentLeft.Phrase = new Phrase( viewModel.PaymentDetail, normal_font);
+            bodyContentLeft.Phrase = new Phrase(viewModel.PaymentDetail, normal_font);
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase("Manufacturer", normal_font);
             tableBody.AddCell(bodyContentLeft);
@@ -206,7 +207,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase(": ", normal_font);
             tableBody.AddCell(bodyContentLeft);
-            bodyContentLeft.Phrase = new Phrase( viewModel.AccountBank.BankName, normal_font);
+            bodyContentLeft.Phrase = new Phrase(viewModel.AccountBank.BankName, normal_font);
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase("", normal_font);
             tableBody.AddCell(bodyContentLeft);
@@ -222,7 +223,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             bodyContentLeft.Phrase = new Phrase("SWIFTCODE : " + bank["SwiftCode"], normal_font);
             tableBody.AddCell(bodyContentLeft);
 
-            if(!viewModel.IsTTPayment)
+            if (!viewModel.IsTTPayment)
             {
                 bodyContentLeft.Phrase = new Phrase("DOCUMENT PRESENTED", normal_font);
                 tableBody.AddCell(bodyContentLeft);
@@ -356,7 +357,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 
                 PdfPTable LocList = new PdfPTable(2);
                 LocList.SetWidths(new float[] { 0.5f, 10f });
-                PdfPCell cell_loc= new PdfPCell() { Border = Rectangle.NO_BORDER, HorizontalAlignment = Element.ALIGN_LEFT, VerticalAlignment = Element.ALIGN_TOP, Padding = 2 };
+                PdfPCell cell_loc = new PdfPCell() { Border = Rectangle.NO_BORDER, HorizontalAlignment = Element.ALIGN_LEFT, VerticalAlignment = Element.ALIGN_TOP, Padding = 2 };
 
                 cell_loc.Phrase = new Phrase("A.", normal_font);
                 LocList.AddCell(cell_loc);
@@ -500,10 +501,10 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             document.Add(printedOn);
             #endregion
 
-            //string pages = document.PageNumber.ToString();
-            //Paragraph page = new Paragraph(pages, normal_font) { Alignment = Element.ALIGN_CENTER };
-            //document.Add(page);
-            
+            string pages = document.PageNumber.ToString();
+            Paragraph page = new Paragraph(pages, normal_font) { Alignment = Element.ALIGN_CENTER };
+            document.Add(page);
+
             document.Close();
             byte[] byteInfo = stream.ToArray();
             stream.Write(byteInfo, 0, byteInfo.Length);

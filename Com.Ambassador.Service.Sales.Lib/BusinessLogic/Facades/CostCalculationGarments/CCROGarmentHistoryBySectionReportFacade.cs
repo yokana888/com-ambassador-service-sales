@@ -48,6 +48,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
             result.Columns.Add(new DataColumn() { ColumnName = "Seksi", DataType = typeof(String) });
             result.Columns.Add(new DataColumn() { ColumnName = "Kode Buyer", DataType = typeof(String) });
             result.Columns.Add(new DataColumn() { ColumnName = "Nama Buyer", DataType = typeof(String) });
+            result.Columns.Add(new DataColumn() { ColumnName = "Tipe Buyer", DataType = typeof(String) });
             result.Columns.Add(new DataColumn() { ColumnName = "Article", DataType = typeof(String) });
             result.Columns.Add(new DataColumn() { ColumnName = "Shipment", DataType = typeof(String) });
 
@@ -60,7 +61,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
             
             Dictionary<string, string> Rowcount = new Dictionary<string, string>();
             if (Query.ToArray().Count() == 0)
-                result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", ""); // to allow column name to be generated properly for empty data as template
+                result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", "", ""); // to allow column name to be generated properly for empty data as template
             else
             {
                 int index = 0;
@@ -75,7 +76,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
                     string ApprovedDate6 = item.ValidatedMDDate == null ? "-" : item.ValidatedMDDate.ToOffset(new TimeSpan(offset, 0, 0)).ToString("dd MMM yyyy", new CultureInfo("id-ID"));
                     string ApprovedDate7 = item.ValidatedSampleDate == null ? "-" : item.ValidatedSampleDate.ToOffset(new TimeSpan(offset, 0, 0)).ToString("dd MMM yyyy", new CultureInfo("id-ID"));
 
-                    result.Rows.Add(index, item.RO_Number, item.Section, item.BrandCode, item.BrandName, item.Article, ApprovedDate1,
+                    result.Rows.Add(index, item.RO_Number, item.Section, item.BrandCode, item.BrandName, item.Type, item.Article, ApprovedDate1,
                                     ApprovedDate2, ApprovedDate3, ApprovedDate4, ApprovedDate5, ApprovedDate6, ApprovedDate7);
                 }
             }  

@@ -203,6 +203,7 @@ namespace Com.Ambassador.Service.Sales.WebApi
                 .AddTransient<CCGEmbroideryApprovalReportLogic>()
                 .AddTransient<CCROGarmentHistoryBySectionReportLogic>()
                 .AddTransient<GarmentSalesContractLogic>()
+                .AddTransient<GarmentSalesContractROLogic>()
                 .AddTransient<GarmentSalesContractItemLogic>()
                 .AddTransient<ArticleColorLogic>()
                 .AddTransient<ROGarmentLogic>()
