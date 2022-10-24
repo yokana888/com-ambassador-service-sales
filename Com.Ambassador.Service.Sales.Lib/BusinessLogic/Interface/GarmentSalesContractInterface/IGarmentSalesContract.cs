@@ -11,6 +11,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Interface.GarmentSalesC
     public interface IGarmentSalesContract : IBaseFacade<GarmentSalesContract>
     {
         Task<int> UpdatePrinted(int id, GarmentSalesContract model);
+        GarmentSalesContract ReadByRO(string ro);
     }
 
 
