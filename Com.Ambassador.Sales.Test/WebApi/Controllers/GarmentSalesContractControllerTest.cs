@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Security.Claims;
 using System.Text;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Com.Ambassador.Sales.Test.WebApi.Controllers
@@ -40,6 +41,7 @@ namespace Com.Ambassador.Sales.Test.WebApi.Controllers
             controller.ControllerContext.HttpContext.Request.Path = new PathString("/v1/unit-test");
             return controller;
         }
+
         [Fact]
         public void Get_PDF_NotFound()
         {
@@ -175,7 +177,62 @@ namespace Com.Ambassador.Sales.Test.WebApi.Controllers
 
         }
 
+        [Fact]
+        public async Task GetByRO_NotNullModel_ReturnOK()
+        {
+            var ViewModel = this.ViewModel;
+            ViewModel.SalesContractROs = new List<GarmentSalesContractROViewModel>();
 
+            var mocks = GetMocks();
+            mocks.Facade
+                .Setup(f => f.ReadByRO(It.IsAny<string>()))
+                .Returns(Model);
+            mocks.Mapper
+                .Setup(m => m.Map<GarmentSalesContractViewModel>(It.IsAny<GarmentSalesContract>()))
+                .Returns(ViewModel);
+
+            var controller = GetController(mocks);
+            var response = controller.GetByRO(It.IsAny<string>());
+
+            Assert.Equal((int)HttpStatusCode.OK, GetStatusCode(response));
+        }
+
+        [Fact]
+        public async Task GetByRO_NullModel_ReturnNotFound()
+        {
+            var mocks = GetMocks();
+            mocks.Mapper.Setup(f => f.Map<GarmentSalesContractViewModel>(It.IsAny<GarmentSalesContract>())).Returns(ViewModel);
+            mocks.Facade.Setup(f => f.ReadByRO(It.IsAny<string>())).Returns((GarmentSalesContract)null);
+
+            var controller = GetController(mocks);
+            var response = controller.GetByRO(It.IsAny<string>());
+
+            Assert.Equal((int)HttpStatusCode.NotFound, GetStatusCode(response));
+        }
+
+        [Fact]
+        public async Task GetByRO_ThrowException_ReturnInternalServerError()
+        {
+            var mocks = this.GetMocks();
+            mocks.Facade.Setup(f => f.ReadByRO(It.IsAny<string>())).Throws(new Exception());
+
+            var controller = GetController(mocks);
+            var response = controller.GetByRO(It.IsAny<string>());
+
+            Assert.Equal((int)HttpStatusCode.InternalServerError, GetStatusCode(response));
+        }
+
+        [Fact]
+        public async Task GetByRO_BadRequest()
+        {
+            var mocks = this.GetMocks();
+
+            var controller = GetController(mocks);
+            controller.ModelState.AddModelError("key", "value");
+            var response = controller.GetByRO(It.IsAny<string>());
+
+            Assert.Equal((int)HttpStatusCode.BadRequest, GetStatusCode(response));
+        }
     }
 }
 
