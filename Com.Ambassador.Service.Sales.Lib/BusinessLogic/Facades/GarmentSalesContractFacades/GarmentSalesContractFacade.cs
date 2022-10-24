@@ -139,7 +139,12 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentSalesCon
 
         public GarmentSalesContract ReadByCostCal(int id)
         {
-            return  garmentSalesContractLogic.ReadByCostCal(id);
+            return garmentSalesContractLogic.ReadByCostCal(id);
+        }
+
+        public GarmentSalesContract ReadByRO(string ro)
+        {
+            return garmentSalesContractLogic.ReadByRO(ro);
         }
     }
 }

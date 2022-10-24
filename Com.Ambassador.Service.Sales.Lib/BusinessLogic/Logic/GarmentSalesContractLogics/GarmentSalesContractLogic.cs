@@ -30,7 +30,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentSalesContr
 
         public override ReadResponse<GarmentSalesContract> Read(int page, int size, string order, List<string> select, string keyword, string filter)
         {
-            IQueryable<GarmentSalesContract> Query = DbSet;
+            IQueryable<GarmentSalesContract> Query = DbSet.Include(x => x.SalesContractROs);
 
             List<string> SearchAttributes = new List<string>()
             {
@@ -251,6 +251,15 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentSalesContr
                 model.SalesContractNo = no + lastNoNumber.ToString().PadLeft(Padding, '0');
             }
 
+        }
+
+        public GarmentSalesContract ReadByRO(string ro)
+        {
+            var garmentSalesContract = this.DbSet
+               .Include(d => d.SalesContractROs)
+               .Where(d => d.IsDeleted.Equals(false) && d.SalesContractROs.Any(e => e.IsDeleted.Equals(false) && e.RONumber.Equals(ro))).FirstOrDefault();
+
+            return garmentSalesContract;
         }
 
         //async Task<string> GenerateNo(GarmentSalesContract model)
