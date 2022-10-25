@@ -214,5 +214,25 @@ namespace Com.Ambassador.Sales.Test.BussinesLogic.Facades.GarmentSalesContract
             //Assert
             Assert.NotEqual(result.Id, 0);
         }
+
+        [Fact]
+        public async Task ReadByRO_Success()
+        {
+            //Setup
+            var dbContext = DbContext(GetCurrentMethod());
+            var serviceProvider = GetServiceProviderMock(dbContext).Object;
+
+            GarmentSalesContractFacade facade = new GarmentSalesContractFacade(serviceProvider, dbContext);
+
+            var dataUtil = DataUtil(facade, dbContext);
+            var data = await dataUtil.GetTestData();
+            var newData = await dataUtil.GetNewData();
+
+            //Act
+            var result = facade.ReadByRO(data.SalesContractROs.First().RONumber);
+
+            //Assert
+            Assert.NotEqual(result.Id, 0);
+        }
     }
 }
