@@ -101,6 +101,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentSalesCon
             int result = 0;
             garmentSalesContractLogic.UpdateAsync(id, model);
             result = await DbContext.SaveChangesAsync();
+
             if (costCalIds.Count > 0)
             {
                 foreach (var cc in costCalIds)
@@ -110,6 +111,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentSalesCon
                     result += await UpdateCostCalAsync(costCal, (int)newRO.Id);
                 }
             }
+
             GarmentSalesContract scExist = await ReadByIdAsync(id);
             foreach (var sc in scExist.SalesContractROs)
             {
@@ -122,7 +124,6 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentSalesCon
                         costCal.SCGarmentId = null;
                         await costCalGarmentLogic.UpdateAsync((int)sc.CostCalculationId, costCal);
                     }
-
                 }
             }
 
