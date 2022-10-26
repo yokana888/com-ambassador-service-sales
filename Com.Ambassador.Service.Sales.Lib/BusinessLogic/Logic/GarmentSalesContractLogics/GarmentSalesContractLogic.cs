@@ -137,42 +137,45 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentSalesContr
                 {
                     foreach (var roId in roIds)
                     {
-
                         GarmentSalesContractRO data = model.SalesContractROs.FirstOrDefault(prop => prop.Id.Equals(roId));
                         if (data == null)
                         {
-
                             GarmentSalesContractRO dataRO = DbContext.GarmentSalesContractROs.AsNoTracking().Include(a=>a.Items).FirstOrDefault(prop => prop.Id.Equals(roId));
                             if (dataRO.Items != null)
                             {
                                 foreach (var item in dataRO.Items)
                                 {
                                     GarmentSalesContractItem dataItem = DbContext.GarmentSalesContractItems.AsNoTracking().FirstOrDefault(prop => prop.Id.Equals(item.Id));
-                                    EntityExtension.FlagForDelete(dataItem, IdentityService.Username, "sales-service");
-                                    garmentSalesContractItemLogic.UpdateAsync(dataItem.Id, item);
+                                    garmentSalesContractItemLogic.DeleteAsync(item.Id).Wait();
                                 }
                             }
 
-                            garmentSalesContractROLogic.UpdateAsync(dataRO.Id,dataRO);
-                            EntityExtension.FlagForDelete(dataRO, IdentityService.Username, "sales-service");
-                            
+                            garmentSalesContractROLogic.DeleteAsync(dataRO.Id).Wait();
                         }
                         else
                         {
-                            garmentSalesContractROLogic.UpdateAsync(roId, data);
-                            foreach(var item in data.Items)
+                            GarmentSalesContractRO dataRO = DbContext.GarmentSalesContractROs.AsNoTracking().Include(a => a.Items).FirstOrDefault(prop => prop.Id.Equals(roId));
+                            if(dataRO.Items != null)
                             {
-                                GarmentSalesContractItem dataItem = DbContext.GarmentSalesContractItems.FirstOrDefault(prop => prop.Id.Equals(item.Id));
-                                if (dataItem == null && item.Id>0)
+                                foreach (var item in dataRO.Items)
                                 {
-                                    EntityExtension.FlagForDelete(dataItem, IdentityService.Username, "sales-service");
-                                }
-                                else if (dataItem != null && item.Id > 0)
-                                {
-                                    garmentSalesContractItemLogic.UpdateAsync(item.Id, item);
+                                    GarmentSalesContractItem dataItem = data.Items.FirstOrDefault(prop => prop.Id.Equals(item.Id));
+                                    if (dataItem == null && item.Id > 0)
+                                    {
+                                        //EntityExtension.FlagForDelete(item, IdentityService.Username, "sales-service");
+                                        garmentSalesContractItemLogic.DeleteAsync(item.Id).Wait();
+                                    }
+                                    else if (dataItem != null && item.Id > 0)
+                                    {
+                                        EntityExtension.FlagForUpdate(dataItem, IdentityService.Username, "sales-service");
+                                        garmentSalesContractItemLogic.UpdateAsync(item.Id, dataItem);
+                                    }
+                                    //garmentSalesContractItemLogic.UpdateAsync(item.Id, item);
                                 }
                             }
-                            
+
+                            EntityExtension.FlagForUpdate(data, IdentityService.Username, "sales-service");
+                            garmentSalesContractROLogic.UpdateAsync(roId, data);
                         }
 
                         foreach(var ro in model.SalesContractROs)
@@ -182,8 +185,8 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentSalesContr
                                 garmentSalesContractROLogic.Create(ro);
                                 foreach(var item in ro.Items)
                                 {
-                                    garmentSalesContractItemLogic.Create(item);
                                     EntityExtension.FlagForCreate(item, IdentityService.Username, "sales-service");
+                                    garmentSalesContractItemLogic.Create(item);
                                 }
                             }
                             else
@@ -192,17 +195,14 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentSalesContr
                                 {
                                     if (i.Id <= 0)
                                     {
-                                        garmentSalesContractItemLogic.Create(i);
                                         EntityExtension.FlagForCreate(i, IdentityService.Username, "sales-service");
+                                        garmentSalesContractItemLogic.Create(i);
                                     }
                                 }
                             }
                         }
-                        
                     }
-
                 }
-
             }
 
             EntityExtension.FlagForUpdate(model, IdentityService.Username, "sales-service");
@@ -257,7 +257,8 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentSalesContr
         {
             var garmentSalesContract = this.DbSet
                .Include(d => d.SalesContractROs)
-               .Where(d => d.IsDeleted.Equals(false) && d.SalesContractROs.Any(e => e.IsDeleted.Equals(false) && e.RONumber.Equals(ro))).FirstOrDefault();
+               .ThenInclude(e => e.Items)
+               .Where(d => d.IsDeleted.Equals(false) && d.SalesContractROs.Any(e => e.IsDeleted.Equals(false) && e.RONumber.Equals(ro) && (e.Items.Count > 0 ? e.Items.Any(f => f.IsDeleted.Equals(false)) : true))).FirstOrDefault();
 
             return garmentSalesContract;
         }
