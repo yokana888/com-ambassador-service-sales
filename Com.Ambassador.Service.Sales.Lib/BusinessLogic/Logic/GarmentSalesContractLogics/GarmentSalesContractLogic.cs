@@ -257,7 +257,8 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentSalesContr
         {
             var garmentSalesContract = this.DbSet
                .Include(d => d.SalesContractROs)
-               .Where(d => d.IsDeleted.Equals(false) && d.SalesContractROs.Any(e => e.IsDeleted.Equals(false) && e.RONumber.Equals(ro))).FirstOrDefault();
+               .ThenInclude(e => e.Items)
+               .Where(d => d.IsDeleted.Equals(false) && d.SalesContractROs.Any(e => e.IsDeleted.Equals(false) && e.RONumber.Equals(ro) && (e.Items.Count > 0 ? e.Items.Any(f => f.IsDeleted.Equals(false)) : true))).FirstOrDefault();
 
             return garmentSalesContract;
         }
