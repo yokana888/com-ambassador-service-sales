@@ -163,6 +163,8 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             double totalQty = 0;
             double totalPrice = 0;
             double totalAmount = 0;
+            Dictionary<string, double> totalQtyPerUnit = new Dictionary<string, double>();
+
             foreach (var ro in viewModel.SalesContractROs)
             {
                 if (ro.Items != null && ro.Items.Count > 0)
@@ -186,9 +188,20 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
                         tableOrder.AddCell(cellOrder);
                         cellOrder.Phrase = new Phrase(ro.DeliveryDate.ToOffset(new TimeSpan(timeoffset, 0, 0)).ToString("dd/MM/yyyy", new CultureInfo("id-ID")), normal_font_small);
                         tableOrder.AddCell(cellOrder);
-                        totalQty += ro.Quantity;
-                        totalPrice += ro.Price;
-                        totalAmount += ro.Amount;
+                        totalQty += item.Quantity;
+                        totalPrice += item.Price;
+                        totalAmount += item.Quantity * item.Price;
+
+                        //string key = ro.RONumber + "~" + ro.Uom.Unit;
+
+                        if (!totalQtyPerUnit.ContainsKey(ro.Uom.Unit))
+                        {
+                            totalQtyPerUnit.Add(ro.Uom.Unit, item.Quantity);
+                        }
+                        else
+                        {
+                            totalQtyPerUnit[ro.Uom.Unit] += item.Quantity;
+                        }
                     }
                 }
                 else
@@ -213,21 +226,44 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
                     totalQty += ro.Quantity;
                     totalPrice += ro.Price;
                     totalAmount += ro.Amount;
+
+
+                    //string key = ro.RONumber + "~" + ro.Uom.Unit;
+
+                    if (!totalQtyPerUnit.ContainsKey(ro.Uom.Unit))
+                    {
+                        totalQtyPerUnit.Add(ro.Uom.Unit, ro.Quantity);
+                    }
+                    else
+                    {
+                        totalQtyPerUnit[ro.Uom.Unit] += ro.Quantity;
+                    }
                 }
                 
             }
 
             cellOrder.Phrase = new Phrase("", bold_font_small);
-            tableOrder.AddCell(cellOrder);
-            cellOrder.Phrase = new Phrase("", bold_font_small);
+            cellOrder.Colspan = 3;
             tableOrder.AddCell(cellOrder);
             cellOrder.Phrase = new Phrase("GRAND TOTAL", bold_font_small);
+            cellOrder.Colspan = 1;
             tableOrder.AddCell(cellOrder);
-            cellOrder.Phrase = new Phrase(totalQty.ToString() + " " + viewModel.SalesContractROs.First().Uom.Unit, bold_font_small);
+
+            //string _totalQtyPerUnit = string.Join(";", totalQtyPerUnit.Select(x => x.Value + " " + x.Key.Split("~").LastOrDefault() + "\n").ToArray());
+            string _totalQtyPerUnit = string.Join(";", totalQtyPerUnit.Select(x => x.Value + " " + x.Key + "\n").ToArray());
+
+            //cellOrder.Phrase = new Phrase(totalQty.ToString() + " " + viewModel.SalesContractROs.First().Uom.Unit, bold_font_small);
+            //tableOrder.AddCell(cellOrder);
+
+            cellOrder.Phrase = new Phrase(_totalQtyPerUnit, bold_font_small);
             tableOrder.AddCell(cellOrder);
-            cellOrder.Phrase = new Phrase(totalPrice.ToString(), bold_font_small);
+
+            //cellOrder.Phrase = new Phrase($"{Number.ToRupiah(totalPrice)}", bold_font_small);
+            //tableOrder.AddCell(cellOrder);
+
+            cellOrder.Phrase = new Phrase("", bold_font_small);
             tableOrder.AddCell(cellOrder);
-            cellOrder.Phrase = new Phrase(totalAmount.ToString(), bold_font_small);
+            cellOrder.Phrase = new Phrase($"{Number.ToRupiah(totalAmount)}", bold_font_small);
             tableOrder.AddCell(cellOrder);
             cellOrder.Phrase = new Phrase("", bold_font_small);
             tableOrder.AddCell(cellOrder);

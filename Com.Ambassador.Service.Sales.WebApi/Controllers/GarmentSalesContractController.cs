@@ -93,7 +93,7 @@ namespace Com.Ambassador.Service.Sales.WebApi.Controllers
                         // await Facade.UpdatePrinted(Id, model);
                         return new FileStreamResult(stream, "application/pdf")
                         {
-                            FileDownloadName = "Sales Contract" + viewModel.SalesContractNo + ".pdf"
+                            FileDownloadName = "Sales Contract " + viewModel.SalesContractNo + ".pdf"
                         };
                     }
                     else
@@ -104,7 +104,7 @@ namespace Com.Ambassador.Service.Sales.WebApi.Controllers
                         // await Facade.UpdatePrinted(Id, model);
                         return new FileStreamResult(stream, "application/pdf")
                         {
-                            FileDownloadName = "Sales Contract" + viewModel.SalesContractNo + ".pdf"
+                            FileDownloadName = "Sales Contract " + viewModel.SalesContractNo + ".pdf"
                         };
                     }
                     

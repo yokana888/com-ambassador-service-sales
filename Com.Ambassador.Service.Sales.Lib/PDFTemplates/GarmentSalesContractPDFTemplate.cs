@@ -94,7 +94,6 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             document.Add(scNo);
             #endregion
 
-
             #region body
             PdfPTable tableBody = new PdfPTable(3);
             tableBody.SetWidths(new float[] { 0.75f, 0.1f, 2f });
