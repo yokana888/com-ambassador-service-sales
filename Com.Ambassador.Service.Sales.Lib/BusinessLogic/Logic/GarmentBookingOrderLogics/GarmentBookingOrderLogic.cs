@@ -57,10 +57,10 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentBookingOrd
             }
             newModel.ConfirmedQuantity = model.ConfirmedQuantity;
 
-            if (newModel.ConfirmedQuantity == 0)
-            {
-                newModel.HadConfirmed = false;
-            }
+            //if (newModel.ConfirmedQuantity == 0)
+            //{
+            //    newModel.HadConfirmed = false;
+            //}
 
             foreach (var newItem in newModel.Items)
             {
@@ -420,7 +420,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentBookingOrd
                               ComodityId = G.Key.ComodityId,
                               ComodityCode = G.Key.ComodityCode,
                               ComodityName = G.Key.ComodityName,
-                              ConfirmQuantity = (G.Key.ConfirmQuantity * 1.05) - G.Sum(m => m.Qty),
+                              ConfirmQuantity = Math.Round(((G.Key.ConfirmQuantity * 1.05)), 0) - G.Sum(m => m.Qty),
                           }).OrderBy(x => x.BookingOrderNo).ThenBy(x => x.SectionCode).ThenBy(x => x.BuyerCode).ThenBy(x => x.ComodityCode);
 
 

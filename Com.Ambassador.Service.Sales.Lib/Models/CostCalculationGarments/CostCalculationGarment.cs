@@ -115,7 +115,7 @@ namespace Com.Ambassador.Service.Sales.Lib.Models.CostCalculationGarments
         public int BookingOrderId { get; set; }
         [MaxLength(255)]
         public string BookingOrderNo { get; set; }
-        public int BOQuantity { get; set; }
+        public double BOQuantity { get; set; }
         public int BookingOrderItemId { get; set; }
 
         public bool IsApprovedMD { get; set; }
