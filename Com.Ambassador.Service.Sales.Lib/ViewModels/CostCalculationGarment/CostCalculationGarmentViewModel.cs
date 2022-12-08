@@ -66,7 +66,7 @@ namespace Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment
 
         public int BookingOrderId { get; set; }
         public string BookingOrderNo { get; set; }
-        public int? BOQuantity { get; set; }
+        public double BOQuantity { get; set; }
         public int BookingOrderItemId { get; set; }
 
         public Approval ApprovalMD { get; set; }
