@@ -16,7 +16,7 @@ namespace Com.Ambassador.Service.Sales.Lib.Models.CostCalculationGarments
         [MaxLength(50)]
         public string RO_Number { get; set; }
         //public string RO { get; set; }
-        [MaxLength(50)]
+        [MaxLength(1000)]
         public string Article { get; set; }
         [MaxLength(50)]
         public string ComodityID { get; set; }
