@@ -583,7 +583,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 				table_ccm.AddCell(cell_ccm_left);
 
 				//DESKRIPSI
-				cell_ccm_left.Phrase = new Phrase(viewModel.CostCalculationGarment_Materials[i].Description, normal_font);
+				cell_ccm_left.Phrase = new Phrase(viewModel.CostCalculationGarment_Materials[i].Description + " - " + viewModel.CostCalculationGarment_Materials[i].ProductRemark, normal_font);
 				table_ccm.AddCell(cell_ccm_left);
 
 				cell_ccm_right.Phrase = new Phrase(String.Format("{0} {1}", viewModel.CostCalculationGarment_Materials[i].Quantity, viewModel.CostCalculationGarment_Materials[i].UOMQuantity.Unit), normal_font);
