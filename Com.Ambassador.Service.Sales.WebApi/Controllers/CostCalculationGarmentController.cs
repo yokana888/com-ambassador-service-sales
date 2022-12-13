@@ -109,7 +109,7 @@ namespace Com.Ambassador.Service.Sales.WebApi.Controllers
 
 					return new FileStreamResult(stream, "application/pdf")
 					{
-						FileDownloadName = "Cost Calculation Export Garment " + viewModel.RO_Number + (viewModel.IsPosted ? "" : " - DRAFT") + ".pdf"
+						FileDownloadName = "Cost Calculation Garment " + viewModel.RO_Number + (viewModel.IsPosted ? "" : " - DRAFT") + ".pdf"
 					};
 
 				}
@@ -142,7 +142,7 @@ namespace Com.Ambassador.Service.Sales.WebApi.Controllers
 
 				return new FileStreamResult(stream, "application/pdf")
 				{
-					FileDownloadName = "Budget Export Garment " + viewModel.RO_Number + (viewModel.IsPosted ? "" : " - DRAFT") + ".pdf"
+					FileDownloadName = "Budget Garment " + viewModel.RO_Number + (viewModel.IsPosted ? "" : " - DRAFT") + ".pdf"
 				};
 			}
 			catch (Exception e)
