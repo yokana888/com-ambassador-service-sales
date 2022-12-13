@@ -405,7 +405,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 				table_ccm.AddCell(cell_ccm);
 
 				//DESCRIPTION
-				cell_ccm.Phrase = new Phrase(viewModel.CostCalculationGarment_Materials[i].Description, normal_font);
+				cell_ccm.Phrase = new Phrase(viewModel.CostCalculationGarment_Materials[i].Description + " - " + viewModel.CostCalculationGarment_Materials[i].ProductRemark, normal_font);
 				table_ccm.AddCell(cell_ccm);
 
 				cell_ccm.HorizontalAlignment = Element.ALIGN_RIGHT;
