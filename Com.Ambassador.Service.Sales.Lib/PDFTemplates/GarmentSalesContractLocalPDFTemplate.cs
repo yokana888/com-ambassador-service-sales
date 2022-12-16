@@ -87,6 +87,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             Paragraph1.SpacingAfter = 10f;
             document.Add(Paragraph1);
 
+            string buyerName = buyer["Name"] != null ? buyer["Name"].ToString() : "";
             PdfPTable tableBodyBuyer = new PdfPTable(3);
             tableBodyBuyer.SetWidths(new float[] { 0.004f, 0.010f, 0.060f });
             PdfPCell bodyContentLefts = new PdfPCell() { Border = Rectangle.NO_BORDER, Padding = 1, HorizontalAlignment = Element.ALIGN_LEFT };
@@ -112,7 +113,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             tableBodyBuyer.ExtendLastRow = false;
             tableBodyBuyer.SpacingAfter = 0.5f;
             document.Add(tableBodyBuyer);
-            string ParagraphStringbuyer = "          Bertindak untuk dan atas nama " + "" + viewModel.BuyerBrandName + "" + ", selanjutnya disebut “Pembeli”";
+            string ParagraphStringbuyer = "          Bertindak untuk dan atas nama " + "" + buyerName + "" + ", selanjutnya disebut “Pembeli”";
             Paragraph Paragraphbuyer = new Paragraph(ParagraphStringbuyer, normal_font) { Alignment = Element.ALIGN_LEFT };
             Paragraphbuyer.SpacingAfter = 10f;
             document.Add(Paragraphbuyer);
@@ -564,7 +565,6 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             signature.AddCell(cell_signature);
             cell_signature.Phrase = new Phrase("PT Ambassador Garmindo", normal_font);
             signature.AddCell(cell_signature);
-            string buyerName = buyer["Name"] != null ? buyer["Name"].ToString() : "";
             cell_signature.Phrase = new Phrase(buyerName, normal_font);
             signature.AddCell(cell_signature);
             cellIContentRights.Phrase = new Phrase("");
