@@ -87,7 +87,14 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentSalesContr
                     {
                         foreach(var item in detail.Items)
                         {
-                            garmentSalesContractItemLogic.Create(item);
+                            if (item.Quantity <= 0)
+                            {
+                                Console.WriteLine("Quantity Item tidak boleh kosong");
+                            }
+                            else
+                            {
+                                garmentSalesContractItemLogic.Create(item);
+                            }
                         }
                     }
                     //EntityExtension.FlagForCreate(detail, IdentityService.Username, "sales-service");
@@ -167,8 +174,15 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentSalesContr
                                     }
                                     else if (dataItem != null && item.Id > 0)
                                     {
-                                        EntityExtension.FlagForUpdate(dataItem, IdentityService.Username, "sales-service");
-                                        garmentSalesContractItemLogic.UpdateAsync(item.Id, dataItem);
+                                        if (dataItem.Quantity <= 0)
+                                        {
+                                            Console.WriteLine("Qty tidak boleh kosong");
+                                        }
+                                        else
+                                        {
+                                            EntityExtension.FlagForUpdate(dataItem, IdentityService.Username, "sales-service");
+                                            garmentSalesContractItemLogic.UpdateAsync(item.Id, dataItem);
+                                        }
                                     }
                                     //garmentSalesContractItemLogic.UpdateAsync(item.Id, item);
                                 }
