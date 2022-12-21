@@ -39,7 +39,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentPreSalesCo
 
             List<string> SelectedFields = new List<string>()
             {
-                "Id", "SectionId", "SectionCode", "BuyerBrandId", "BuyerBrandName", "BuyerBrandCode", "SCNo", "SCDate", "SCType", "LastModifiedUtc", "CreatedUtc", "BuyerAgentId", "BuyerAgentName", "BuyerAgentCode", "OrderQuantity", "IsPosted"
+                "Id", "SectionId", "SectionCode", "BuyerBrandId", "BuyerBrandName", "BuyerBrandCode", "SCNo", "SCDate", "SCType", "LastModifiedUtc", "CreatedUtc", "BuyerAgentId", "BuyerAgentName", "BuyerAgentCode", "OrderQuantity", "IsPosted","Remark"
             };
 
             Query = Query
@@ -62,6 +62,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentPreSalesCo
                     OrderQuantity = sc.OrderQuantity,
                     IsDeleted = sc.IsDeleted,
                     IsPosted = sc.IsPosted,
+                    Remark=sc.Remark
                 }).OrderByDescending(s => s.LastModifiedUtc);
 
             Dictionary<string, string> OrderDictionary = JsonConvert.DeserializeObject<Dictionary<string, string>>(order);
