@@ -69,7 +69,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase("Jabatan", normal_font);
             tableBody.AddCell(bodyContentLeft);
-            bodyContentLeft.Phrase = new Phrase(": Direktur Marketing", normal_font);
+            bodyContentLeft.Phrase = new Phrase(": Direktur", normal_font);
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase("", normal_font);
             tableBody.AddCell(bodyContentLeft);
@@ -485,11 +485,11 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             sublist3.IndentationLeft = 10f;
             sublist3.PreSymbol = string.Format("{0}.", 3);
             string tanggalClaimTerbilang = NumberToTextIDN.terbilang(viewModel.Claim.GetValueOrDefault());
-            ListItem three = new ListItem("Jika Produk yang diterima Pembeli tidak seuai dengan kesepakatan, maka Pembeli wajib memberitahukan kepada Penjual, berikut dengan bukti yang cukup selambat-lambatnya " + viewModel.Claim + "(" + tanggalClaimTerbilang + ") hari setelah Produk diterima, selanjutnya klaim akan diselesaikan secara terpidah dan tidak dapat dihubungkan dan / atau diperhitungkan dengan pembayaran Produk dalam kontak Penjualan ini.", normal_font_small);
+            ListItem three = new ListItem("Jika Produk yang diterima Pembeli tidak sesuai dengan kesepakatan, maka Pembeli wajib memberitahukan kepada Penjual, berikut dengan bukti yang cukup selambat-lambatnya " + viewModel.Claim + "(" + tanggalClaimTerbilang + ") hari setelah Produk diterima, selanjutnya klaim akan diselesaikan secara terpidah dan tidak dapat dihubungkan dan / atau diperhitungkan dengan pembayaran Produk dalam kontak Penjualan ini.", normal_font_small);
             three.Alignment = Element.ALIGN_JUSTIFIED;
             three.Leading = 13;
             sublist3.Add(three);
-            three = new ListItem("Bilamana dalam jangka waktu tersebut diatas Pembeli tidak mengajukan klaim maka Produk dinyatakan sudah sesuai denan Kontrak Penjualan.", normal_font_small);
+            three = new ListItem("Bilamana dalam jangka waktu tersebut diatas Pembeli tidak mengajukan klaim maka Produk dinyatakan sudah sesuai dengan Kontrak Penjualan.", normal_font_small);
             three.Alignment = Element.ALIGN_JUSTIFIED;
             three.Leading = 13;
             sublist3.Add(three);
@@ -499,7 +499,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             List sublist4 = new List(List.UNORDERED);
             sublist4.IndentationLeft = 10f;
             sublist4.ListSymbol = new Chunk("");
-            ListItem four = new ListItem("Dalam hal terjadinya Force Majeure termasuk hal-hal berikut tetapi tidak terbatas pada bencana alam, kebakaran, pemogokan pekerjaan, hambatan lalu lintas, tindakan pemerintah dalam bidang ekonomi dan moneter yang ecara nyata berpengaruh terhadap pelaksanaan Kontrak Penjualan ini maupun hal-hal lain di luar kemampuan Penjual, maka Penjual tidak akan bertanggungjawab atas kegagalan penyerahan atau penyerahan yang tertunda, selanjutnya Penjual dan Pembeli sepakat untuk melakukan peninjauan kembali isi Kontrak Penjualan ini.", normal_font_small);
+            ListItem four = new ListItem("Dalam hal terjadinya Force Majeure termasuk hal-hal berikut tetapi tidak terbatas pada bencana alam, kebakaran, pemogokan pekerjaan, hambatan lalu lintas, tindakan pemerintah dalam bidang ekonomi dan moneter yang secara nyata berpengaruh terhadap pelaksanaan Kontrak Penjualan ini maupun hal-hal lain di luar kemampuan Penjual, maka Penjual tidak akan bertanggungjawab atas kegagalan penyerahan atau penyerahan yang tertunda, selanjutnya Penjual dan Pembeli sepakat untuk melakukan peninjauan kembali isi Kontrak Penjualan ini.", normal_font_small);
             four.Alignment = Element.ALIGN_JUSTIFIED;
             four.Leading = 13;
             sublist4.Add(four);
