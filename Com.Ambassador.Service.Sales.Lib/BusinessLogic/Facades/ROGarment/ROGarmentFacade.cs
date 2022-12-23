@@ -127,6 +127,8 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.ROGarment
                     .ThenInclude(ccg => ccg.CostCalculationGarment_Materials)
                 .FirstOrDefaultAsync();
 
+            read.CostCalculationGarment.CostCalculationGarment_Materials = read.CostCalculationGarment.CostCalculationGarment_Materials.OrderBy(o => o.MaterialIndex).ToList();
+
             read.RO_Garment_SizeBreakdowns = read.RO_Garment_SizeBreakdowns.OrderBy(o => o.SizeBreakdownIndex).ToList();
             foreach (var sizeBreakdown in read.RO_Garment_SizeBreakdowns)
             {
