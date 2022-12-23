@@ -137,7 +137,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             PdfPTable tableOrder = new PdfPTable(8);
             tableOrder.TotalWidth = 500f;
             tableOrder.LockedWidth = true;
-            float[] widths = new float[] { 1f, 5f, 5f, 5f, 3f, 4f, 4f, 3f };
+            float[] widths = new float[] { 1f, 5f, 5f, 5f, 3f, 4f, 5f, 3f };
             tableOrder.SetWidths(widths);
             tableOrder.HorizontalAlignment = 0;
             tableOrder.SpacingAfter = 20f;
