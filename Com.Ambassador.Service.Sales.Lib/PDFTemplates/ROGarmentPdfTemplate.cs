@@ -336,10 +336,10 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             document.Add(table_acc_top);
 
             //Main Accessories Table
-            PdfPTable table_accessories = new PdfPTable(5);
+            PdfPTable table_accessories = new PdfPTable(6);
             table_accessories.TotalWidth = 570f;
 
-            float[] accessories_widths = new float[] { 2f, 3f, 5f, 2.5f, 7.5f };
+            float[] accessories_widths = new float[] { 2f, 3f, 5f, 5f, 2.5f, 7.5f };
             table_accessories.SetWidths(accessories_widths);
 
             PdfPCell cell_acc_center = new PdfPCell()
@@ -370,6 +370,9 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             cell_acc_center.Phrase = new Phrase("DESCRIPTION", bold_font);
             table_accessories.AddCell(cell_acc_center);
 
+            cell_acc_center.Phrase = new Phrase("DETAIL PRODUCT", bold_font);
+            table_accessories.AddCell(cell_acc_center);
+
             cell_acc_center.Phrase = new Phrase("QUANTITY", bold_font);
             table_accessories.AddCell(cell_acc_center);
 
@@ -390,6 +393,9 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
                     cell_acc_left.Phrase = new Phrase(materialModel.Description != null ? materialModel.Description : "", normal_font);
                     table_accessories.AddCell(cell_acc_left);
 
+                    cell_acc_left.Phrase = new Phrase(materialModel.ProductRemark != null ? materialModel.ProductRemark : "", normal_font);
+                    table_accessories.AddCell(cell_acc_left);
+
                     cell_acc_left.Phrase = new Phrase(materialModel.Quantity != null ? String.Format("{0} " + materialModel.UOMQuantity.Unit, materialModel.Quantity.ToString()) : "0", normal_font);
                     table_accessories.AddCell(cell_acc_left);
 
@@ -405,7 +411,6 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             document.Add(table_accessories);
 
             #endregion
-
 
             #region Table Size Breakdown
             //Title

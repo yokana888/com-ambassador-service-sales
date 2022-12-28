@@ -168,9 +168,10 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 
             foreach (var ro in viewModel.SalesContractROs)
             {
-                if (ro.Items != null && ro.Items.Count > 0)
+                var getQty = ro.Items.FirstOrDefault(x => x.Quantity == 0); // mengecek apakah qty item yang dimasukkan berjumlah 0
+                if (ro.Items != null && ro.Items.Count > 0 && getQty == null)
                 {
-                    foreach(var item in ro.Items)
+                    foreach (var item in ro.Items)
                     {
                         index++;
                         cellOrder.Phrase = new Phrase(index.ToString(), normal_font_small);
@@ -185,7 +186,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
                         tableOrder.AddCell(cellOrder);
                         cellOrder.Phrase = new Phrase($"{Number.ToRupiah(item.Price)} / {ro.Uom.Unit}", normal_font_small);
                         tableOrder.AddCell(cellOrder);
-                        cellOrder.Phrase = new Phrase($"{Number.ToRupiah(item.Price*item.Quantity)}", normal_font_small);
+                        cellOrder.Phrase = new Phrase($"{Number.ToRupiah(item.Price * item.Quantity)}", normal_font_small);
                         tableOrder.AddCell(cellOrder);
                         cellOrder.Phrase = new Phrase(ro.DeliveryDate.ToOffset(new TimeSpan(timeoffset, 0, 0)).ToString("dd/MM/yyyy", new CultureInfo("id-ID")), normal_font_small);
                         tableOrder.AddCell(cellOrder);
@@ -240,7 +241,6 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
                         totalQtyPerUnit[ro.Uom.Unit] += ro.Quantity;
                     }
                 }
-                
             }
 
             cellOrder.Phrase = new Phrase("", bold_font_small);
