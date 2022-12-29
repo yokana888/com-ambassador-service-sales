@@ -1486,7 +1486,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentMasterPl
                                 cell.Style.Fill.BackgroundColor.SetColor(
                                     Convert.ToDouble(cell.Value) <= 45.5 ? Color.Yellow :
                                     Convert.ToDouble(cell.Value) > 45.5 && Convert.ToDouble(cell.Value) <=50.5 ? Color.Green :
-                                    Convert.ToDouble(cell.Value) > 50.5 && Convert.ToDouble(cell.Value) <= 58 ? Color.Red :
+                                    Convert.ToDouble(cell.Value) > 50.5 && Convert.ToDouble(cell.Value) <= 56.5 ? Color.Red :
                                     Color.LightSlateGray);
                             }
                         }
