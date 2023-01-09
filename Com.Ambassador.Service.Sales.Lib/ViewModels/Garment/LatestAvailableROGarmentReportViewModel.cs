@@ -15,5 +15,8 @@ namespace Com.Ambassador.Service.Sales.Lib.ViewModels.Garment
         public double Quantity { get; set; }
         public string Uom { get; set; }
         public double LeadTime { get; set; }
+        public string SizeRange { get; set; }
+        public string Fabric { get; set; }
+        public int RO_GarmentId { get; set; }
     }
 }
