@@ -38,5 +38,6 @@ namespace Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment
         public string POMaster { get; set; }
 
         public double AvailableQuantity { get; set; } // untuk validasi
+        public int CostCalculationGarmentId { get; set; }
     }
 }
