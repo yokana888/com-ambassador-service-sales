@@ -59,6 +59,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
             dataTable.Columns.Add(new DataColumn() { ColumnName = "Satuan", DataType = typeof(string) });
             dataTable.Columns.Add(new DataColumn() { ColumnName = "Fabric", DataType = typeof(string) });
             dataTable.Columns.Add(new DataColumn() { ColumnName = "Size", DataType = typeof(string) });
+            dataTable.Columns.Add(new DataColumn() { ColumnName = "Style", DataType = typeof(string) });
 
             List<(string, Enum, Enum)> mergeCells = new List<(string, Enum, Enum)>() { };
 
@@ -67,7 +68,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
                 int i = 0;
                 foreach (var d in data)
                 {
-                    dataTable.Rows.Add(++i, d.RONo, d.ApprovedSampleDate.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), d.DeliveryDate.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), d.DateDiff, d.LeadTime, d.BuyerCode, d.Buyer, d.Type, d.Article, d.Quantity, d.Uom, d.Fabric, d.SizeRange);
+                    dataTable.Rows.Add(++i, d.RONo, d.ApprovedSampleDate.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), d.DeliveryDate.ToString("dd MMMM yyyy", new CultureInfo("id-ID")), d.DateDiff, d.LeadTime, d.BuyerCode, d.Buyer, d.Type, d.Article, d.Quantity, d.Uom, d.Fabric, d.SizeRange, d.CommodityDescription);
                 }
                 dataTable.Rows.Add(null, null, null, null, null, null, null, null, null, null, null);
                 dataTable.Rows.Add(null, null, null, null, null, null, null, null, null, null, null);
@@ -203,6 +204,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
                 SizeRange = cc.SizeRange,
                 RO_GarmentId = Convert.ToInt32(cc.RO_GarmentId),
                 Fabric = DbContext.RO_Garment_SizeBreakdowns.Where(d => d.RO_GarmentId == cc.RO_GarmentId).Select(d => d.ColorName).FirstOrDefault(),
+                CommodityDescription = cc.CommodityDescription,
             }).ToList();
 
             return data;
