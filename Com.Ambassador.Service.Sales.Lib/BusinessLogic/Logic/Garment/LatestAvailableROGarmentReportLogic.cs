@@ -56,6 +56,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.Garment
                 LeadTime = cc.LeadTime,
                 SizeRange = cc.SizeRange,
                 RO_GarmentId = cc.RO_GarmentId,
+                CommodityDescription = cc.CommodityDescription,
             });
 
             return result;
