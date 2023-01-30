@@ -236,13 +236,17 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 			table_bottom_column1_2.AddCell(cell_bottom_column1_2);
 
 			double CM_Price = 0;
+            var isFabricCM = 0;
 			foreach (CostCalculationGarment_MaterialViewModel item in viewModel.CostCalculationGarment_Materials)
 			{
 				CM_Price += item.CM_Price ?? 0;
+                if (item.isFabricCM)
+                {
+                    isFabricCM++;
+                }
 			}
 			double ConfirmPrice = viewModel.ConfirmPrice ?? 0;
 			double CMT = CM_Price > 0 ? ConfirmPrice : 0;
-			string CMT_Price = this.GetCurrencyValue(CMT, isDollar);
 			double FOB = ConfirmPrice ;
             double FOB_Remark = 0;
             if (CMT > 0)
@@ -252,7 +256,9 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
                 double a = (1.05 * CM_Price / Convert.ToDouble(viewModel.Rate.Value)) - (viewModel.Insurance.GetValueOrDefault() + viewModel.Freight.GetValueOrDefault());
                 FOB_Remark = ConfirmPrice + a;
             }
-			string FOB_Price = this.GetCurrencyValue(FOB, isDollar);
+            string CMT_Price = CMT > 0 ? this.GetCurrencyValue(CMT, isDollar) : isFabricCM > 0 ? this.GetCurrencyValue(FOB, isDollar) : this.GetCurrencyValue(0, isDollar);
+            string FOB_Price = isFabricCM>0 ? this.GetCurrencyValue(0, isDollar) : this.GetCurrencyValue(FOB, isDollar);
+
 			cell_bottom_column1_2.Phrase = new Phrase($"{FOB_Price}", normal_font);
 			table_bottom_column1_2.AddCell(cell_bottom_column1_2);
 			cell_bottom_column1_2.Phrase = new Phrase($"{CMT_Price}", normal_font);
