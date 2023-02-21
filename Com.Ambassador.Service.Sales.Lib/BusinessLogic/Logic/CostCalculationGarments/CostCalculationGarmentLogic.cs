@@ -568,7 +568,48 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
 			return data;
 		}
 
-		internal List<string> ReadUnpostReasonCreators(string keyword, int page, int size)
+        internal List<CostCalculationGarmentForJournal> GetCCGByRo(string RO_Number)
+        {
+            IQueryable<CostCalculationGarment> Query = DbSet;
+
+            List<CostCalculationGarmentForJournal> data = new List<CostCalculationGarmentForJournal>();
+
+            var QueryX = (from a in Query
+                          join b in DbContext.CostCalculationGarment_Materials on a.Id equals b.CostCalculationGarmentId
+                          where a.IsApprovedKadivMD == true && a.RO_Number == RO_Number
+
+                          group new { Amt = b.Total } by new { a.RO_Number, a.Quantity, a.OTL1CalculatedRate, a.OTL2CalculatedRate, a.Risk } into G
+
+                          select new CostCalculationGarmentForJournal
+                          {
+                             RONo = G.Key.RO_Number,                          
+                             OTL1 = Math.Round(G.Key.OTL1CalculatedRate,0),
+                             OTL2 = Math.Round(G.Key.OTL2CalculatedRate,0),
+                             Risk = G.Key.Risk,
+                             Amount = Math.Round(G.Sum(c => c.Amt), 0),
+                             AmountCC = 0,
+                          });
+
+
+            foreach (CostCalculationGarmentForJournal i in QueryX)
+            {
+               
+
+                data.Add(new CostCalculationGarmentForJournal
+                {
+                    RONo = i.RONo,                   
+                    OTL1 = i.OTL1,
+                    OTL2 = i.OTL2,
+                    Risk = i.Risk,
+                    Amount = i.Amount,
+                    AmountCC = Math.Round(((i.Amount + i.OTL1 + i.OTL2) * ((100 + i.Risk)/100)),0),
+                });
+            };
+
+            return data;
+        }
+
+        internal List<string> ReadUnpostReasonCreators(string keyword, int page, int size)
         {
             IQueryable<CostCalculationGarmentUnpostReason> Query = DbContext.Set<CostCalculationGarmentUnpostReason>();
 

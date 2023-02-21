@@ -509,7 +509,28 @@ namespace Com.Ambassador.Service.Sales.WebApi.Controllers
 			}
 		}
 
-		[HttpGet("materials/by-prmasteritemids")]
+        [HttpGet("dataforjournal")]
+        public IActionResult GetCCByRo( string RO_Number)
+        {
+            try
+            {
+                var viewModel = Facade.GetCCGByRo(RO_Number);
+                Dictionary<string, object> Result =
+                new ResultFormatter(ApiVersion, Common.OK_STATUS_CODE, Common.OK_MESSAGE)
+                .Ok(viewModel);
+                return Ok(Result);
+
+            }
+            catch (Exception e)
+            {
+                Dictionary<string, object> Result =
+                    new ResultFormatter(ApiVersion, Common.INTERNAL_ERROR_STATUS_CODE, e.Message)
+                    .Fail();
+                return StatusCode(Common.INTERNAL_ERROR_STATUS_CODE, Result);
+            }
+        }
+
+        [HttpGet("materials/by-prmasteritemids")]
         public IActionResult GetMaterialsByPRMasterItemIds(int page = 1, int size = 25, string order = "{}", string select = null, string keyword = null, string filter = "{}", string search = "[]", string prmasteritemids = "[]")
         {
             try
