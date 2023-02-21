@@ -363,7 +363,13 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
 			return costCalculationGarmentLogic.GetComodityQtyOrderHoursBuyerByRo(ro);
 
 		}
-		public List<string> ReadUnpostReasonCreators(string keyword, int page, int size)
+
+        public List<CostCalculationGarmentForJournal> GetCCGByRo(string RO_Number)
+        {
+            return costCalculationGarmentLogic.GetCCGByRo(RO_Number);
+
+        }
+        public List<string> ReadUnpostReasonCreators(string keyword, int page, int size)
         {
             return costCalculationGarmentLogic.ReadUnpostReasonCreators(keyword, page, size);
         }
