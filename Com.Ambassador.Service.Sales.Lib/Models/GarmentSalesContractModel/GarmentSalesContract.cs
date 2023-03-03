@@ -46,7 +46,7 @@ namespace Com.Ambassador.Service.Sales.Lib.Models.GarmentSalesContractModel
         public string PaymentMethod { get; set; }
         [MaxLength(500)]
         public string DownPayment { get; set; }
-        public int LatePayment { get; set; }
+        public double LatePayment { get; set; }
         public int LateReturn { get; set; }
         public double? Claim { get; set; }
 
