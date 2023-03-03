@@ -4,14 +4,16 @@ using Com.Ambassador.Service.Sales.Lib;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Com.Ambassador.Service.Sales.Lib.Migrations
 {
     [DbContext(typeof(SalesDbContext))]
-    partial class SalesDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230303083715_SC_Late_Payment_ChangeToDouble")]
+    partial class SC_Late_Payment_ChangeToDouble
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -221,11 +223,11 @@ namespace Com.Ambassador.Service.Sales.Lib.Migrations
                     b.Property<DateTimeOffset>("ApprovedPurchasingDate");
 
                     b.Property<string>("Article")
-                        .HasMaxLength(50);
+                        .HasMaxLength(1000);
 
                     b.Property<int>("AutoIncrementNumber");
 
-                    b.Property<int>("BOQuantity");
+                    b.Property<double>("BOQuantity");
 
                     b.Property<int>("BookingOrderId");
 
