@@ -134,7 +134,7 @@ namespace Com.Ambassador.Sales.Test.BussinesLogic.Facades.Garment.GarmentMerchan
                 availableDateEnd = data.DeliveryDate,
             };
 
-            var facade = new LatestAvailableROGarmentReportFacade(serviceProvider);
+            var facade = new LatestAvailableROGarmentReportFacade(serviceProvider, dbContext);
             var Response = facade.Read(filter: JsonConvert.SerializeObject(filter));
 
             Assert.NotEqual(Response.Item2, 0);
@@ -169,7 +169,7 @@ namespace Com.Ambassador.Sales.Test.BussinesLogic.Facades.Garment.GarmentMerchan
                 availableDateEnd = data.DeliveryDate.AddDays(30),
             };
 
-            var facade = new LatestAvailableROGarmentReportFacade(serviceProvider);
+            var facade = new LatestAvailableROGarmentReportFacade(serviceProvider, dbContext);
             var Response = facade.GenerateExcel(filter: JsonConvert.SerializeObject(filter));
 
             Assert.NotNull(Response.Item2);

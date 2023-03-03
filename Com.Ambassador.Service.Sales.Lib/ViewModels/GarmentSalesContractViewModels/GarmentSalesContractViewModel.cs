@@ -40,7 +40,7 @@ namespace Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentSalesContractViewMo
         public double FreightCost { get; set; }
         public string PaymentMethod { get; set; }
         public string DownPayment { get; set; }
-        public int LatePayment { get; set; }
+        public double LatePayment { get; set; }
         public int LateReturn { get; set; }
         public double? Claim { get; set; }
 
