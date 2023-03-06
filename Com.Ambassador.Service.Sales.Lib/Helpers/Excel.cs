@@ -59,7 +59,7 @@ namespace Com.Ambassador.Service.Sales.Lib.Helpers
             {
                 var sheet = package.Workbook.Worksheets.Add(item.Value);
 
-                sheet.Cells["A2"].Value = "PT.Dan Liris";
+                sheet.Cells["A2"].Value = "PT.Ambassador Garmindo";
                 sheet.Cells["A2:D2"].Merge = true;
 
                 sheet.Cells["A3"].Value = title;
