@@ -18,6 +18,7 @@ namespace Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment
         public DateTimeOffset ApprovalKadivMDDate { get; set; }
         public DateTimeOffset ValidatedMDDate { get; set; }
         public DateTimeOffset ValidatedSampleDate { get; set; }
+        public DateTimeOffset ValidatedPPICDate { get; set; }
         public string Type { get; set; }
 
     }

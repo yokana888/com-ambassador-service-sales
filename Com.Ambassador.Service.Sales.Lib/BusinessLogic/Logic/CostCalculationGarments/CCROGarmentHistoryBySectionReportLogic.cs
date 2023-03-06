@@ -78,6 +78,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
                         ApprovalKadivMDDate = a.ApprovedKadivMDDate,
                         ValidatedMDDate = a.ValidationMDDate,
                         ValidatedSampleDate = a.ValidationSampleDate,
+                        ValidatedPPICDate=a.ApprovedPPICDate,
                         Type = buyerQ.Where(x => x.Code == a.BuyerCode).Select(x => x.Type).FirstOrDefault()
                     });
 
