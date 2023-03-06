@@ -134,7 +134,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             tableBody.SpacingAfter = 0.5f;
             document.Add(tableBody);
 
-            string ParagraphString1 = "          Bertindak untuk dan atas nama PT. Dan Liris, selanjutnya disebut Penjual.";
+            string ParagraphString1 = "          Bertindak untuk dan atas nama PT. Ambassador Garmindo, selanjutnya disebut Penjual.";
             Paragraph Paragraph1 = new Paragraph(ParagraphString1, normal_font) { Alignment = Element.ALIGN_LEFT };
             Paragraph1.SpacingAfter = 10f;
             document.Add(Paragraph1);
