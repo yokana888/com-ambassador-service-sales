@@ -41,7 +41,7 @@ namespace Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentBookingOrderViewMod
             SalesDbContext dbContext = (SalesDbContext)validationContext.GetService(typeof(SalesDbContext));
 
             int clientTimeZoneOffset = 0;
-            DateTimeOffset dt = DateTimeOffset.Now.AddDays(45);
+            DateTimeOffset dt = DateTimeOffset.Now.AddDays(40);
             dt.ToOffset(new TimeSpan(clientTimeZoneOffset, 0, 0)).ToString("dd MMMM yyyy", new CultureInfo("id-ID"));
             if (SectionName == null)
                 yield return new ValidationResult("Seksi harus diisi", new List<string> { "Section" });
@@ -57,8 +57,8 @@ namespace Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentBookingOrderViewMod
                     yield return new ValidationResult("Tanggal Pengiriman harus diisi", new List<string> { "DeliveryDate" });
                 else if (this.DeliveryDate < this.BookingOrderDate)
                     yield return new ValidationResult("Tanggal Pengiriman Harus lebih dari Tanggal Booking", new List<string> { "DeliveryDate" });
-                else if (this.DeliveryDate < DateTimeOffset.Now.AddDays(45))
-                    yield return new ValidationResult("Tanggal Pengiriman harus lebih dari 45 Hari (" + dt.ToOffset(new TimeSpan(clientTimeZoneOffset, 0, 0)).ToString("dd MMMM yyyy", new CultureInfo("id-ID")) + ")", new List<string> { "DeliveryDate" });
+                else if (this.DeliveryDate < DateTimeOffset.Now.AddDays(40))
+                    yield return new ValidationResult("Tanggal Pengiriman harus lebih dari 40 Hari (" + dt.ToOffset(new TimeSpan(clientTimeZoneOffset, 0, 0)).ToString("dd MMMM yyyy", new CultureInfo("id-ID")) + ")", new List<string> { "DeliveryDate" });
             }
             if (Id<=0 || isUpdate)
             {
