@@ -217,10 +217,10 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             document.Add(table_fabric_top);
 
             //Main fabric table
-            PdfPTable table_fabric = new PdfPTable(8);
+            PdfPTable table_fabric = new PdfPTable(9);
             table_fabric.TotalWidth = 570f;
 
-            float[] fabric_widths = new float[] { 5f, 5f, 5f, 5f, 5f, 5f, 5f, 5f };
+            float[] fabric_widths = new float[] { 5f, 5f, 5f, 5f, 5f, 5f, 5f, 5f, 5f };
             table_fabric.SetWidths(fabric_widths);
 
             PdfPCell cell_fabric_center = new PdfPCell()
@@ -241,6 +241,9 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 
             //cell_fabric_center.Phrase = new Phrase("FABRIC", bold_font);
             //table_fabric.AddCell(cell_fabric_center);
+
+            cell_fabric_center.Phrase = new Phrase("NO PO", bold_font);
+            table_fabric.AddCell(cell_fabric_center);
 
             cell_fabric_center.Phrase = new Phrase("PRODUCT CODE", bold_font);
             table_fabric.AddCell(cell_fabric_center);
@@ -272,6 +275,9 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
                 {
                     //cell_fabric_left.Phrase = new Phrase(materialModel.Category.SubCategory != null ? materialModel.Category.SubCategory : "", normal_font);
                     //table_fabric.AddCell(cell_fabric_left);
+
+                    cell_fabric_left.Phrase = new Phrase(materialModel.PO_SerialNumber, normal_font);
+                    table_fabric.AddCell(cell_fabric_left);
 
                     cell_fabric_left.Phrase = new Phrase(materialModel.Product.Code, normal_font);
                     table_fabric.AddCell(cell_fabric_left);
@@ -336,10 +342,10 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             document.Add(table_acc_top);
 
             //Main Accessories Table
-            PdfPTable table_accessories = new PdfPTable(6);
+            PdfPTable table_accessories = new PdfPTable(7);
             table_accessories.TotalWidth = 570f;
 
-            float[] accessories_widths = new float[] { 2f, 3f, 5f, 5f, 2.5f, 7.5f };
+            float[] accessories_widths = new float[] { 3f, 2f, 3f, 5f, 5f, 2.5f, 7.5f };
             table_accessories.SetWidths(accessories_widths);
 
             PdfPCell cell_acc_center = new PdfPCell()
@@ -360,6 +366,8 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 
             //cell_acc_center.Phrase = new Phrase("ACCESSORIES", bold_font);
             //table_accessories.AddCell(cell_acc_center);
+            cell_fabric_center.Phrase = new Phrase("NO PO", bold_font);
+            table_accessories.AddCell(cell_fabric_center);
 
             cell_fabric_center.Phrase = new Phrase("PRODUCT CODE", bold_font);
             table_accessories.AddCell(cell_fabric_center);
@@ -383,6 +391,8 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             {
                 if (materialModel.Category.name != "FABRIC")
                 {
+                    cell_acc_left.Phrase = new Phrase(materialModel.PO_SerialNumber, normal_font);
+                    table_accessories.AddCell(cell_acc_left);
 
                     cell_acc_left.Phrase = new Phrase(materialModel.Product.Code, normal_font);
                     table_accessories.AddCell(cell_acc_left);
