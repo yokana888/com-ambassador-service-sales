@@ -105,7 +105,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 
 			cell_detail2.Phrase = new Phrase("QTY", normal_font);
 			table_detail2.AddCell(cell_detail2);
-			cell_detail2.Phrase = new Phrase($"{viewModel.Quantity} PCS", normal_font);
+			cell_detail2.Phrase = new Phrase($"{viewModel.Quantity} {viewModel.UOM.Unit}", normal_font);
 			table_detail2.AddCell(cell_detail2);
 
 			cell_detail2.Phrase = new Phrase("DELIVERY", normal_font);
