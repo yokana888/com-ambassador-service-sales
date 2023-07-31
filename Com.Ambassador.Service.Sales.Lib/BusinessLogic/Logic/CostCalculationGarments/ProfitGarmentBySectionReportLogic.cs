@@ -83,7 +83,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
                             a.CommissionRate,
                             a.CommissionPortion,
                             a.Insurance,
-                            a.Freight
+                            a.Freight,
                         } into G
 
                         select new ProfitGarmentBySectionReportViewModel
@@ -104,6 +104,8 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
                             UOMUnit = G.Key.UOMUnit,
                             DeliveryDate = G.Key.DeliveryDate,
                             ConfirmPrice = G.Key.ConfirmPrice,
+                            HPP = G.Key.RateValue > 1 ? Math.Round(((Math.Round(G.Sum(m => m.GmtCost), 2) + G.Key.OTL1CalculatedRate + G.Key.OTL2CalculatedRate + ((G.Key.Risk / 100) * (Math.Round(G.Sum(m => m.GmtCost), 2) + G.Key.OTL1CalculatedRate + G.Key.OTL2CalculatedRate)) + Math.Round(G.Sum(m => m.Shipfee), 2)) / G.Key.RateValue),2) : Math.Round(G.Sum(m => m.GmtCost), 2) + G.Key.OTL1CalculatedRate + G.Key.OTL2CalculatedRate + ((G.Key.Risk / 100) * (Math.Round(G.Sum(m => m.GmtCost), 2) + G.Key.OTL1CalculatedRate + G.Key.OTL2CalculatedRate)) + Math.Round(G.Sum(m => m.Shipfee), 2),
+            
                             CurrencyRate = G.Key.RateValue,
                             CMPrice = Math.Round(G.Sum(m => m.CMP), 2) / G.Key.RateValue * 1.05,
                             FOBPrice = ((Math.Round(G.Sum(m => m.CMP), 2) / G.Key.RateValue) * 1.05) + G.Key.ConfirmPrice,
@@ -111,8 +113,9 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
                             AccAllow = G.Key.AccessoriesAllowance,
                             Amount = G.Key.Quantity * (((Math.Round(G.Sum(m => m.CMP), 2) / G.Key.RateValue) * 1.05) + G.Key.ConfirmPrice),
                             Commision = G.Key.CommissionPortion,
-                            ProfitIDR = ((G.Key.ConfirmPrice - G.Key.Insurance - G.Key.Freight) * G.Key.RateValue) - G.Key.CommissionRate - Math.Round(G.Sum(m => m.GmtCost), 2) - G.Key.OTL1CalculatedRate - G.Key.OTL2CalculatedRate - ((G.Key.Risk / 100) * (Math.Round(G.Sum(m => m.GmtCost), 2) + G.Key.OTL1CalculatedRate + G.Key.OTL2CalculatedRate)) - Math.Round(G.Sum(m => m.Shipfee), 2),
-                            ProfitUSD = Math.Round(((((G.Key.ConfirmPrice - G.Key.Insurance - G.Key.Freight) * G.Key.RateValue) - G.Key.CommissionRate - Math.Round(G.Sum(m => m.GmtCost), 2) - G.Key.OTL1CalculatedRate - G.Key.OTL2CalculatedRate - ((G.Key.Risk / 100) * (Math.Round(G.Sum(m => m.GmtCost), 2) + G.Key.OTL1CalculatedRate + G.Key.OTL2CalculatedRate)) - Math.Round(G.Sum(m => m.Shipfee), 2)) / G.Key.RateValue), 2),
+                            CommisionIDR = G.Key.CommissionRate,
+                            ProfitIDR = G.Key.RateValue > 1 ? 0 : ((G.Key.ConfirmPrice - G.Key.Insurance - G.Key.Freight) * G.Key.RateValue) - G.Key.CommissionRate - Math.Round(G.Sum(m => m.GmtCost), 2) - G.Key.OTL1CalculatedRate - G.Key.OTL2CalculatedRate - ((G.Key.Risk / 100) * (Math.Round(G.Sum(m => m.GmtCost), 2) + G.Key.OTL1CalculatedRate + G.Key.OTL2CalculatedRate)) - Math.Round(G.Sum(m => m.Shipfee), 2),
+                            ProfitUSD = G.Key.RateValue > 1 ? Math.Round(((((G.Key.ConfirmPrice - G.Key.Insurance - G.Key.Freight) * G.Key.RateValue) - G.Key.CommissionRate - Math.Round(G.Sum(m => m.GmtCost), 2) - G.Key.OTL1CalculatedRate - G.Key.OTL2CalculatedRate - ((G.Key.Risk / 100) * (Math.Round(G.Sum(m => m.GmtCost), 2) + G.Key.OTL1CalculatedRate + G.Key.OTL2CalculatedRate)) - Math.Round(G.Sum(m => m.Shipfee), 2)) / G.Key.RateValue), 2) : 0,
                             ProfitFOB = Math.Round(((((((G.Key.ConfirmPrice - G.Key.Insurance - G.Key.Freight) * G.Key.RateValue) - G.Key.CommissionRate - Math.Round(G.Sum(m => m.GmtCost), 2) - G.Key.OTL1CalculatedRate - G.Key.OTL2CalculatedRate - ((G.Key.Risk / 100) * (Math.Round(G.Sum(m => m.GmtCost), 2) + G.Key.OTL1CalculatedRate + G.Key.OTL2CalculatedRate)) - Math.Round(G.Sum(m => m.Shipfee), 2)) / G.Key.RateValue) * 100) / (((Math.Round(G.Sum(m => m.CMP), 2) / G.Key.RateValue) * 1.05) + G.Key.ConfirmPrice)), 2),
                         });
 
@@ -143,7 +146,9 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
                               Quantity = a.Quantity,
                               UOMUnit = a.UOMUnit,
                               DeliveryDate = a.DeliveryDate,
-                              ConfirmPrice = a.ConfirmPrice,
+                              ConfirmPrice = b.IsFabricCM == "FOB" ? a.ConfirmPrice : 0,
+                              ConfirmPrice1 = b.IsFabricCM == "CMT" ? a.ConfirmPrice : 0,
+                              HPP = a.HPP,
                               CurrencyRate = a.CurrencyRate,
                               CMPrice = a.CMPrice,
                               FOBPrice = a.FOBPrice,
@@ -151,10 +156,11 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
                               AccAllow = a.AccAllow,
                               Amount = a.Amount,
                               Commision = a.Commision,
-                              ProfitIDR = a.ProfitIDR,
-                              ProfitUSD = a.ProfitUSD,
+                              CommisionIDR = a.CommisionIDR,
+                              ProfitIDR = a.ProfitIDR == 0 ? 0 : a.ProfitIDR,
+                              ProfitUSD = a.ProfitUSD == 0 ? 0 : a.ProfitUSD,
                               ProfitFOB = a.ProfitFOB,
-                              TermPayment = b.IsFabricCM
+                              TermPayment = b.IsFabricCM,
                           });
 
             return result;
