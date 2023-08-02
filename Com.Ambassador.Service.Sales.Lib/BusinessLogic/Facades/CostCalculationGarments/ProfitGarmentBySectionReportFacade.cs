@@ -238,7 +238,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
                 string startDate = _filter.dateFrom.GetValueOrDefault().Date.ToShortDateString();
                 string finishDate= _filter.dateTo.GetValueOrDefault().Date.ToShortDateString();
                 worksheet.Cells["A1"].Value = "LAPORAN PROFIT GARMENT PER SEKSI";
-                worksheet.Cells["A2"].Value = "TANGGAL AWAL : " + startDate + "  TANGGAL AKHIR : " + finishDate;
+                worksheet.Cells["A2"].Value = "TANGGAL SHIPMENT AWAL : " + startDate + "  TANGGAL SHIPMENT AKHIR : " + finishDate;
                 worksheet.Cells["A3"].Value = "SEKSI : " + _filter.section;
 
                 worksheet.Cells["A" + 1 + ":F" + 1 + ""].Merge = true;
@@ -247,6 +247,8 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
                 worksheet.Cells["A" + 4 + ":F" + 4 + ""].Merge = true;
 
                 worksheet.Cells["A5"].LoadFromDataTable(result, true);
+
+                worksheet.Cells["A" + 1 + ":AE" + 5 + ""].Style.Font.Bold = true;
                 worksheet.Cells["A" + 5 + ":AE" + (rowPosition + 5) + ""].Style.Border.Bottom.Style = ExcelBorderStyle.Thin;
                 worksheet.Cells["A" + 5 + ":AE" + (rowPosition + 5) + ""].Style.Border.Top.Style = ExcelBorderStyle.Thin;
                 worksheet.Cells["A" + 5 + ":AE" + (rowPosition + 5) + ""].Style.Border.Left.Style = ExcelBorderStyle.Thin;
