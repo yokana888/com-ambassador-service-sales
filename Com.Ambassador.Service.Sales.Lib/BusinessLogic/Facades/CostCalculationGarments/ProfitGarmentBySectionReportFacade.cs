@@ -63,22 +63,25 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
             result.Columns.Add(new DataColumn() { ColumnName = "Shipment", DataType = typeof(String) });
             result.Columns.Add(new DataColumn() { ColumnName = "Qty Order", DataType = typeof(Double) });
             result.Columns.Add(new DataColumn() { ColumnName = "Satuan", DataType = typeof(String) });
-            result.Columns.Add(new DataColumn() { ColumnName = "Confirm Price", DataType = typeof(Double) });
+            result.Columns.Add(new DataColumn() { ColumnName = "Confirm Price FOB", DataType = typeof(Double) });
+            result.Columns.Add(new DataColumn() { ColumnName = "Confirm Price CMT", DataType = typeof(Double) });
+            result.Columns.Add(new DataColumn() { ColumnName = "HPP", DataType = typeof(Double) });
             result.Columns.Add(new DataColumn() { ColumnName = "Fabric Cost", DataType = typeof(String) });
-            result.Columns.Add(new DataColumn() { ColumnName = "FOB Price", DataType = typeof(String) });
+            result.Columns.Add(new DataColumn() { ColumnName = "FOB Price", DataType = typeof(Double) });
             result.Columns.Add(new DataColumn() { ColumnName = "Amount", DataType = typeof(Double) });
             result.Columns.Add(new DataColumn() { ColumnName = "Rate USD", DataType = typeof(Double) });
             result.Columns.Add(new DataColumn() { ColumnName = "Komisi %", DataType = typeof(Double) });
+            result.Columns.Add(new DataColumn() { ColumnName = "Komisi IDR", DataType = typeof(Double) });
             result.Columns.Add(new DataColumn() { ColumnName = "Profit %", DataType = typeof(Double) });
             result.Columns.Add(new DataColumn() { ColumnName = "Profit IDR", DataType = typeof(Double) });
             result.Columns.Add(new DataColumn() { ColumnName = "Profit USD", DataType = typeof(Double) });
             result.Columns.Add(new DataColumn() { ColumnName = "Profit/FOB %", DataType = typeof(Double) });
-            result.Columns.Add(new DataColumn() { ColumnName = "Term Pembayaran", DataType = typeof(String) });
+            result.Columns.Add(new DataColumn() { ColumnName = "Garment Price", DataType = typeof(String) });
 
             int rowPosition = 1;
             Dictionary<string, string> Rowcount = new Dictionary<string, string>();
             if (Query.ToArray().Count() == 0)
-                result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", "", 0, 0, 0, 0, 0, 0, 0, ""); // to allow column name to be generated properly for empty data as template
+                result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", 0, "", 0, 0, 0, "", 0, 0, 0, 0, 0, 0, 0, 0, 0, ""); // to allow column name to be generated properly for empty data as template
             else
             {
                 Dictionary<string, List<ProfitGarmentBySectionReportViewModel>> dataBySection = new Dictionary<string, List<ProfitGarmentBySectionReportViewModel>>();
@@ -112,6 +115,8 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
                         UOMUnit = item.UOMUnit,
                         DeliveryDate = item.DeliveryDate,
                         ConfirmPrice = item.ConfirmPrice,
+                        ConfirmPrice1 = item.ConfirmPrice1,
+                        HPP = item.HPP,
                         CMPrice = item.CMPrice,
                         FOBPrice = item.FOBPrice,
                         FabAllow = item.FabAllow,
@@ -122,6 +127,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
                         ProfitUSD = item.ProfitUSD,
                         ProfitFOB = item.ProfitFOB,
                         Commision = item.Commision,
+                        CommisionIDR = item.CommisionIDR,
                         TermPayment = item.TermPayment
                     });
 
@@ -187,16 +193,18 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
                         string Amnt = string.Format("{0:N2}", item.Amount);
                         string Rate = string.Format("{0:N2}", item.CurrencyRate);
                         string Comm = string.Format("{0:N2}", item.Commision);
-
+                        string CMTPrc = string.Format("{0:N2}", item.ConfirmPrice1);
+                        string HP = string.Format("{0:N2}", item.HPP);
+                    
                         result.Rows.Add(index, item.RO_Number, item.Section, item.UnitName, item.BuyerCode, item.BuyerName, item.BrandCode, item.BrandName, item.Type,
                                         item.Article, item.Comodity, item.ComodityDescription, item.FabAllow, item.AccAllow, ShipDate, item.Quantity, item.UOMUnit,
-                                        item.ConfirmPrice, item.CMPrice, item.FOBPrice, item.Amount, item.CurrencyRate, item.Commision, item.Profit, item.ProfitIDR, item.ProfitUSD, item.ProfitFOB, item.TermPayment);
+                                        item.ConfirmPrice, item.ConfirmPrice1, item.HPP, CMPrc1, item.FOBPrice, item.Amount, item.CurrencyRate, item.Commision, item.CommisionIDR, item.Profit, item.ProfitIDR, item.ProfitUSD, item.ProfitFOB, item.TermPayment);
 
                         rowPosition += 1;
                         SECTION = item.Section;
                     }
-
-                    result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", "SUB TOTAL  :", "", "", 0, "", 0, "SEKSI :", SECTION, Math.Round(subTotalAmount[Seksi.Key], 2), 0, 0, 0, Math.Round(subTotalPrftIDR[Seksi.Key], 2), Math.Round(subTotalPrftUSD[Seksi.Key], 2), 0, "");
+                 
+                    result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", "SUB TOTAL  :", "", "SEKSI", 0, SECTION, 0, 0, 0, "", 0, Math.Round(subTotalAmount[Seksi.Key], 2), 0, 0, 0, 0, Math.Round(subTotalPrftIDR[Seksi.Key], 2), Math.Round(subTotalPrftUSD[Seksi.Key], 2), 0, "");
 
                     rowPosition += 1;
                     totalAmount += subTotalAmount[Seksi.Key];
@@ -208,11 +216,11 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
                 {
                     if (i == 0)
                     {
-                        result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", "", "", "GRAND TOTAL", grandTotalByUom[i].quantity, grandTotalByUom[i].uom, grandTotalByUom[i].amount, "", "GRAND TOTAL AMOUNT", data.Sum(d => d.Amount), 0, 0, 0, 0, 0, 0, "");
+                          result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", "GRAND TOTAL", "", "", grandTotalByUom[i].quantity, grandTotalByUom[i].uom, grandTotalByUom[i].amount, 0, 0, "GRAND TOTAL AMOUNT", 0, data.Sum(d => d.Amount), 0, 0, 0, 0, 0, 0, 0, "");
                     }
                     else
-                    {
-                        result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", grandTotalByUom[i].quantity, grandTotalByUom[i].uom, grandTotalByUom[i].amount, "", "", 0, 0, 0, 0, 0, 0, 0, "");
+                    {          
+                        result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", grandTotalByUom[i].quantity, grandTotalByUom[i].uom, grandTotalByUom[i].amount, 0, 0, "", 0, 0, 0, 0, 0, 0, 0, 0, 0, "");
                     }
                 }
             }
