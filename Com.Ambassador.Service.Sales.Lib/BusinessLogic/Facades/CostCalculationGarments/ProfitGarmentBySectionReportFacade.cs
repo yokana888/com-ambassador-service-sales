@@ -78,6 +78,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
             result.Columns.Add(new DataColumn() { ColumnName = "Profit/FOB %", DataType = typeof(Double) });
             result.Columns.Add(new DataColumn() { ColumnName = "Garment Price", DataType = typeof(String) });
 
+            int rowPosition = 1;
             Dictionary<string, string> Rowcount = new Dictionary<string, string>();
             if (Query.ToArray().Count() == 0)
                 result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", 0, "", 0, 0, 0, "", 0, 0, 0, 0, 0, 0, 0, 0, 0, ""); // to allow column name to be generated properly for empty data as template
@@ -171,8 +172,6 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
                 double totalPrftIDR = 0;
                 double totalPrftUSD = 0;
 
-                int rowPosition = 1;
-
                 foreach (KeyValuePair<string, List<ProfitGarmentBySectionReportViewModel>> Seksi in dataBySection)
                 {
                     string SECTION = "";
@@ -212,7 +211,6 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
                     totalPrftIDR += subTotalPrftIDR[Seksi.Key];
                     totalPrftUSD += subTotalPrftUSD[Seksi.Key];
                 }
-
                 rowPosition++;
                 foreach (var i in Enumerable.Range(0, grandTotalByUom.Count))
                 {
@@ -226,17 +224,50 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
                     }
                 }
             }
-            ExcelPackage package = new ExcelPackage();
-            var sheet = package.Workbook.Worksheets.Add("Profit Garment By Seksi");
-            sheet.Cells["A1"].LoadFromDataTable(result, true, OfficeOpenXml.Table.TableStyles.Light16);
+            //ExcelPackage package = new ExcelPackage();
+            //var sheet = package.Workbook.Worksheets.Add("Profit Garment By Seksi");
+            //sheet.Cells["A1"].LoadFromDataTable(result, true, OfficeOpenXml.Table.TableStyles.Light16);
 
-            sheet.Cells[sheet.Dimension.Address].AutoFitColumns();
-            MemoryStream streamExcel = new MemoryStream();
-            package.SaveAs(streamExcel);
+            //sheet.Cells[sheet.Dimension.Address].AutoFitColumns();
+            //MemoryStream streamExcel = new MemoryStream();
+            //package.SaveAs(streamExcel);
+            Filter _filter = JsonConvert.DeserializeObject<Filter>(filter);
+            using (var package = new ExcelPackage())
+            {
+                var worksheet = package.Workbook.Worksheets.Add("Profit Garment By Seksi");
+                string startDate = _filter.dateFrom.GetValueOrDefault().Date.ToShortDateString();
+                string finishDate= _filter.dateTo.GetValueOrDefault().Date.ToShortDateString();
+                worksheet.Cells["A1"].Value = "LAPORAN PROFIT GARMENT PER SEKSI";
+                worksheet.Cells["A2"].Value = "TANGGAL AWAL : " + startDate + "  TANGGAL AKHIR : " + finishDate;
+                worksheet.Cells["A3"].Value = "SEKSI : " + _filter.section;
 
-            string fileName = string.Concat("Profit Garment Per Seksi", ".xlsx");
+                worksheet.Cells["A" + 1 + ":F" + 1 + ""].Merge = true;
+                worksheet.Cells["A" + 2 + ":F" + 2 + ""].Merge = true;
+                worksheet.Cells["A" + 3 + ":F" + 3 + ""].Merge = true;
+                worksheet.Cells["A" + 4 + ":F" + 4 + ""].Merge = true;
 
-            return Tuple.Create(streamExcel, fileName);
+                worksheet.Cells["A5"].LoadFromDataTable(result, true);
+                worksheet.Cells["A" + 5 + ":AE" + (rowPosition + 5) + ""].Style.Border.Bottom.Style = ExcelBorderStyle.Thin;
+                worksheet.Cells["A" + 5 + ":AE" + (rowPosition + 5) + ""].Style.Border.Top.Style = ExcelBorderStyle.Thin;
+                worksheet.Cells["A" + 5 + ":AE" + (rowPosition + 5) + ""].Style.Border.Left.Style = ExcelBorderStyle.Thin;
+                worksheet.Cells["A" + 5 + ":AE" + (rowPosition + 5) + ""].Style.Border.Right.Style = ExcelBorderStyle.Thin;
+
+                worksheet.Cells["A" + 1 + ":AE" + (rowPosition + 5) + ""].AutoFitColumns();
+
+
+                var streamExcel = new MemoryStream();
+                package.SaveAs(streamExcel);
+
+                string fileName = string.Concat("Profit Garment Per Seksi", ".xlsx");
+
+                return Tuple.Create(streamExcel, fileName);
+            }
+        }
+        private class Filter
+        {
+            public string section { get; set; }
+            public DateTimeOffset? dateFrom { get; set; }
+            public DateTimeOffset? dateTo { get; set; }
         }
 
         public Tuple<List<ProfitGarmentBySectionReportViewModel>, int> Read(int page = 1, int size = 25, string filter = "{}")
