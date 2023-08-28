@@ -159,7 +159,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
                               CommisionIDR = a.CommisionIDR,
                               ProfitIDR = a.ProfitIDR == 0 ? 0 : a.ProfitIDR,
                               ProfitUSD = a.ProfitUSD == 0 ? 0 : a.ProfitUSD,
-                              ProfitFOB = a.ProfitFOB,
+                              ProfitFOB = a.ProfitUSD == 0 ? 0 : a.ProfitFOB,
                               TermPayment = b.IsFabricCM,
                           });
 
