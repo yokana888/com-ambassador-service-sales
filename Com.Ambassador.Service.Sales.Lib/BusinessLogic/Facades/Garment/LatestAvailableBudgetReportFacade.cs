@@ -61,10 +61,10 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
                 dataTable.Rows.Add(null, null, null, null, null, null, null, null, null, null, null, null, null);
                 dataTable.Rows.Add(null, null, null, null, null, null, null, null, null, null, null, null, null);
 
-                var Count35 = data.Count(d => d.LeadTime == 40);
-                var Count35Ok = data.Count(d => d.DateDiff >= 40 && d.LeadTime == 40);
+                var Count35 = data.Count(d => d.LeadTime == 35);
+                var Count35Ok = data.Count(d => d.DateDiff >= 35 && d.LeadTime == 35);
                 var Percent35Ok = ((decimal)Count35Ok / Count35).ToString("P", new CultureInfo("id-ID"));
-                var Count35NotOk = data.Count(d => d.DateDiff < 40 && d.LeadTime == 40);
+                var Count35NotOk = data.Count(d => d.DateDiff < 35 && d.LeadTime == 35);
                 var Percent35NotOk = ((decimal)Count35NotOk / Count35).ToString("P", new CultureInfo("id-ID"));
 
                 var Count25 = data.Count(d => d.LeadTime == 25);
@@ -80,10 +80,10 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
                 var PercentNotOk = ((decimal)CountNotOk / Count).ToString("P", new CultureInfo("id-ID"));
 
 
-                dataTable.Rows.Add(null, "KESIAPAN BUDGET DENGAN LEAD TIME 40 HARI", null, null, null, null, null, null, null, null, null, null, null);
-                dataTable.Rows.Add(null, "Status OK", null, "Selisih Tgl Kesiapan Budget dengan Tgl Shipment >= 40 hari", null, null, null, null, null, null, null, null, null);
+                dataTable.Rows.Add(null, "KESIAPAN BUDGET DENGAN LEAD TIME 35 HARI", null, null, null, null, null, null, null, null, null, null, null);
+                dataTable.Rows.Add(null, "Status OK", null, "Selisih Tgl Kesiapan Budget dengan Tgl Shipment >= 35 hari", null, null, null, null, null, null, null, null, null);
                 dataTable.Rows.Add(null, "Persentase Status OK", null, $"{Count35Ok}/{Count35} X 100% = {Percent35Ok}", null, null, null, null, null, null, null, null, null);
-                dataTable.Rows.Add(null, "Status NOT OK", null, "Selisih Tgl Kesiapan Budget dengan Tgl Shipment < 40 hari", null, null, null, null, null, null, null, null, null);
+                dataTable.Rows.Add(null, "Status NOT OK", null, "Selisih Tgl Kesiapan Budget dengan Tgl Shipment < 35 hari", null, null, null, null, null, null, null, null, null);
                 dataTable.Rows.Add(null, "Persentase Status NOT OK", null, $"{Count35NotOk}/{Count35} X 100% = {Percent35NotOk}", null, null, null, null, null, null, null, null, null);
 
                 dataTable.Rows.Add(null, null, null, null, null, null, null, null, null, null, null, null, null);
