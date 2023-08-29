@@ -88,55 +88,55 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
 
                 foreach(var q in data)
                 {
-                    if (q.LeadTime == 40)
+                    if (q.LeadTime == 35)
                     {
-                        Count35 = data.Count(d => d.LeadTime == 40);
-                        Count35Ok = data.Count(d => d.DateDiff >= 35 && d.LeadTime == 40);
-                        Count35NotOk = data.Count(d => d.DateDiff < 35 && d.LeadTime == 40);
-                        if (Count35Ok > 0)
-                        {
+                        Count35 = data.Count(d => d.LeadTime == 35);
+                        Count35Ok = data.Count(d => d.DateDiff >= 30 && d.LeadTime == 35);
+                        Count35NotOk = data.Count(d => d.DateDiff < 30 && d.LeadTime == 35);
+                        //if (Count35Ok > 0)
+                        //{
                             Percent35Ok = ((decimal)Count35Ok / Count35).ToString("P", new CultureInfo("id-ID"));
-                        }
-                        else
-                        {
+                        //}
+                        //else
+                        //{
                             Percent35NotOk = ((decimal)Count35NotOk / Count35).ToString("P", new CultureInfo("id-ID"));
-                        }
+                        //}
                     }
                     else if (q.LeadTime == 25)
                     {
                         Count25 = data.Count(d => d.LeadTime == 25);
                         Count25Ok = data.Count(d => d.DateDiff >= 20 && d.LeadTime == 25);
                         Count25NotOk = data.Count(d => d.DateDiff < 20 && d.LeadTime == 25);
-                        if (Count25Ok > 0)
-                        {
+                        //if (Count25Ok > 0)
+                        //{
                             Percent25Ok = ((decimal)Count25Ok / Count25).ToString("P", new CultureInfo("id-ID"));
-                        }
-                        else
-                        {
+                        //}
+                        //else
+                        //{
                             Percent25NotOk = ((decimal)Count25NotOk / Count25).ToString("P", new CultureInfo("id-ID"));
-                        }
+                        //}
                     }
                 }
 
                 var Count = Count25 + Count35; 
                 var CountOk = Count35Ok + Count25Ok;
                 var CountNotOk = Count35NotOk + Count25NotOk;
-                if (CountOk > 0){
+                //if (CountOk > 0){
                     PercentOk = ((decimal)CountOk / Count).ToString("P", new CultureInfo("id-ID"));
-                } else {
+                //} else {
                     PercentNotOk = ((decimal)CountNotOk / Count).ToString("P", new CultureInfo("id-ID"));
-                }
+                //}
 
                 dataTable.Rows.Add(null, "KESIAPAN RO GARMENT DENGAN LEAD TIME 35 HARI", null, null, null, null, null, null, null, null, null);
-                dataTable.Rows.Add(null, "Status OK", null, "Selisih Tgl Penerimaan RO dengan Tgl Shipment >= 35 hari", null, null, null, null, null, null, null);
+                dataTable.Rows.Add(null, "Status OK", null, "Selisih Tgl Penerimaan RO dengan Tgl Shipment >= 30 hari", null, null, null, null, null, null, null);
                 dataTable.Rows.Add(null, "Persentase Status OK", null, $"{Count35Ok}/{Count35} X 100% = {Percent35Ok}", null, null, null, null, null, null, null);
-                dataTable.Rows.Add(null, "Status NOT OK", null, "Selisih Tgl Penerimaan RO dengan Tgl Shipment < 35 hari", null, null, null, null, null, null, null);
+                dataTable.Rows.Add(null, "Status NOT OK", null, "Selisih Tgl Penerimaan RO dengan Tgl Shipment < 30 hari", null, null, null, null, null, null, null);
                 dataTable.Rows.Add(null, "Persentase Status NOT OK", null, $"{Count35NotOk}/{Count35} X 100% = {Percent35NotOk}", null, null, null, null, null, null, null);
 
                 dataTable.Rows.Add(null, null, null, null, null, null, null, null, null, null, null);
                 dataTable.Rows.Add(null, null, null, null, null, null, null, null, null, null, null);
 
-                dataTable.Rows.Add(null, "KESIAPAN RO GARMENT DENGAN LEAD TIME 20 HARI", null, null, null, null, null, null, null, null, null);
+                dataTable.Rows.Add(null, "KESIAPAN RO GARMENT DENGAN LEAD TIME 25 HARI", null, null, null, null, null, null, null, null, null);
                 dataTable.Rows.Add(null, "Status OK", null, "Selisih Tgl Penerimaan RO dengan Tgl Shipment >= 20 hari", null, null, null, null, null, null, null);
                 dataTable.Rows.Add(null, "Persentase Status OK", null, $"{Count25Ok}/{Count25} X 100% = {Percent25Ok}", null, null, null, null, null, null, null);
                 dataTable.Rows.Add(null, "Status NOT OK", null, "Selisih Tgl Penerimaan RO dengan Tgl Shipment < 20 hari", null, null, null, null, null, null, null);
