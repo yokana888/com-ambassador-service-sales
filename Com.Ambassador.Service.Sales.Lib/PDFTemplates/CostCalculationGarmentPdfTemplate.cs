@@ -357,7 +357,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
 			cell_bottom_column2_1.Phrase = new Phrase($"{Number.ToRupiahWithoutSymbol(viewModel.NETFOB)}", normal_font);
 			table_bottom_column2_1.AddCell(cell_bottom_column2_1);
 
-			cell_bottom_column2_1.Phrase = new Phrase("COMM (%)", normal_font);
+			cell_bottom_column2_1.Phrase = new Phrase("OTHER EXPENSE (%)", normal_font);
 			table_bottom_column2_1.AddCell(cell_bottom_column2_1);
 			cell_bottom_column2_1.Phrase = new Phrase(String.Format("{0:0.00}%", viewModel.CommissionPortion), normal_font);
 			table_bottom_column2_1.AddCell(cell_bottom_column2_1);
