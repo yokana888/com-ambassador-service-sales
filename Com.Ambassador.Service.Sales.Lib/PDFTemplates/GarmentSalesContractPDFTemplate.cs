@@ -200,7 +200,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase("", normal_font);
             tableBody.AddCell(bodyContentLeft);
-            bodyContentCenter.Phrase = new Phrase("ADDRESS : JL. MERAPI NO. 23 BLOK E2, DESA/KELURAHAN BANARAN, KEC. GROGOL \n KAB. SUKOHARJO, PROVINSI JAWA TENGAH 57552, INDONESIA", normal_font);
+            bodyContentCenter.Phrase = new Phrase("ADDRESS : JL. MERAPI NO. 23, DESA/KELURAHAN BANARAN, KEC. GROGOL \n KAB. SUKOHARJO, PROVINSI JAWA TENGAH 57552, INDONESIA", normal_font);
             tableBody.AddCell(bodyContentCenter);
             bodyContentLeft.Phrase = new Phrase("Bank Detail", normal_font);
             tableBody.AddCell(bodyContentLeft);
