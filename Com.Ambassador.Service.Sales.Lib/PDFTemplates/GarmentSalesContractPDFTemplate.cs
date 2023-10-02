@@ -200,7 +200,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase("", normal_font);
             tableBody.AddCell(bodyContentLeft);
-            bodyContentCenter.Phrase = new Phrase("ADDRESS : JL. MERAPI NO. 23 BLOK E2, DESA/KELURAHAN BANARAN, KEC. GROGOL \n KAB. SUKOHARJO, PROVINSI JAWA TENGAH 57552, INDONESIA", normal_font);
+            bodyContentCenter.Phrase = new Phrase("ADDRESS : JL. MERAPI NO. 23, DESA/KELURAHAN BANARAN, KEC. GROGOL \n KAB. SUKOHARJO, PROVINSI JAWA TENGAH 57552, INDONESIA", normal_font);
             tableBody.AddCell(bodyContentCenter);
             bodyContentLeft.Phrase = new Phrase("Bank Detail", normal_font);
             tableBody.AddCell(bodyContentLeft);
@@ -563,13 +563,14 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             cb.AddImage(image, inlineImage: true);
 
             string[] headOffices = {
-                "Head Office : JL. MERAPI NO. 23, BANARAN, GROGOL, SUKOHARJO JAWA TENGAH 57552 - INDONESIA",
+                "Head Office : JL. MERAPI NO. 23 BLOK E2, DESA/KELURAHAN BANARAN, KEC. GROGOL,",
+                "KAB. SUKOHARJO, PROVINSI JAWA TENGAH 57552, INDONESIA",
                 "TELP. 0271-732888",
                 "Website : www.ambassadorgarmindo.com",
             };
             for (int i = 0; i < headOffices.Length; i++)
             {
-                cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, headOffices[i], headOfficeX, headOfficeY - image.ScaledHeight - (i * 10), 0);
+                cb.ShowTextAligned(PdfContentByte.ALIGN_CENTER, headOffices[i], headOfficeX, headOfficeY - image.ScaledHeight - (i * 9), 0);
             }
 
             #endregion
