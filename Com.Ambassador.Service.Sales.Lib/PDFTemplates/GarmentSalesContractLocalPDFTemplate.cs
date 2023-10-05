@@ -75,10 +75,11 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase("Alamat", normal_font);
             tableBody.AddCell(bodyContentLeft);
-            bodyContentLeft.Phrase = new Phrase(": Kelurahan Banaran, Kecamatan Grogol, Kabupaten Sukoharjo", normal_font);
+            bodyContentLeft.Phrase = new Phrase(": JL. Merapi No. 23 Blok E2, Kelurahan Banaran, Kecamatan Grogol, Kabupaten Sukoharjo", normal_font);
             tableBody.AddCell(bodyContentLeft);
             PdfPCell cellBody = new PdfPCell(tableBody); // dont remove
             tableBody.ExtendLastRow = false;
+            tableBody.SpacingAfter = 0.5f;
             tableBody.SpacingAfter = 0.5f;
             document.Add(tableBody);
 
