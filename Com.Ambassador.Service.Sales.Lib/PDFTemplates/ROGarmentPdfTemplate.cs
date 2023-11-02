@@ -263,6 +263,9 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             cell_fabric_center.Phrase = new Phrase("DESCRIPTION", bold_font);
             table_fabric.AddCell(cell_fabric_center);
 
+            cell_fabric_center.Phrase = new Phrase("DETAIL BARANG", bold_font);
+            table_fabric.AddCell(cell_fabric_center);
+
             cell_fabric_center.Phrase = new Phrase("QUANTITY", bold_font);
             table_fabric.AddCell(cell_fabric_center);
 
@@ -296,6 +299,9 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
                     table_fabric.AddCell(cell_fabric_left);
 
                     cell_fabric_left.Phrase = new Phrase(materialModel.Description != null ? materialModel.Description : "", normal_font);
+                    table_fabric.AddCell(cell_fabric_left);
+
+                    cell_fabric_left.Phrase = new Phrase(materialModel.ProductRemark != null ? materialModel.ProductRemark : "", normal_font);
                     table_fabric.AddCell(cell_fabric_left);
 
                     cell_fabric_left.Phrase = new Phrase(materialModel.Quantity.ToString() != null ? String.Format("{0} " + materialModel.UOMQuantity.Unit, materialModel.Quantity.ToString()) : "0", normal_font);
