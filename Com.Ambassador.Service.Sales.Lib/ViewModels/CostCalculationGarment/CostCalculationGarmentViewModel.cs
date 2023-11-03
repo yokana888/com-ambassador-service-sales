@@ -66,7 +66,7 @@ namespace Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment
 
         public int BookingOrderId { get; set; }
         public string BookingOrderNo { get; set; }
-        public int? BOQuantity { get; set; }
+        public double BOQuantity { get; set; }
         public int BookingOrderItemId { get; set; }
 
         public Approval ApprovalMD { get; set; }
@@ -139,7 +139,7 @@ namespace Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment
             else if (this.DeliveryDate < DateTimeOffset.Now)
                 yield return new ValidationResult("Delivery Date harus lebih besar dari hari ini", new List<string> { "DeliveryDate" });
             var bj = CostCalculationGarment_Materials.Where(a => a.Product.Code == "BJ001").FirstOrDefault();
-            if(bj == null)
+            if (bj == null)
             {
                 if (this.SMV_Cutting == null)
                     yield return new ValidationResult("SMV Cutting harus diisi", new List<string> { "SMV_Cutting" });
