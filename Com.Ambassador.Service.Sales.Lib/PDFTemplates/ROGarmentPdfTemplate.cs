@@ -217,10 +217,10 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             document.Add(table_fabric_top);
 
             //Main fabric table
-            PdfPTable table_fabric = new PdfPTable(9);
+            PdfPTable table_fabric = new PdfPTable(10);
             table_fabric.TotalWidth = 570f;
 
-            float[] fabric_widths = new float[] { 5f, 5f, 5f, 5f, 5f, 5f, 5f, 5f, 5f };
+            float[] fabric_widths = new float[] { 5f, 5f, 5f, 5f, 5f, 5f, 5f, 5f, 5f, 5f };
             table_fabric.SetWidths(fabric_widths);
 
             PdfPCell cell_fabric_center = new PdfPCell()
