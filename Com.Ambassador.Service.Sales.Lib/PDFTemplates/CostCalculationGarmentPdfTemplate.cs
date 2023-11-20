@@ -145,6 +145,12 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
                 }
                 imageHeight = image.ScaledHeight;
                 float imageY = 800 - imageHeight;
+
+                if (image.Height > 700)
+                {
+                    image.Width = 400;
+                }
+
                 image.SetAbsolutePosition(520, imageY);
                 cb.AddImage(image, inlineImage: true);
             }
