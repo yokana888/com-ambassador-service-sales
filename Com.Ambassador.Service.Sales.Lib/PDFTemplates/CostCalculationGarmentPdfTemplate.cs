@@ -152,7 +152,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
                 }
 
                 image.SetAbsolutePosition(520, imageY);
-                cb.AddImage(image, inlineImage: true);
+                cb.AddImage(image/*, inlineImage: true*/);
             }
             catch (Exception)
             {
