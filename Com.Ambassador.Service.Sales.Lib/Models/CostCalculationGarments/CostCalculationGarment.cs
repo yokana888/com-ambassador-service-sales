@@ -172,5 +172,8 @@ namespace Com.Ambassador.Service.Sales.Lib.Models.CostCalculationGarments
         public string RODistributionBy { get; set; }
 
         public bool IsPosted { get; set; }
+
+        [MaxLength(20)]
+        public string CCType { get; set; }
     }
 }
