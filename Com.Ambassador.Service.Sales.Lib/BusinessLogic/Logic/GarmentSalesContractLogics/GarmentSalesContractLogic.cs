@@ -44,7 +44,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.GarmentSalesContr
 
             List<string> SelectedFields = new List<string>()
             {
-                "Id", "BuyerBrandName", "BuyerBrandCode", "SalesContractNo", "LastModifiedUtc", "CreatedUtc"
+                "Id", "BuyerBrandName", "BuyerBrandCode", "SalesContractNo", "LastModifiedUtc", "CreatedUtc","BuyerBrandId"
             };
 
             Query = Query
