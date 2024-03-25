@@ -67,11 +67,11 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
                 var Count35NotOk = data.Count(d => d.DateDiff < 35 && d.LeadTime == 35);
                 var Percent35NotOk = ((decimal)Count35NotOk / Count35).ToString("P", new CultureInfo("id-ID"));
                 var leadTime = data[0].LeadTime;
-                //var Count25 = data.Count(d => d.LeadTime == 25);
-                //var Count25Ok = data.Count(d => d.DateDiff >= 25 && d.LeadTime == 25);
-                //var Percent25Ok = ((decimal)Count25Ok / Count25).ToString("P", new CultureInfo("id-ID"));
-                //var Count25NotOk = data.Count(d => d.DateDiff < 25 && d.LeadTime == 25);
-                //var Percent25NotOk = ((decimal)Count25NotOk / Count25).ToString("P", new CultureInfo("id-ID"));
+                var Count25 = data.Count(d => d.LeadTime == 25);
+                var Count25Ok = data.Count(d => d.DateDiff >= 25 && d.LeadTime == 25);
+                var Percent25Ok = ((decimal)Count25Ok / Count25).ToString("P", new CultureInfo("id-ID"));
+                var Count25NotOk = data.Count(d => d.DateDiff < 25 && d.LeadTime == 25);
+                var Percent25NotOk = ((decimal)Count25NotOk / Count25).ToString("P", new CultureInfo("id-ID"));
 
                 var Count = Count25 + Count35;
                 var CountOk = Count35Ok + Count25Ok;
