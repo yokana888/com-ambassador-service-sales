@@ -72,7 +72,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
                 }
                 dataTable.Rows.Add(null, null, null, null, null, null, null, null, null, null, null);
                 dataTable.Rows.Add(null, null, null, null, null, null, null, null, null, null, null);
-                var leadTime = data[0].LeadTime;
+                var leadTime = "25";
                 var Percent35Ok = "";
                 var Percent35NotOk = "";
                 //var Percent25Ok = "";
@@ -89,11 +89,11 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
                 foreach(var q in data)
                 {
                    //if (q.LeadTime == 35)
-                    if (q.LeadTime == 30)
+                    if (q.LeadTime == 25)
                     {
-                        Count35 = data.Count(d => d.LeadTime == 35);
-                        Count35Ok = data.Count(d => d.DateDiff >= 35 && d.LeadTime == 35);
-                        Count35NotOk = data.Count(d => d.DateDiff < 35 && d.LeadTime == 35);
+                        Count35 = data.Count(d => d.LeadTime == 25);
+                        Count35Ok = data.Count(d => d.DateDiff >= 25 && d.LeadTime == 25);
+                        Count35NotOk = data.Count(d => d.DateDiff < 25 && d.LeadTime == 25);
                         //if (Count35Ok > 0)
                         //{
                             Percent35Ok = ((decimal)Count35Ok / Count35).ToString("P", new CultureInfo("id-ID"));
