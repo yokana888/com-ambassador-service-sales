@@ -73,7 +73,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
                 dataTable.Rows.Add(null, null, null, null, null, null, null, null, null, null, null);
                 dataTable.Rows.Add(null, null, null, null, null, null, null, null, null, null, null);
                 var leadTime = "25";
-
+                
                 //LEAD 35
                 var Count35 = data.Count(d => d.LeadTime == 35);
                 var Count35Ok = data.Count(d => d.DateDiff >= 30 && d.LeadTime == 35);

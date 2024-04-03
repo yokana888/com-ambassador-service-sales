@@ -66,7 +66,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
                 var Count35 = data.Count(d => d.LeadTime == 35);
                 var Count35Ok = data.Count(d => d.DateDiff >= 35 && d.LeadTime == 35);
                 var Percent35Ok = ((decimal)Count35Ok / Count35).ToString("P", new CultureInfo("id-ID"));
-                var Count35NotOk = data.Count(d => d.DateDiff < 35 && d.LeadTime == 35);
+                var Count35NotOk = data.Count(d => d.DateDiff < 30 && d.LeadTime == 30);
                 var Percent35NotOk = ((decimal)Count35NotOk / Count35).ToString("P", new CultureInfo("id-ID"));
 
                 //LEAD 30
@@ -83,7 +83,12 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.Garment
                 var Count25NotOk = data.Count(d => d.DateDiff < 25 && d.LeadTime == 25);
                 var Percent25NotOk = ((decimal)Count25NotOk / Count25).ToString("P", new CultureInfo("id-ID"));
 
-
+                var Count = Count25 + Count30 + Count35;
+                var CountOk = Count35Ok + Count30Ok + Count25Ok;
+                var PercentOk = ((decimal)CountOk / Count).ToString("P", new CultureInfo("id-ID"));
+                var CountNotOk = Count35NotOk + Count30NotOk + Count25NotOk;
+                var PercentNotOk = ((decimal)CountNotOk / Count).ToString("P", new CultureInfo("id-ID"));
+                
                 dataTable.Rows.Add(null, "KESIAPAN BUDGET DENGAN LEAD TIME " +leadTime+ " HARI", null, null, null, null, null, null, null, null, null, null, null);
                 dataTable.Rows.Add(null, "Status OK", null, "Selisih Tgl Kesiapan Budget dengan Tgl Shipment >=  " + leadTime + " hari", null, null, null, null, null, null, null, null, null);
                 dataTable.Rows.Add(null, "Persentase Status OK", null, $"{CountOk}/{Count} X 100% = {PercentOk}", null, null, null, null, null, null, null, null, null);
