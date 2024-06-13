@@ -68,12 +68,12 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase("", normal_font);
             tableBody.AddCell(bodyContentLeft);
-            bodyContentLeft.Phrase = new Phrase("NIK", normal_font);
-            tableBody.AddCell(bodyContentLeft);
-            bodyContentLeft.Phrase = new Phrase(": ", normal_font);
-            tableBody.AddCell(bodyContentLeft);
-            bodyContentLeft.Phrase = new Phrase("", normal_font);
-            tableBody.AddCell(bodyContentLeft);
+            //bodyContentLeft.Phrase = new Phrase("NIK", normal_font);
+            //tableBody.AddCell(bodyContentLeft);
+            //bodyContentLeft.Phrase = new Phrase(": ", normal_font);
+            //tableBody.AddCell(bodyContentLeft);
+            //bodyContentLeft.Phrase = new Phrase("", normal_font);
+            //tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase("Alamat", normal_font);
             tableBody.AddCell(bodyContentLeft);
             bodyContentLeft.Phrase = new Phrase(": JL. Merapi No. 23 Blok E2, Kelurahan Banaran, Kecamatan Grogol, Kabupaten Sukoharjo", normal_font);
