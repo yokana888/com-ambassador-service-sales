@@ -175,5 +175,8 @@ namespace Com.Ambassador.Service.Sales.Lib.Models.CostCalculationGarments
 
         [MaxLength(20)]
         public string CCType { get; set; }
+
+        [MaxLength(50)]
+        public string SubconType { get; set; }
     }
 }
