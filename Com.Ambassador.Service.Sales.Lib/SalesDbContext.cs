@@ -89,6 +89,8 @@ namespace Com.Ambassador.Service.Sales.Lib
 
         public DbSet<DeliveryNoteProductionModel> DeliveryNoteProduction { get; set; }
 
+        public DbSet<LogHistory> LogHistories { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -111,6 +113,12 @@ namespace Com.Ambassador.Service.Sales.Lib
 
             modelBuilder.Entity<RO_Garment>()
                 .Ignore(c => c.ImagesFile);
+
+            modelBuilder.Entity<CostCalculationGarment>()
+              .HasMany(c => c.CostCalculationGarment_Materials)
+              .WithOne(m => m.CostCalculationGarment)
+              .HasForeignKey(m => m.CostCalculationGarmentId)
+              .OnDelete(DeleteBehavior.Cascade); // Mengaktifkan cascade delete
 
             modelBuilder.Entity<RO_Garment>()
                 .Ignore(c => c.DocumentsFile);
