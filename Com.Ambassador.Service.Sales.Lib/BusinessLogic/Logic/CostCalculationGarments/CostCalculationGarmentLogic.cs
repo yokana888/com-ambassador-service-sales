@@ -700,7 +700,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
                         {
                             try
                             {
-                                var data = await DbSet.FirstOrDefaultAsync(d => d.Id == id);
+                                var data = await DbSet.Include(s => s.CostCalculationGarment_Materials).FirstOrDefaultAsync(d => d.Id == id);
 
                                 //update CostCalculationGarment approved
                                 if (data != null)
@@ -729,6 +729,13 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
                                     data.IsPosted = false;
 
                                     EntityExtension.FlagForUpdate(data, IdentityService.Username, "sales-service");
+
+                                    foreach (var item in data.CostCalculationGarment_Materials)
+                                    {
+                                        item.IsPRMaster = false;
+                                        item.IsPosted = false;
+                                        EntityExtension.FlagForUpdate(item, IdentityService.Username, "sales-service");
+                                    }
 
                                     DbSet.Update(data);
 
