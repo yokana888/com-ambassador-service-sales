@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Com.Efrata.Service.Sales.Lib.ViewModels.CostCalculationGarment
+namespace Com.Ambassador.Service.Sales.Lib.ViewModels.CostCalculationGarment.Cancel_Approval
 {
     public class CancelApprovalCostCalculationGarmentViewModel : BaseViewModel
     {
