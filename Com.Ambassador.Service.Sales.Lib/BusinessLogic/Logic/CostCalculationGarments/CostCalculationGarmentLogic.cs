@@ -846,6 +846,70 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
             return Excel.CreateExcel(new List<KeyValuePair<DataTable, string>>() { new KeyValuePair<DataTable, string>(result, "Cancel Approval Cost Calculation") }, true);
         }
 
+        #region Report Reject RO
+        public Tuple<List<CancelApprovalCostCalculationReportViewModel>, int> ReadRejectRO(DateTime? dateFrom, DateTime? dateTo, int page, int size, int offset)
+        {
+            var Query = GetReportQueryReadRejectRO(dateFrom, dateTo, offset);
+
+            var Data = Query.OrderByDescending(b => b.CancelDate).ToList();
+
+            Pageable<CancelApprovalCostCalculationReportViewModel> pageable = new Pageable<CancelApprovalCostCalculationReportViewModel>(Data, page - 1, size);
+            List<CancelApprovalCostCalculationReportViewModel> Data_ = pageable.Data.ToList<CancelApprovalCostCalculationReportViewModel>();
+
+            int TotalData = pageable.TotalCount;
+
+            return Tuple.Create(Data_, TotalData);
+        }
+
+        private IQueryable<CancelApprovalCostCalculationReportViewModel> GetReportQueryReadRejectRO(DateTime? dateFrom, DateTime? dateTo, int offset)
+        {
+            //get data log history where remark is not null and activity start with Cancel
+            var dataLogHistory = DbContext.LogHistories.Where(x =>
+                    x.Remark != null && x.Activity.StartsWith("Reject") &&
+                    x.CreatedDate.AddHours(offset).Date >= dateFrom.Value.Date && x.CreatedDate.AddHours(offset).Date <= dateTo.Value.Date);
+
+            //mapping data to cancel approval cost calculation report view model
+            var result = dataLogHistory.Select(x => new CancelApprovalCostCalculationReportViewModel
+            {
+                Activity = x.Activity,
+                CancelDate = x.CreatedDate.AddHours(offset),
+                CancelBy = x.CreatedBy,
+                CancelReason = x.Remark,
+                RequestedBy = DbSet.First(s => s.RO_Number == x.Activity.Substring(x.Activity.Length - 9)).CreatedBy
+            });
+
+            return result;
+        }
+
+        public MemoryStream GenerateExcelReadRejectRO(DateTime? dateFrom, DateTime? dateTo, int offset)
+        {
+            var Query = GetReportQueryReadRejectRO(dateFrom, dateTo, offset);
+            Query = Query.OrderByDescending(b => b.CancelDate);
+
+            DataTable result = new DataTable();
+
+            result.Columns.Add(new DataColumn() { ColumnName = "No", DataType = typeof(string) });
+            result.Columns.Add(new DataColumn() { ColumnName = "Aktifitas", DataType = typeof(string) });
+            result.Columns.Add(new DataColumn() { ColumnName = "Tanggal Cancel", DataType = typeof(string) });
+            result.Columns.Add(new DataColumn() { ColumnName = "Dibatalkan Oleh", DataType = typeof(string) });
+            result.Columns.Add(new DataColumn() { ColumnName = "Yang Meminta", DataType = typeof(string) });
+            result.Columns.Add(new DataColumn() { ColumnName = "Alasan Pembatalan", DataType = typeof(string) });
+
+            if (Query.ToArray().Count() == 0)
+                result.Rows.Add("", "", "", "", "");
+            else
+            {
+                int index = 1;
+                foreach (var d in Query)
+                {
+                    result.Rows.Add(index, d.Activity, d.CancelDate.ToString("dd MMM yyyy"), d.CancelBy, d.RequestedBy, d.CancelReason);
+                    index++;
+                }
+            }
+
+            return Excel.CreateExcel(new List<KeyValuePair<DataTable, string>>() { new KeyValuePair<DataTable, string>(result, "Cancel Approval Cost Calculation") }, true);
+        }
+        #endregion
         #endregion
     }
 }

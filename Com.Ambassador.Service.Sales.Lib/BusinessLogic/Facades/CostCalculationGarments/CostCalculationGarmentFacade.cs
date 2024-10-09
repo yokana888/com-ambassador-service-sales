@@ -444,6 +444,17 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.CostCalculation
             return costCalculationGarmentLogic.GenerateExcelCancelApproval(dateFrom, dateTo, offset);
         }
 
+        #region Report Reject RO
+        public Tuple<List<CancelApprovalCostCalculationReportViewModel>, int> ReadRejectRO(DateTime? dateFrom, DateTime? dateTo, int page, int size, int offset)
+        {
+            return costCalculationGarmentLogic.ReadRejectRO(dateFrom, dateTo, page, size, offset);
+        }
+
+        public MemoryStream GenerateExcelReadRejectRO(DateTime? dateFrom, DateTime? dateTo, int offset)
+        {
+            return costCalculationGarmentLogic.GenerateExcelReadRejectRO(dateFrom, dateTo, offset);
+        }
+        #endregion
         #endregion
     }
 }
