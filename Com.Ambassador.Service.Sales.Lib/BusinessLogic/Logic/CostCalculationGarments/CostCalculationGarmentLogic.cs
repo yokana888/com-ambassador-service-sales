@@ -852,7 +852,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
                 CancelDate = x.CreatedDate.AddHours(offset),
                 CancelBy = x.CreatedBy,
                 CancelReason = x.Remark,
-                RequestedBy = DbSet.First(s => s.RO_Number == x.Activity.Substring(x.Activity.Length - 9)).CreatedBy
+                RequestedBy = DbSet.IgnoreQueryFilters().First(s => s.RO_Number == x.Activity.Substring(x.Activity.Length - 9)).CreatedBy
             });
 
             return result;
@@ -916,7 +916,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
                 CancelDate = x.CreatedDate.AddHours(offset),
                 CancelBy = x.CreatedBy,
                 CancelReason = x.Remark,
-                RequestedBy = DbSet.First(s => s.RO_Number == x.Activity.Substring(x.Activity.Length - 9)).CreatedBy
+                RequestedBy = DbSet.IgnoreQueryFilters().First(s => s.RO_Number == x.Activity.Substring(x.Activity.Length - 9)).CreatedBy
             });
 
             return result;
@@ -950,7 +950,6 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.CostCalculationGa
 
             return Excel.CreateExcel(new List<KeyValuePair<DataTable, string>>() { new KeyValuePair<DataTable, string>(result, "Cancel Approval Cost Calculation") }, true);
         }
-        #endregion
         #endregion
     }
 }
