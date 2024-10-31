@@ -90,6 +90,7 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             document.Add(Paragraph1);
 
             string buyerName = buyer["Name"] != null ? buyer["Name"].ToString() : "";
+            string buyerLawsuit = buyer["Type"] != null ? buyer["Type"].ToString() : "";
             PdfPTable tableBodyBuyer = new PdfPTable(3);
             tableBodyBuyer.SetWidths(new float[] { 0.004f, 0.010f, 0.060f });
             PdfPCell bodyContentLefts = new PdfPCell() { Border = Rectangle.NO_BORDER, Padding = 1, HorizontalAlignment = Element.ALIGN_LEFT };
@@ -101,10 +102,27 @@ namespace Com.Ambassador.Service.Sales.Lib.PDFTemplates
             tableBodyBuyer.AddCell(bodyContentLefts);
             bodyContentLefts.Phrase = new Phrase("", normal_font);
             tableBodyBuyer.AddCell(bodyContentLefts);
-            bodyContentLefts.Phrase = new Phrase("NIK ", normal_font);
-            tableBodyBuyer.AddCell(bodyContentLefts);
-            bodyContentLefts.Phrase = new Phrase(":" + " " + buyerNIK, normal_font);
-            tableBodyBuyer.AddCell(bodyContentLefts);
+            //bodyContentLefts.Phrase = new Phrase("NIK ", normal_font);
+            //tableBodyBuyer.AddCell(bodyContentLefts);
+            //bodyContentLefts.Phrase = new Phrase(":" + " " + buyerNIK, normal_font);
+            //tableBodyBuyer.AddCell(bodyContentLefts);
+            if (buyerLawsuit != "Badan Hukum")
+            {
+                bodyContentLefts.Phrase = new Phrase("NIK ", normal_font);
+                tableBodyBuyer.AddCell(bodyContentLefts);
+
+                bodyContentLefts.Phrase = new Phrase(": " + buyerNIK, normal_font);
+                tableBodyBuyer.AddCell(bodyContentLefts);
+            }
+            else
+            {
+                bodyContentLefts.Phrase = new Phrase("Jabatan ", normal_font);
+                tableBodyBuyer.AddCell(bodyContentLefts);
+
+                bodyContentLefts.Phrase = new Phrase(": " + viewModel.RecipientJob , normal_font);
+                tableBodyBuyer.AddCell(bodyContentLefts);
+            }
+
             bodyContentLefts.Phrase = new Phrase("", normal_font);
             tableBodyBuyer.AddCell(bodyContentLefts);
             bodyContentLefts.Phrase = new Phrase("Alamat", normal_font);
