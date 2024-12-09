@@ -45,11 +45,11 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentBookingO
             List<GarmentBookingOrderMonitoringViewModel> listAllGarmentBookingMonitoring = new List<GarmentBookingOrderMonitoringViewModel>();
             List<GarmentBookingOrderMonitoringViewModel> listGarmentBookingMonitoringFilter = new List<GarmentBookingOrderMonitoringViewModel>();
 
-
-            var Query = (from a in DbContext.GarmentBookingOrders
-                         join b in DbContext.GarmentBookingOrderItems on a.Id equals b.BookingOrderId
-
-                         where a.IsDeleted == false
+            var Query1 = (from a in DbContext.GarmentBookingOrders
+                          join b in DbContext.GarmentBookingOrderItems on a.Id equals b.BookingOrderId
+                          join c in DbContext.CostCalculationGarments on b.Id equals c.BookingOrderItemId into cc
+                          from CCG in cc.DefaultIfEmpty()
+                          where a.IsDeleted == false
                              && a.IsCanceled == false
                              && a.OrderQuantity > 0
                              && a.SectionCode == (string.IsNullOrWhiteSpace(section) ? a.SectionCode : section)
@@ -61,8 +61,8 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentBookingO
                              && a.DeliveryDate.AddHours(offset).Date >= DateDeliveryFrom.Date
                              && a.DeliveryDate.AddHours(offset).Date <= DateDeliveryTo.Date
                              && b.IsCanceled==false
-                         select new GarmentBookingOrderMonitoringViewModel
-                         {
+                          select new GarmentBookingOrderMonitoringViewModel
+                          {
                              CreatedUtc = a.CreatedUtc,
                              BookingOrderNo = a.BookingOrderNo,
                              BookingOrderDate = a.BookingOrderDate,
@@ -71,6 +71,8 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentBookingO
                              DeliveryDate = a.DeliveryDate,
                              ComodityName = b.ComodityName,
                              ConfirmQuantity = b.ConfirmQuantity,
+                             CCQuantity = CCG == null ? 0 : CCG.Quantity,
+                             RemainingQuantity = 0,
                              DeliveryDateItems = b.DeliveryDate,
                              ConfirmDate = b.ConfirmDate,
                              Remark = b.Remark,
@@ -82,10 +84,62 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentBookingO
                              LastModifiedUtc = a.LastModifiedUtc,
                              NotConfirmedQuantity= a.ExpiredBookingQuantity + a.CanceledQuantity,
                              SurplusQuantity = (a.ConfirmedQuantity - a.OrderQuantity) > 0 ? (a.ConfirmedQuantity - a.OrderQuantity).ToString() : "-"
-                         }
-            );
+                          }
+                          );
 
-            foreach(var query in Query)
+            var Query = (from x in Query1
+                         group new { CCQty = x.CCQuantity } by new
+                         {
+                             x.CreatedUtc,
+                             x.BookingOrderNo,
+                             x.BookingOrderDate,
+                             x.BuyerName,
+                             x.OrderQuantity,
+                             x.DeliveryDate,
+                             x.ComodityName,
+                             x.ConfirmQuantity,
+                             x.RemainingQuantity,
+                             x.DeliveryDateItems,
+                             x.ConfirmDate,
+                             x.Remark,
+                             x.StatusConfirm,
+                             x.StatusBooking,
+                             x.OrderLeft,
+                             x.DateDiff,
+                             x.row_count,
+                             x.LastModifiedUtc,
+                             x.NotConfirmedQuantity,
+                             x.SurplusQuantity,
+                         } into G
+
+                         select new GarmentBookingOrderMonitoringViewModel
+                         {
+                             CreatedUtc = G.Key.CreatedUtc,
+                             BookingOrderNo = G.Key.BookingOrderNo,
+                             BookingOrderDate = G.Key.BookingOrderDate,
+                             BuyerName = G.Key.BuyerName,
+                             OrderQuantity = G.Key.OrderQuantity,
+                             DeliveryDate = G.Key.DeliveryDate,
+                             ComodityName = G.Key.ComodityName,
+                             ConfirmQuantity = G.Key.ConfirmQuantity,
+                             DeliveryDateItems = G.Key.DeliveryDateItems,
+                             ConfirmDate = G.Key.ConfirmDate,
+                             Remark = G.Key.Remark,
+                             StatusConfirm = G.Key.StatusConfirm,
+                             StatusBooking = G.Key.StatusBooking,
+                             OrderLeft = G.Key.OrderLeft,
+                             DateDiff = G.Key.DateDiff,
+                             row_count = G.Key.row_count,
+                             LastModifiedUtc = G.Key.LastModifiedUtc,
+                             NotConfirmedQuantity = G.Key.NotConfirmedQuantity,
+                             SurplusQuantity = G.Key.SurplusQuantity,
+                             CCQuantity = G.Sum(m => m.CCQty) == 0 ? 0 : G.Sum(m => m.CCQty),
+                             RemainingQuantity = G.Sum(m => m.CCQty) == 0 ? Convert.ToInt32((1.05 * G.Key.ConfirmQuantity)) : (G.Key.ConfirmQuantity - Convert.ToInt32((1.05 * G.Key.ConfirmQuantity))) <= 0 ? 0 : Convert.ToInt32((1.05 * G.Key.ConfirmQuantity)) - G.Sum(m => m.CCQty),
+                             //StatusConfirm = a.ConfirmedQuantity == 0 ? "Belum Dikonfirmasi" : a.ConfirmedQuantity > 0 ? "Sudah Dikonfirmasi" : "-",
+
+                         }).OrderBy(x => x.BookingOrderNo).ThenBy(x => x.BuyerName);
+
+            foreach (var query in Query)
             {
                 if (statusConfirm == "Belum Dikonfirmasi")
                 {
@@ -93,13 +147,15 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentBookingO
                     {
                         listGarmentBookingMonitoring.Add(query);
                     }
-                } else if (statusConfirm == "Sudah Dikonfirmasi")
+                } 
+                else if (statusConfirm == "Sudah Dikonfirmasi")
                 {
                     if (query.StatusConfirm == statusConfirm)
                     {
                         listGarmentBookingMonitoring.Add(query);
                     }
-                } else
+                } 
+                else
                 {
                     listGarmentBookingMonitoring.Add(query);
                 }
@@ -135,11 +191,11 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentBookingO
                                   StatusConfirm = "Belum Dikonfirmasi",
                                   StatusBooking = a.IsBlockingPlan == true ? "Sudah Dibuat Master Plan" : a.ConfirmedQuantity == 0 && a.IsBlockingPlan == false ? "Booking" : a.ConfirmedQuantity > 0 && a.IsBlockingPlan == false ? "Confirmed" : "-",
                                   OrderLeft = (a.OrderQuantity - a.ConfirmedQuantity)>0 ? (a.OrderQuantity - a.ConfirmedQuantity).ToString() : "0",
-                                  DateDiff = ((TimeSpan)(a.DeliveryDate.AddHours(offset) - today)).Days <= 40 && ((TimeSpan)(a.DeliveryDate.AddHours(offset) - today)).Days >= 0 ? ((TimeSpan)(a.DeliveryDate.AddHours(offset) - today)).Days.ToString() : "-",
+                                  //DateDiff = ((TimeSpan)(a.DeliveryDate.AddHours(offset) - today)).Days <= 40 && ((TimeSpan)(a.DeliveryDate.AddHours(offset) - today)).Days >= 0 ? ((TimeSpan)(a.DeliveryDate.AddHours(offset) - today)).Days.ToString() : "-",
                                   row_count = 1,
                                   LastModifiedUtc = a.LastModifiedUtc,
                                   NotConfirmedQuantity = a.ExpiredBookingQuantity + a.CanceledQuantity,
-                                  SurplusQuantity = (a.ConfirmedQuantity - a.OrderQuantity)>0? (a.ConfirmedQuantity - a.OrderQuantity).ToString(): "-"
+                                  //SurplusQuantity = (a.ConfirmedQuantity - a.OrderQuantity)>0? (a.ConfirmedQuantity - a.OrderQuantity).ToString(): "-"
                               }
                 );
                 foreach (var query in query2.OrderBy(o => o.BookingOrderNo))
@@ -234,20 +290,22 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentBookingO
             result.Columns.Add(new DataColumn() { ColumnName = "Tanggal Pengeriman (booking)", DataType = typeof(string) });
             result.Columns.Add(new DataColumn() { ColumnName = "Komoditi", DataType = typeof(string) });
             result.Columns.Add(new DataColumn() { ColumnName = "Jumlah Confirm", DataType = typeof(string) });
+            result.Columns.Add(new DataColumn() { ColumnName = "Budget Turun", DataType = typeof(string) });
+            result.Columns.Add(new DataColumn() { ColumnName = "Sisa Budget Turun", DataType = typeof(string) });
             result.Columns.Add(new DataColumn() { ColumnName = "Tanggal Pengiriman (confirm)", DataType = typeof(string) });
             result.Columns.Add(new DataColumn() { ColumnName = "Tanggal Confirm", DataType = typeof(string) });
             result.Columns.Add(new DataColumn() { ColumnName = "Keterangan", DataType = typeof(string) });
             result.Columns.Add(new DataColumn() { ColumnName = "Status Confirm", DataType = typeof(string) });
             result.Columns.Add(new DataColumn() { ColumnName = "Status Booking Order", DataType = typeof(string) });
             result.Columns.Add(new DataColumn() { ColumnName = "Sisa Order (Belum Confirm)", DataType = typeof(string) });
-            result.Columns.Add(new DataColumn() { ColumnName = "Seilisih Hari (dari Tanggal Pengiriman)", DataType = typeof(string) });
+            //result.Columns.Add(new DataColumn() { ColumnName = "Seilisih Hari (dari Tanggal Pengiriman)", DataType = typeof(string) });
             result.Columns.Add(new DataColumn() { ColumnName = "Not Confirmed Order (MINUS)", DataType = typeof(string) });
-            result.Columns.Add(new DataColumn() { ColumnName = "Over Confirm (SURPLUS)", DataType = typeof(string) });
+            //result.Columns.Add(new DataColumn() { ColumnName = "Over Confirm (SURPLUS)", DataType = typeof(string) });
 
             List<(string, Enum, Enum)> mergeCells = new List<(string, Enum, Enum)>() { };
 
             if (Query.ToArray().Count() == 0)
-                result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", "", "","",""); // to allow column name to be generated properly for empty data as template
+                result.Rows.Add("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""); // to allow column name to be generated properly for empty data as template
             else
             {
                 int index = 0;
@@ -284,14 +342,15 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentBookingO
 
                         counterTemp++;
 
-                        result.Rows.Add(item.BookingOrderNo, BookingOrderDate, item.BuyerName, item.OrderQuantity, DeliveryDate, item.ComodityName, item.ConfirmQuantity,
-                        DeliveryDateItems, ConfirmDate, item.Remark, item.StatusConfirm, item.StatusBooking, item.OrderLeft, item.DateDiff,item.NotConfirmedQuantity, item.SurplusQuantity);
+                        result.Rows.Add(item.BookingOrderNo, BookingOrderDate, item.BuyerName, item.OrderQuantity, DeliveryDate, item.ComodityName, item.ConfirmQuantity, item.CCQuantity, item.RemainingQuantity,
+                        DeliveryDateItems, ConfirmDate, item.Remark, item.StatusConfirm, item.StatusBooking, item.OrderLeft, item.NotConfirmedQuantity);
 
-                       
-                    } else
+
+                    } 
+                    else
                     {
-                        result.Rows.Add(item.BookingOrderNo, BookingOrderDate, item.BuyerName, item.OrderQuantity, DeliveryDate, item.ComodityName, item.ConfirmQuantity,
-                        DeliveryDateItems, ConfirmDate, item.Remark, item.StatusConfirm, item.StatusBooking, item.OrderLeft, item.DateDiff, item.NotConfirmedQuantity, item.SurplusQuantity);
+                        result.Rows.Add(item.BookingOrderNo, BookingOrderDate, item.BuyerName, item.OrderQuantity, DeliveryDate, item.ComodityName, item.ConfirmQuantity, item.CCQuantity, item.RemainingQuantity,
+                        DeliveryDateItems, ConfirmDate, item.Remark, item.StatusConfirm, item.StatusBooking, item.OrderLeft, item.NotConfirmedQuantity);
 
                         if (counterTemp > 1)
                         {
@@ -300,8 +359,8 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentBookingO
                             mergeCells.Add(($"C{rowPosition - counterTemp}:C{rowPosition - 1}", OfficeOpenXml.Style.ExcelHorizontalAlignment.Left, OfficeOpenXml.Style.ExcelVerticalAlignment.Center));
                             mergeCells.Add(($"D{rowPosition - counterTemp}:D{rowPosition - 1}", OfficeOpenXml.Style.ExcelHorizontalAlignment.Left, OfficeOpenXml.Style.ExcelVerticalAlignment.Center));
                             mergeCells.Add(($"E{rowPosition - counterTemp}:E{rowPosition - 1}", OfficeOpenXml.Style.ExcelHorizontalAlignment.Left, OfficeOpenXml.Style.ExcelVerticalAlignment.Center));
-                            mergeCells.Add(($"K{rowPosition - counterTemp}:K{rowPosition - 1}", OfficeOpenXml.Style.ExcelHorizontalAlignment.Left, OfficeOpenXml.Style.ExcelVerticalAlignment.Center));
-                            mergeCells.Add(($"L{rowPosition - counterTemp}:L{rowPosition - 1}", OfficeOpenXml.Style.ExcelHorizontalAlignment.Left, OfficeOpenXml.Style.ExcelVerticalAlignment.Center));
+                            //mergeCells.Add(($"K{rowPosition - counterTemp}:K{rowPosition - 1}", OfficeOpenXml.Style.ExcelHorizontalAlignment.Left, OfficeOpenXml.Style.ExcelVerticalAlignment.Center));
+                            //mergeCells.Add(($"L{rowPosition - counterTemp}:L{rowPosition - 1}", OfficeOpenXml.Style.ExcelHorizontalAlignment.Left, OfficeOpenXml.Style.ExcelVerticalAlignment.Center));
                             mergeCells.Add(($"M{rowPosition - counterTemp}:M{rowPosition - 1}", OfficeOpenXml.Style.ExcelHorizontalAlignment.Left, OfficeOpenXml.Style.ExcelVerticalAlignment.Center));
                             mergeCells.Add(($"N{rowPosition - counterTemp}:N{rowPosition - 1}", OfficeOpenXml.Style.ExcelHorizontalAlignment.Left, OfficeOpenXml.Style.ExcelVerticalAlignment.Center));
                             mergeCells.Add(($"O{rowPosition - counterTemp}:O{rowPosition - 1}", OfficeOpenXml.Style.ExcelHorizontalAlignment.Left, OfficeOpenXml.Style.ExcelVerticalAlignment.Center));
@@ -320,8 +379,8 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Facades.GarmentBookingO
                     mergeCells.Add(($"C{rowPosition + 1 - counterTemp}:C{rowPosition}", OfficeOpenXml.Style.ExcelHorizontalAlignment.Left, OfficeOpenXml.Style.ExcelVerticalAlignment.Center));
                     mergeCells.Add(($"D{rowPosition + 1 - counterTemp}:D{rowPosition}", OfficeOpenXml.Style.ExcelHorizontalAlignment.Left, OfficeOpenXml.Style.ExcelVerticalAlignment.Center));
                     mergeCells.Add(($"E{rowPosition + 1 - counterTemp}:E{rowPosition}", OfficeOpenXml.Style.ExcelHorizontalAlignment.Left, OfficeOpenXml.Style.ExcelVerticalAlignment.Center));
-                    mergeCells.Add(($"K{rowPosition + 1 - counterTemp}:K{rowPosition}", OfficeOpenXml.Style.ExcelHorizontalAlignment.Left, OfficeOpenXml.Style.ExcelVerticalAlignment.Center));
-                    mergeCells.Add(($"L{rowPosition + 1 - counterTemp}:L{rowPosition}", OfficeOpenXml.Style.ExcelHorizontalAlignment.Left, OfficeOpenXml.Style.ExcelVerticalAlignment.Center));
+                    //mergeCells.Add(($"K{rowPosition + 1 - counterTemp}:K{rowPosition}", OfficeOpenXml.Style.ExcelHorizontalAlignment.Left, OfficeOpenXml.Style.ExcelVerticalAlignment.Center));
+                    //mergeCells.Add(($"L{rowPosition + 1 - counterTemp}:L{rowPosition}", OfficeOpenXml.Style.ExcelHorizontalAlignment.Left, OfficeOpenXml.Style.ExcelVerticalAlignment.Center));
                     mergeCells.Add(($"M{rowPosition + 1 - counterTemp}:M{rowPosition}", OfficeOpenXml.Style.ExcelHorizontalAlignment.Left, OfficeOpenXml.Style.ExcelVerticalAlignment.Center));
                     mergeCells.Add(($"N{rowPosition + 1 - counterTemp}:N{rowPosition}", OfficeOpenXml.Style.ExcelHorizontalAlignment.Left, OfficeOpenXml.Style.ExcelVerticalAlignment.Center));
                     mergeCells.Add(($"O{rowPosition + 1 - counterTemp}:O{rowPosition}", OfficeOpenXml.Style.ExcelHorizontalAlignment.Left, OfficeOpenXml.Style.ExcelVerticalAlignment.Center));
