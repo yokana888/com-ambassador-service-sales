@@ -15,6 +15,8 @@ namespace Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentBookingOrderViewMod
         public DateTimeOffset? DeliveryDate { get; set; }
         public string ComodityName { get; set; }
         public double? ConfirmQuantity { get; set; }
+        public int? CCQuantity { get; set; }
+        public int? RemainingQuantity { get; set; }
         public DateTimeOffset? DeliveryDateItems { get; set; }
         public DateTimeOffset? ConfirmDate { get; set; }
         public string Remark { get; set; }
