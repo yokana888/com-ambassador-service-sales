@@ -60,11 +60,9 @@ namespace Com.Ambassador.Service.Sales.WebApi.Controllers
                 {
                     GarmentSalesContractViewModel viewModel = Mapper.Map<GarmentSalesContractViewModel>(model);
 
-
                     string BuyerUri = "master/garment-buyers";
                     string BuyerBrandUri = "master/garment-buyer-brands";
                     string BankUri = "master/account-banks";
-
                    
                     /* Get BuyerBrand */
                     var response = HttpClientService.GetAsync($@"{APIEndpoint.Core}{BuyerBrandUri}/" + viewModel.BuyerBrandId).Result.Content.ReadAsStringAsync();
@@ -73,7 +71,6 @@ namespace Com.Ambassador.Service.Sales.WebApi.Controllers
                     Dictionary<string, object> buyerBrand = JsonConvert.DeserializeObject<Dictionary<string, object>>(json.ToString());
 
                     Dictionary<string, object> buyers = JsonConvert.DeserializeObject<Dictionary<string, object>>(buyerBrand["Buyers"].ToString());
-
 
                     /* Get Buyer */
                     var responseBuyer = HttpClientService.GetAsync($@"{APIEndpoint.Core}{BuyerUri}/" + buyers["Id"]).Result.Content.ReadAsStringAsync();
