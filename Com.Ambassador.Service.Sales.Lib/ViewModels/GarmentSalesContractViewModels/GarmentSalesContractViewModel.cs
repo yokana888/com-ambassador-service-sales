@@ -98,14 +98,14 @@ namespace Com.Ambassador.Service.Sales.Lib.ViewModels.GarmentSalesContractViewMo
                     yield return new ValidationResult("Alamat Penerima harus diisi", new List<string> { "RecipientAddress" });
                 }
             }
+
             if (this.BuyerType == "Badan Hukum")
             {
-                if (!string.IsNullOrWhiteSpace(RecipientJob))
+                if (string.IsNullOrWhiteSpace(RecipientJob))
                 {
                     yield return new ValidationResult("Jabatan Penerima harus diisi", new List<string> { "RecipientJob" });
                 }
             }
-            
             
             if (this.LatePayment.Equals(null))
             {
