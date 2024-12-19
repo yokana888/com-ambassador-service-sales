@@ -233,6 +233,7 @@ namespace Com.Ambassador.Service.Sales.Lib.BusinessLogic.Logic.ROGarmentLogics
                 {
                     RO_Number = ccg.RO_Number,
                     Article = ccg.Article,
+                    BuyerBrandName = ccg.BuyerBrandName
                 },
                 Total = ro.Total,
                 IsPosted = ro.IsPosted,
